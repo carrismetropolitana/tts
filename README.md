@@ -1,2 +1,4 @@
-# intermodal-parser
+# tts-generator
+
+Disambiguates common bus stop abbreviations automatically.
  
