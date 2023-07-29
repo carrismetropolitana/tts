@@ -321,6 +321,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Combatentes da Grande Guerra');
   regex = /\b(Mov[^\s]*[\s]F[^\s]*[\s]Arm[^\s]*)\b/giu;
   thisString = thisString.replace(regex, 'Movimento das Forças Armadas');
+  regex = /\bF[^\s]*[\s]+Arm[^\s]*\b/giu;
+  thisString = thisString.replace(regex, 'Forças Armadas');
   regex = /\b(C[o]?v[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Cova ');
   regex = /\b(C[\.]?)\s(?=Pau)/giu;
@@ -465,6 +467,10 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Cardoso ');
   regex = /\b(Man[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Manuel ');
+  regex = /\b(Isid[\.]?)\s/giu;
+  thisString = thisString.replace(regex, 'Isidoro ');
+  regex = /\b(Xa[v]?[\.]?)\s/giu;
+  thisString = thisString.replace(regex, 'Xavier ');
   regex = /\b(Fran[c]?[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Francisco ');
   regex = /\b(Fred[\.]?)\s/giu;
@@ -570,6 +576,8 @@ module.exports = (p) => {
   }
   regex = /\s(Pr[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, ' Praça ');
+  regex = /\s(P[r]?[\.]?)(\s)+(?=T[áa]x)/giu;
+  thisString = thisString.replace(regex, ' Praça ');
   /* Resolve Eng */
   regex = /\s(Eng[\.]?[aª][\.]?)(\s)/giu;
   thisString = thisString.replace(regex, ' Engenheira$2');
@@ -672,8 +680,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, '$1Segundo$4');
   regex = /([aª]|Isabel|Inês|Ines|Beatriz|Matilde|Gertrudes|Judite|Leonor|Lurdes\b)(\s[I]\b)([^.]?)/giu;
   thisString = thisString.replace(regex, '$1 Primeira$3');
-  regex = /([oº]|Manuel|Luis|Henrique|Henriques|José\b)(\s[I]\b)([^.]?)/giu;
-  thisString = thisString.replace(regex, '$1 Primeiro$3');
+  regex = /(?<=[oº]|Manuel|Lu[íi]s|Henrique|Henriques|Jos[eé])(\s+[I]\b)([^.]?)/giu;
+  thisString = thisString.replace(regex, ' Primeiro$2');
   regex = /([aª]|Isabel|Inês|Ines|Beatriz|Matilde|Gertrudes|Judite|Leonor|Lurdes\b)(\s[V])(\s|$)/giu;
   thisString = thisString.replace(regex, '$1 Quinta ');
   regex = /([oº]|Manuel|Luis|Henrique|Henriques\b)(\s[V])(\s|$)/giu;
@@ -683,6 +691,10 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Cruzamento entre $1 e $4');
   regex = /\bEDP\b/giu;
   thisString = thisString.replace(regex, 'E. D. P.');
+  regex = /\bFCT\b/giu;
+  thisString = thisString.replace(regex, 'F. C. T.');
+  regex = /\bIc\s/giu;
+  thisString = thisString.replace(regex, 'I. C. ');
   /* Trim spaces */
   thisString = thisString.replace(/\s+/g, ' ');
   /* Return result */
