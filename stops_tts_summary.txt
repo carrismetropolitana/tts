@@ -246,10 +246,10 @@ stop_id,stop_name,tts_stop_name
 020151,VALE FETAL (ESTR BELA VISTA 60),Vale Fetal ( Estrada Bela Vista 60 )
 020153,ESTR BELA VISTA 100 ROT MARCO GEODÉSICO,Estrada Bela Vista 100 Rotunda Marco Geodésico
 020154,ESTR BELA VISTA 100 ROT MARCO GEODÉSICO,Estrada Bela Vista 100 Rotunda Marco Geodésico
-020155,VL FETAL ESTR BELA VISTA(X)R CRIS LOPES,Cruzamento Entre Vale Fetal Estrada Bela Vista E Rua Cris Lopes
-020156,VL FETAL ESTR BELA VISTA(X)R CRIS LOPES,Cruzamento Entre Vale Fetal Estrada Bela Vista E Rua Cris Lopes
-020157,VALE FETAL ESTR BELA VISTA186 (ESCOLA),Vale Fetal Estrada Bela Vista 186 ( Escola )
-020158,VALE FETAL ESTR BELA VISTA186 (ESCOLA),Vale Fetal Estrada Bela Vista 186 ( Escola )
+020155,VL FETAL ESTR BELA VISTA (X) R CRIS LOPES,Cruzamento Entre Vale Fetal Estrada Bela Vista E Rua Cris Lopes
+020156,VL FETAL ESTR BELA VISTA (X) R CRIS LOPES,Cruzamento Entre Vale Fetal Estrada Bela Vista E Rua Cris Lopes
+020157,VALE FETAL ESTR BELA VISTA 186 (ESCOLA),Vale Fetal Estrada Bela Vista 186 ( Escola )
+020158,VALE FETAL ESTR BELA VISTA 186 (ESCOLA),Vale Fetal Estrada Bela Vista 186 ( Escola )
 020159,CH CAP ESTR B VISTA 206 (X) QTA NOVA,Cruzamento Entre Charneca De Caparica Estrada B Vista 206 E Quinta Nova
 020160,CH CAP ESTR B VISTA 206 (X) QTA NOVA,Cruzamento Entre Charneca De Caparica Estrada B Vista 206 E Quinta Nova
 020161,CH CAPARICA (R RAMADA CURTO 13),Charneca De Caparica ( Rua Ramada Curto 13 )
@@ -315,8 +315,8 @@ stop_id,stop_name,tts_stop_name
 020242,R SOEIRO PEREIRA GOMES 68A,Rua Soeiro Pereira Gomes 68 A
 020243,AV ILHA DA MADEIRA 50A,Avenida Ilha Da Madeira 50 A
 020244,AV ILHA DA MADEIRA 50A,Avenida Ilha Da Madeira 50 A
-020245,AROEIRA AV MAR (X) R JOSÉ MALHOA (ROT),Cruzamento Entre Aroeira Avenida Mar E Rua José Malhoa ( Rotunda )
-020246,AROEIRA AV MAR (X) R JOSÉ MALHOA (ROT),Cruzamento Entre Aroeira Avenida Mar E Rua José Malhoa ( Rotunda )
+020245,AV MAR (X) R JOSÉ MALHOA (ROT),Cruzamento Entre Avenida Mar E Rua José Malhoa ( Rotunda )
+020246,AV MAR (X) R JOSÉ MALHOA (ROT),Cruzamento Entre Avenida Mar E Rua José Malhoa ( Rotunda )
 020247,R SOEIRO PEREIRA GOMES 2,Rua Soeiro Pereira Gomes 2
 020249,AV DE VALE BEM 35,Avenida De Vale Bem 35
 020251,CH CAPARICA (R PEDRO COSTA) TREMOCEIRA,Charneca De Caparica ( Rua Pedro Costa ) Tremoceira
@@ -342,7 +342,7 @@ stop_id,stop_name,tts_stop_name
 020273,Bº COR ROSA (R BELA VISTA 4),Bairro Cor Rosa ( Rua Bela Vista 4 )
 020275,PRAGAL (AV TORRADO SILVA) ESTAÇÃO,Pragal ( Avenida Torrado Silva ) Estação
 020276,PRAGAL (AV TORRADO SILVA) ESTAÇÃO,Pragal ( Avenida Torrado Silva ) Estação
-020277,PRAGAL(AV TORRADO SILVA) HOSPITAL G ORTA,Pragal ( Avenida Torrado Silva ) Hospital Garcia De Orta
+020277,AV TORRADO SILVA (HOSPITAL G ORTA),Avenida Torrado Silva ( Hospital Garcia De Orta )
 020279,PRAGAL R CIDADE OSTRAVA 8 (J FREG),Pragal Rua Cidade Ostrava 8 ( Junta De Freguesia )
 020280,PRAGAL R CIDADE OSTRAVA 8 (J FREG),Pragal Rua Cidade Ostrava 8 ( Junta De Freguesia )
 020281,COVA PIEDADE (R RAMIRO FERRÃO 38),Cova Piedade ( Rua Ramiro Ferrão 38 )
@@ -375,7 +375,7 @@ stop_id,stop_name,tts_stop_name
 020313,MTE CAP AV T LOROSAE (X) PORTO BRANDÃO,Cruzamento Entre Monte De Caparica Avenida T Lorosae E Porto Brandão
 020314,MTE CAP AV T LOROSAE (X) PORTO BRANDÃO,Cruzamento Entre Monte De Caparica Avenida T Lorosae E Porto Brandão
 020315,TORRE CAPARICA (EN 10-1) (X) FACULDADE,Cruzamento Entre Torre Caparica ( Estrada Nacional 10 - 1 ) E Faculdade
-020317,MONTE CAPARICA (FCT) ROTUNDA,Monte De Caparica ( Fct ) Rotunda
+020317,MONTE CAPARICA (FCT) ROTUNDA,Monte De Caparica ( F. C. T. ) Rotunda
 020319,CASAS VELHAS (DIA A DIA),Casas Velhas ( Dia A Dia )
 020321,LAZARIM (R S MACÁRIO772)QTA S FRANCISCO,Lazarim ( Rua São Macário 772 ) Quinta São Francisco
 020322,LAZARIM (R S MACÁRIO772)QTA S FRANCISCO,Lazarim ( Rua São Macário 772 ) Quinta São Francisco
@@ -406,9 +406,9 @@ stop_id,stop_name,tts_stop_name
 020351,LAZARIM R S MACÁRIO (X) R HUMB MADEIRA,Cruzamento Entre Lazarim Rua São Macário E Rua Humberto Madeira
 020352,LAZARIM R S MACÁRIO (X) R HUMB MADEIRA,Cruzamento Entre Lazarim Rua São Macário E Rua Humberto Madeira
 020353,R DO AREEIRO COLÉGIO SOSSEGO MAMÃ,Rua Do Areeiro Colégio Sossego Mamã
-020355,MTE CAPARICA IC32 (X) R AREEIRO,Cruzamento Entre Monte De Caparica Ic 32 E Rua Areeiro
-020356,MTE CAPARICA IC32 (X) R AREEIRO,Cruzamento Entre Monte De Caparica Ic 32 E Rua Areeiro
-020357,MONTE CAPARICA (FCT) ROTUNDA,Monte De Caparica ( Fct ) Rotunda
+020355,MTE CAPARICA IC32 (X) R AREEIRO,Cruzamento Entre Monte De Caparica I. C. 32 E Rua Areeiro
+020356,MTE CAPARICA IC32 (X) R AREEIRO,Cruzamento Entre Monte De Caparica I. C. 32 E Rua Areeiro
+020357,MONTE CAPARICA (FCT) ROTUNDA,Monte De Caparica ( F. C. T. ) Rotunda
 020359,MTE CAPARICA R ALFREDO CUNHA (ESCOLA),Monte De Caparica Rua Alfredo Cunha ( Escola )
 020361,MTE CAP AV TIMOR LOR (METRO) (X) FOMEGA,Cruzamento Entre Monte De Caparica Avenida Timor Lor ( Metro ) E Fomega
 020363,CACILHAS (LARGO ALFR DINIS ALEX) TER P19,Cacilhas ( Largo Alfr Dinis Alex) Terminal P 19
@@ -455,9 +455,9 @@ stop_id,stop_name,tts_stop_name
 020425,R DIREITA PRAGAL (ESCOLA SECUNDÁRIA),Rua Direita Pragal ( Escola Secundária )
 020427,ALMADA (R D JOÃO CASTRO 84),Almada ( Rua Dom João Castro 84 )
 020429,CACILHAS (LGO ALF DINIS ALEX) TER P6,Cacilhas ( Largo Alfredo Dinis Alex) Terminal P 6
-020431,(IC20) SERRADO DPS POSTO ABASTECINENTO,( Ic 20 ) Serrado Depois Posto De Abastecimento
+020431,(IC20) SERRADO DPS POSTO ABASTECINENTO,( I. C. 20 ) Serrado Depois Posto De Abastecimento
 020433,FUNCHALINHO (NÓ),Funchalinho ( Nó )
-020435,COSTA CAPARICA (IC 20) CEMITÉRIO,Costa Da Caparica ( Ic 20 ) Cemitério
+020435,COSTA CAPARICA (IC 20) CEMITÉRIO,Costa Da Caparica ( I. C. 20 ) Cemitério
 020437,AV 1º DE MAIO 19,Avenida 1º De Maio 19
 020438,AV 1º DE MAIO 19,Avenida 1º De Maio 19
 020439,AV GENERAL HUMBERTO DELGADO,Avenida General Humberto Delgado
@@ -467,7 +467,7 @@ stop_id,stop_name,tts_stop_name
 020443,C CAPARICA (AV G H DELGADO) PARQUE,Costa Da Caparica ( Avenida General Humberto Delgado ) Parque
 020444,C CAPARICA (AV G H DELGADO) PARQUE,Costa Da Caparica ( Avenida General Humberto Delgado ) Parque
 020445,FUNCHALINHO (NÓ),Funchalinho ( Nó )
-020447,MONTE CAPARICA (IC 20) ESC CASAS VELHAS,Monte De Caparica ( Ic 20 ) Escola Casas Velhas
+020447,MONTE CAPARICA (IC 20) ESC CASAS VELHAS,Monte De Caparica ( I. C. 20 ) Escola Casas Velhas
 020449,CACILHAS (LGO ALF DINIS ALEX) TER P1,Cacilhas ( Largo Alfredo Dinis Alex) Terminal P 1
 020451,COSTA CAP AV AF ALBUQ 8A (X) R MACAU,Cruzamento Entre Costa Da Caparica Avenida Afonso Albuquerque 8 A E Rua Macau
 020452,COSTA CAP AV AF ALBUQ 8A (X) R MACAU,Cruzamento Entre Costa Da Caparica Avenida Afonso Albuquerque 8 A E Rua Macau
@@ -519,8 +519,8 @@ stop_id,stop_name,tts_stop_name
 020506,FEIJÓ (R CASTANHEIROS N13B) JARDIM,Feijó ( Rua Castanheiros N 13 B ) Jardim
 020507,FEIJÓ R CASTANHEIROS 39 (ESP CIDADÃO),Feijó Rua Castanheiros 39 ( Espaço Cidadão )
 020508,FEIJÓ R CASTANHEIROS 39 (ESP CIDADÃO),Feijó Rua Castanheiros 39 ( Espaço Cidadão )
-020509,LARANJEIRO (R ISID FERREIRA) FARMÁCIA,Laranjeiro ( Rua Isid Ferreira ) Farmácia
-020510,LARANJEIRO (R ISID FERREIRA) FARMÁCIA,Laranjeiro ( Rua Isid Ferreira ) Farmácia
+020509,LARANJEIRO (R ISID FERREIRA) FARMÁCIA,Laranjeiro ( Rua Isidoro Ferreira ) Farmácia
+020510,LARANJEIRO (R ISID FERREIRA) FARMÁCIA,Laranjeiro ( Rua Isidoro Ferreira ) Farmácia
 020511,FEIJÓPÇA FRANCISCO TABORDA (PARQUE/ROT),Feijó Praça Francisco Taborda ( Parque/rotunda )
 020512,FEIJÓPÇA FRANCISCO TABORDA (PARQUE/ROT),Feijó Praça Francisco Taborda ( Parque/rotunda )
 020513,FEIJÓ (R ALEMBRANÇA) ESCOLA 2 3 CICLO,Feijó ( Rua Alembrança ) Escola 2 3 Ciclo
@@ -620,7 +620,7 @@ stop_id,stop_name,tts_stop_name
 020636,RUA AUGUSTO ROSA,Rua Augusto Rosa
 020637,COSTA CAPARICA (TORRE ARGOLAS) TER P1,Costa Da Caparica ( Torre Argolas ) Terminal P 1
 020639,C CAP AV DR ARESTA BRANCO 13 (ROTUNDA),Costa Da Caparica Avenida Doutora Aresta Branco 13 ( Rotunda )
-020641,COSTA CAPARICA (IC 20) CEMITÉRIO,Costa Da Caparica ( Ic 20 ) Cemitério
+020641,COSTA CAPARICA (IC 20) CEMITÉRIO,Costa Da Caparica ( I. C. 20 ) Cemitério
 020643,CAPUCHOS (EN10-1) 738 (ROTUNDA),Capuchos ( Estrada Nacional 10 - 1 ) 738 ( Rotunda )
 020644,CAPUCHOS (EN10-1) 738 (ROTUNDA),Capuchos ( Estrada Nacional 10 - 1 ) 738 ( Rotunda )
 020645,STO ANTÓNIO CAPUCHOS (EN10-1) 703,Santo António Capuchos ( Estrada Nacional 10 - 1 ) 703
@@ -1094,7 +1094,7 @@ stop_id,stop_name,tts_stop_name
 030186,R 17 Set (X) Pcta M Boba - Jta Freg,Cruzamento Entre Rua 17 Setembro E Praceta M Boba - Junta De Freguesia
 030187,Estr Serra da Mina 56A,Estrada Serra Da Mina 56 A
 030188,EB 2/3 José Cardoso Pires,Escola Básica 2 / 3 José Cardoso Pires
-030189,Estr Serra Mira (Fte Estal CMA),Estrada Serra Mira ( Frente Estal Cma )
+030189,Estr Serra Mira (Fte Estal CMA),Estrada Serra Mira ( Frente Estaleiro Cma )
 030191,Estr Serra Mira (Posto Combustível),Estrada Serra Mira ( Posto De Combustível )
 030193,Moinhos Funcheira (X) S Mira,Cruzamento Entre Moinhos Funcheira E Santa Mira
 030195,Av Liberdade 44A,Avenida Liberdade 44 A
@@ -1255,8 +1255,8 @@ stop_id,stop_name,tts_stop_name
 030439,R D António Luz (X) R Vitor Damas,Cruzamento Entre Rua Dom António Luz E Rua Vitor Damas
 030441,R Baden Pawell 12,Rua Baden Pawell 12
 030443,Av Cruz Vermelha (Rotunda),Avenida Cruz Vermelha ( Rotunda )
-030445,Av D José I (Análises Clínicas),Avenida Dom José I ( Análises Clínicas )
-030446,Av D José I 77,Avenida Dom José I 77
+030445,Av D José I (Análises Clínicas),Avenida Dom José Primeiro ( Análises Clínicas )
+030446,Av D José I 77,Avenida Dom José Primeiro 77
 030447,Av João Paulo II (Praça Gama Pinto),Avenida João Paulo Segundo ( Praça Gama Pinto )
 030448,Av João Paulo II (Pça Gama Pinto),Avenida João Paulo Segundo ( Praça Gama Pinto )
 030449,R Madame Curie 16,Rua Madame Curie 16
@@ -1266,8 +1266,8 @@ stop_id,stop_name,tts_stop_name
 030454,R Prof Dr Ant Flores 4,Rua Professor Doutor António Flores 4
 030455,R Dr Francisco Sá Carneiro,Rua Doutor Francisco Sá Carneiro
 030457,Av Dom José (Supermercado),Avenida Dom José ( Supermercado )
-030458,Av D José I (Supermercado),Avenida Dom José I ( Supermercado )
-030459,Av D José I 7,Avenida Dom José I 7
+030458,Av D José I (Supermercado),Avenida Dom José Primeiro ( Supermercado )
+030459,Av D José I 7,Avenida Dom José Primeiro 7
 030461,Av Dr José Pontes Fte 5,Avenida Doutor José Pontes Frente 5
 030462,Av Dr José Pontes Fte 5,Avenida Doutor José Pontes Frente 5
 030463,Av Dr José Pontes Fte 33,Avenida Doutor José Pontes Frente 33
@@ -1824,7 +1824,7 @@ stop_id,stop_name,tts_stop_name
 050152,R Dr José Joaquim de Almeida 4,Rua Doutor José Joaquim De Almeida 4
 050153,R Dr José Joaquim de Almeida 23,Rua Doutor José Joaquim De Almeida 23
 050155,Estr Rebelva (Qta do Lameiro),Estrada Rebelva ( Quinta Do Lameiro )
-050157,R Frei Armando Câmara (Supermercado),Rua Frei Armando Câmara ( Supermercado )
+050157,R Frei Armando Câmara (Supermercado),Rua Forças Armadas Câmara ( Supermercado )
 050159,Estr da Rebelva Fte 893,Estrada Da Rebelva Frente 893
 050161,Estr da Rebelva Fte 1081A,Estrada Da Rebelva Frente 1081 A
 050163,Lgo de São Domingos de Rana (Igreja),Largo De São Domingos De Rana ( Igreja )
@@ -2026,9 +2026,9 @@ stop_id,stop_name,tts_stop_name
 050434,R Mq Pombal Lt 30 Fte Centro Comunit,Rua Marquês Pombal Lote 30 Frente Centro Comercialunit
 050435,Av J Dantas Fte Macolid - Alto Portela,Avenida J Dantas Frente Macolid - Alto Portela
 050436,R Júlio Dantas Fte 769 - Oficina,Rua Júlio Dantas Frente 769 - Oficina
-050437,R Prof Ant Xav P Cout Fte 112A,Rua Professor António Xav P Cout Frente 112 A
-050438,R Prof Ant Xav P Coutinho Lt 3 Chaf,Rua Professor António Xav P Coutinho Lote 3 Chaf
-050439,R Prof Ant Xav P Coutinho 101,Rua Professor António Xav P Coutinho 101
+050437,R Prof Ant Xav P Cout Fte 112A,Rua Professor António Xavier P Cout Frente 112 A
+050438,R Prof Ant Xav P Coutinho Lt 3 Chaf,Rua Professor António Xavier P Coutinho Lote 3 Chaf
+050439,R Prof Ant Xav P Coutinho 101,Rua Professor António Xavier P Coutinho 101
 050440,R Júlio Dantas 711 Fte Auto Serra,Rua Júlio Dantas 711 Frente Auto Serra
 050441,Av Júlio Dantas - Macolide,Avenida Júlio Dantas - Macolide
 050442,R Mq Pombal 29 - Cent Comunitário,Rua Marquês Pombal 29 - Centro Comercialunitário
@@ -2120,13 +2120,13 @@ stop_id,stop_name,tts_stop_name
 060009,Gare do Oriente 22-C,Gare Do Oriente 22 -c
 060011,Gare do Oriente 21-C,Gare Do Oriente 21 -c
 060012,Qta Granja - Av Uruguai,Quinta Granja - Avenida Uruguai
-060013,LISBOA (SETE RIOS),Lisboa ( Sete Rios )
+060013,Lisboa (Sete Rios) P5,Lisboa ( Sete Rios ) P 5
 060015,Colégio Militar (Metro),Colégio Militar ( Metro )
-060017,AV CALOUSTE GULBENK (ACESSO AV J MALHOA),Avenida Calouste Gulbenk ( Acesso Avenida J Malhoa )
-060018,AV CALOUSTE GULBENK (ACESSO AV J MALHOA),Avenida Calouste Gulbenk ( Acesso Avenida J Malhoa )
+060017,AV CALOUSTE GULBENK (ACESSO AV J MALHOA),Avenida Calouste Gulbenkian ( Acesso Avenida J Malhoa )
+060018,AV CALOUSTE GULBENK (ACESSO AV J MALHOA),Avenida Calouste Gulbenkian ( Acesso Avenida J Malhoa )
 060019,LISBOA (AV CEUTA) BANCO ALIMENTAR,Lisboa ( Avenida Ceuta ) Banco Alimentar
 060021,LISBOA (AV CEUTA) ALCÂNTARA,Lisboa ( Avenida Ceuta ) Alcântara
-060023,LISBOA (CAMPOLIDE) AV C GULBENKIAN(ALTO),Lisboa ( Campolide ) Avenida C Gulbenkian ( Alto )
+060023,LISBOA (CAMPOLIDE) AV C GULBENKIAN(ALTO),Lisboa ( Campolide ) Avenida Calouste Gulbenkian ( Alto )
 060025,LISBOA (AV JOSÉ MALHOA IEFP),Lisboa ( Avenida José Malhoa Iefp )
 060027,Amoreiras,Amoreiras
 060029,Campolide,Campolide
@@ -2346,9 +2346,9 @@ stop_id,stop_name,tts_stop_name
 060393,CID UNIVERS - AV PROF G PINTO (CANTINA),Cid Univers - Avenida Professor G Pinto ( Cantina )
 060395,AV CEUTA (X) R ARCO CARVALHÃO,Cruzamento Entre Avenida Ceuta E Rua Arco Carvalhão
 060397,LISBOA (AV CEUTA) QTA CABRINHA (PARQUE),Lisboa ( Avenida Ceuta ) Quinta Cabrinha ( Parque )
-060399,LISBOA (AV C GULBENKIAN) EST CAMPOLIDE,Lisboa ( Avenida C Gulbenkian ) Estação Campolide
-060401,LISBOA (CAMPOLIDE) AV C GULBENKIAN,Lisboa ( Campolide ) Avenida C Gulbenkian
-060403,LISBOA (AV C GULBENKIAN) EST CAMPOLIDE,Lisboa ( Avenida C Gulbenkian ) Estação Campolide
+060399,LISBOA (AV C GULBENKIAN) EST CAMPOLIDE,Lisboa ( Avenida Calouste Gulbenkian ) Estação Campolide
+060401,LISBOA (CAMPOLIDE) AV C GULBENKIAN,Lisboa ( Campolide ) Avenida Calouste Gulbenkian
+060403,LISBOA (AV C GULBENKIAN) EST CAMPOLIDE,Lisboa ( Avenida Calouste Gulbenkian ) Estação Campolide
 060405,LISBOA (MARQUÊS POMBAL),Lisboa ( Marquês Pombal )
 060407,R JOAQUIM ANTÓNIO AGUIAR (RITZ),Rua Joaquim António Aguiar ( Ritz )
 060409,ALCÂNTARA - AV CEUTA,Alcântara - Avenida Ceuta
@@ -2375,12 +2375,11 @@ stop_id,stop_name,tts_stop_name
 060450,AV ENG DUARTE PACHECO (POSTO COMBUST),Avenida Engenheiro Duarte Pacheco ( Posto De Combustível )
 060451,CAIS DO SODRÉ - AV 24 DE JULHO,Cais Do Sodré - Avenida 24 De Julho
 060452,CAIS DO SODRÉ - AV 24 DE JULHO,Cais Do Sodré - Avenida 24 De Julho
-060453,SETE RIOS,Sete Rios
-060454,SETE RIOS,Sete Rios
-060455,SETE RIOS,Sete Rios
-060456,SETE RIOS,Sete Rios
-060457,SETE RIOS,Sete Rios
-060458,SETE RIOS,Sete Rios
+060453,Lisboa (Sete Rios) P3,Lisboa ( Sete Rios ) P 3
+060454,Lisboa (Sete Rios) P4,Lisboa ( Sete Rios ) P 4
+060456,Lisboa (Sete Rios) P6,Lisboa ( Sete Rios ) P 6
+060457,Lisboa (Sete Rios) P7,Lisboa ( Sete Rios ) P 7
+060458,Lisboa (Sete Rios) P8,Lisboa ( Sete Rios ) P 8
 060462,Marquês Pombal (Metro),Marquês Pombal ( Metro )
 061200,Campo Grande,Campo Grande
 061205,Aeroporto (Figo Maduro),Aeroporto ( Figo Maduro )
@@ -3069,10 +3068,10 @@ stop_id,stop_name,tts_stop_name
 070881,Alto Mucharros (X) B S Francisco,Cruzamento Entre Alto Mucharros E B São Francisco
 070883,Camarate (Qta Sta Rosa),Camarate ( Quinta Santa Rosa )
 070884,Camarate (Qta Sta Rosa),Camarate ( Quinta Santa Rosa )
-070885,R Eduardo Aug Pinto 2 (Correios),Rua Eduardo Aug Pinto 2 ( Correios )
-070886,R Eduardo Aug Pinto 2 (Correios),Rua Eduardo Aug Pinto 2 ( Correios )
-070887,R Eduardo Aug Pinto 42 (Chafariz),Rua Eduardo Aug Pinto 42 ( Chafariz )
-070888,R Eduardo Aug Pinto 42 (Chafariz),Rua Eduardo Aug Pinto 42 ( Chafariz )
+070885,R Eduardo Aug Pinto 2 (Correios),Rua Eduardo Augusto Pinto 2 ( Correios )
+070886,R Eduardo Aug Pinto 2 (Correios),Rua Eduardo Augusto Pinto 2 ( Correios )
+070887,R Eduardo Aug Pinto 42 (Chafariz),Rua Eduardo Augusto Pinto 42 ( Chafariz )
+070888,R Eduardo Aug Pinto 42 (Chafariz),Rua Eduardo Augusto Pinto 42 ( Chafariz )
 070889,Em 507-1 (Escola) (Camarate),Estrada Municipal 507 - 1 ( Escola ) ( Camarate )
 070890,Em 507-1 (Escola) (Camarate),Estrada Municipal 507 - 1 ( Escola ) ( Camarate )
 070891,R M Deolinda R G Ferreira (Qta Arieira),Rua M Deolinda Rua G Ferreira ( Quinta Arieira )
@@ -3306,7 +3305,7 @@ stop_id,stop_name,tts_stop_name
 071177,R Major Rosa Bastos 13 (Montemor),Rua Major Rosa Bastos 13 ( Montemor )
 071178,R Major Rosa Bastos 13 (Montemor),Rua Major Rosa Bastos 13 ( Montemor )
 071179,R Joaquim Augusto Dias (C Paradela),Rua Joaquim Augusto Dias ( Casal Paradela )
-071181,R Aug Dias Silva 98 (Externato),Rua Aug Dias Silva 98 ( Externato )
+071181,R Aug Dias Silva 98 (Externato),Rua Augusto Dias Silva 98 ( Externato )
 071183,R 4 Outubro (X) R José P Lourenço,Cruzamento Entre Rua 4 Outubro E Rua José P Lourenço
 071184,R 4 Outubro (X) R José P Lourenço,Cruzamento Entre Rua 4 Outubro E Rua José P Lourenço
 071185,R 4 Outubro 8 (C Paradela),Rua 4 Outubro 8 ( Casal Paradela )
@@ -3440,11 +3439,11 @@ stop_id,stop_name,tts_stop_name
 071371,Av 25 Abril (X) R Figueiras,Cruzamento Entre Avenida 25 Abril E Rua Figueiras
 071372,Av 25 Abril (X) R Vinha Grande,Cruzamento Entre Avenida 25 Abril E Rua Vinha Grande
 071373,R Bomb Volunt Camarate 4,Rua Bombeiros Voluntários Camarate 4
-071375,R Fundadores (Az Rego),Rua Fundadores ( Az Rego )
+071375,R Fundadores (Az Rego),Rua Fundadores ( Azinhaga Rego )
 071377,R Cidade Lisboa 6 (C Saude),Rua Cidade Lisboa 6 ( Centro De Saúde )
 071378,R Cidade Lisboa 6 (C Saude),Rua Cidade Lisboa 6 ( Centro De Saúde )
-071379,Est Militar 223 (X) R J Aug Gouveia,Cruzamento Entre Estação Militar 223 E Rua J Aug Gouveia
-071380,Est Militar 223 (X) R J Aug Gouveia,Cruzamento Entre Estação Militar 223 E Rua J Aug Gouveia
+071379,Est Militar 223 (X) R J Aug Gouveia,Cruzamento Entre Estação Militar 223 E Rua J Augusto Gouveia
+071380,Est Militar 223 (X) R J Aug Gouveia,Cruzamento Entre Estação Militar 223 E Rua J Augusto Gouveia
 071381,Av Brasilia 91 (Apelação),Avenida Brasilia 91 ( Apelação )
 071382,Av Brasilia 91 (Apelação),Avenida Brasilia 91 ( Apelação )
 071383,R Liberdade (X) R Alfredo Lima,Cruzamento Entre Rua Liberdade E Rua Alfredo Lima
@@ -3557,7 +3556,7 @@ stop_id,stop_name,tts_stop_name
 071542,Qta Francelha Baixo,Quinta Francelha Baixo
 071545,R Cabo Verde (Prior Velho),Rua Cabo Verde ( Prior Velho )
 071547,R Nampula 4 (Prior Velho),Rua Nampula 4 ( Prior Velho )
-071549,Av Vasco Gama Fern (X) R J Stos Mateus,Cruzamento Entre Avenida Vasco Gama Fernando E Rua J Stos Mateus
+071549,Av Vasco Gama Fern (X) R J Stos Mateus,Cruzamento Entre Avenida Vasco Gama Fernando E Rua J Santos Mateus
 071551,En 374 (Malhapão),Estrada Nacional 374 ( Malhapão )
 071553,En 8 20 (X) Várzea,Cruzamento Entre Estrada Nacional 8 20 E Várzea
 071554,En 8 20 (X) Várzea,Cruzamento Entre Estrada Nacional 8 20 E Várzea
@@ -4845,8 +4844,8 @@ stop_id,stop_name,tts_stop_name
 090145,QUATRO MARCOS X (EM 1023),Cruzamento Entre Quatro Marcos E ( Estrada Municipal 1023 )
 090147,MOITA PALHEIRÃO (EN 379-2 70),Moita Palheirão ( Estrada Nacional 379 - 2 70 )
 090148,MOITA PALHEIRÃO (EN 379-2 70),Moita Palheirão ( Estrada Nacional 379 - 2 70 )
-090149,CARVALHINHO (EM 533-1) X IC 13,Cruzamento Entre Carvalhinho ( Estrada Municipal 533 - 1 ) E Ic 13
-090150,CARVALHINHO (EM 533-1) X IC 13,Cruzamento Entre Carvalhinho ( Estrada Municipal 533 - 1 ) E Ic 13
+090149,CARVALHINHO (EM 533-1) X IC 13,Cruzamento Entre Carvalhinho ( Estrada Municipal 533 - 1 ) E I. C. 13
+090150,CARVALHINHO (EM 533-1) X IC 13,Cruzamento Entre Carvalhinho ( Estrada Municipal 533 - 1 ) E I. C. 13
 090151,CARVALHINHO (EM 533-1) VIV ROQUE,Carvalhinho ( Estrada Municipal 533 - 1 ) Vivenda Roque
 090153,CARVALHINHO (EM533-1)XJUNTO R BL VISTA,Cruzamento Entre Carvalhinho ( Estrada Municipal 533 - 1 ) E Junto Rua Bl Vista
 090154,CARVALHINHO (EM533-1)XJUNTO R BL VISTA,Cruzamento Entre Carvalhinho ( Estrada Municipal 533 - 1 ) E Junto Rua Bl Vista
@@ -4968,8 +4967,8 @@ stop_id,stop_name,tts_stop_name
 090302,BREJOS MOITA (EM 1020) ESC PRIMÁRIA,Brejos Moita ( Estrada Municipal 1020 ) Escola Primária
 090303,BREJOS MOITA (EM 1020)CENTRAL ELECTR,Brejos Moita ( Estrada Municipal 1020 ) Central Electr
 090304,BREJOS MOITA (EM 1020)CENTRAL ELECTR,Brejos Moita ( Estrada Municipal 1020 ) Central Electr
-090305,BREJOS MOITA (EM 1020) X ACESSO IC13,Cruzamento Entre Brejos Moita ( Estrada Municipal 1020 ) E Acesso Ic 13
-090306,BREJOS MOITA (EM 1020) X ACESSO IC13,Cruzamento Entre Brejos Moita ( Estrada Municipal 1020 ) E Acesso Ic 13
+090305,BREJOS MOITA (EM 1020) X ACESSO IC13,Cruzamento Entre Brejos Moita ( Estrada Municipal 1020 ) E Acesso I. C. 13
+090306,BREJOS MOITA (EM 1020) X ACESSO IC13,Cruzamento Entre Brejos Moita ( Estrada Municipal 1020 ) E Acesso I. C. 13
 090307,MOITA (R SANTOS SILVA 15),Moita ( Rua Santos Silva 15 )
 090308,MOITA (R SANTOS SILVA 15),Moita ( Rua Santos Silva 15 )
 090311,CABEÇO VERDE (EN11-2) X FONTE FETO 11,Cruzamento Entre Cabeço Verde ( Estrada Nacional 11 - 2 ) E Fonte Feto 11
@@ -5014,7 +5013,7 @@ stop_id,stop_name,tts_stop_name
 100048,Bº AREIAS (R FERNANDO PESSOA 358A),Bairro Areias ( Rua Fernando Pessoa 358 A )
 100049,Bº AREIAS (AV BARBOSA BOCAGE 1204),Bairro Areias ( Avenida Barbosa Bocage 1204 )
 100050,Bº AREIAS (AV BARBOSA BOCAGE 1204),Bairro Areias ( Avenida Barbosa Bocage 1204 )
-100051,Bº AREIAS (R ANT NOBRE) JTO PÇ LIBERDADE,Bairro Areias ( Rua António Nobre ) Jto Praça Liberdade
+100051,Bº AREIAS (R ANT NOBRE) JTO PÇ LIBERDADE,Bairro Areias ( Rua António Nobre ) Junto Praça Liberdade
 100053,Bº AREIAS (PÇA LIBERDADE) PQUE INFANTIL,Bairro Areias ( Praça Liberdade ) Parque Infantil
 100055,Bº AREIAS (R LEITÃO BARROS) ESCOLA,Bairro Areias ( Rua Leitão Barros ) Escola
 100056,Bº AREIAS (R LEITÃO BARROS) ESCOLA,Bairro Areias ( Rua Leitão Barros ) Escola
@@ -5023,8 +5022,8 @@ stop_id,stop_name,tts_stop_name
 100059,Bº AREIAS (AV BARBOSA BOCAGE 444),Bairro Areias ( Avenida Barbosa Bocage 444 )
 100060,Bº AREIAS (AV BARBOSA BOCAGE 444),Bairro Areias ( Avenida Barbosa Bocage 444 )
 100061,Bº ESTEVAL (AV AFONSO V 67) TERMINAL,Bairro Esteval ( Avenida Afonso Quinto 67 ) Terminal
-100063,Bº ESTEVAL (R EÇA QUEIROZ)R J GOMES FERR,Bairro Esteval ( Rua Eça Queiroz ) Rua J Gomes Ferr
-100064,Bº ESTEVAL (R EÇA QUEIROZ)R J GOMES FERR,Bairro Esteval ( Rua Eça Queiroz ) Rua J Gomes Ferr
+100063,Bº ESTEVAL (R EÇA QUEIROZ)R J GOMES FERR,Bairro Esteval ( Rua Eça Queiroz ) Rua J Gomes Ferreira
+100064,Bº ESTEVAL (R EÇA QUEIROZ)R J GOMES FERR,Bairro Esteval ( Rua Eça Queiroz ) Rua J Gomes Ferreira
 100065,Bº ESTEVAL (R JOSÉ MALHOA 58),Bairro Esteval ( Rua José Malhoa 58 )
 100066,Bº ESTEVAL (R JOSÉ MALHOA 58),Bairro Esteval ( Rua José Malhoa 58 )
 100067,Bº ESTEVAL (R ANTONIO C F TRINDADE 152),Bairro Esteval ( Rua Antonio C F Trindade 152 )
@@ -5143,8 +5142,8 @@ stop_id,stop_name,tts_stop_name
 100210,FOROS BOAVISTA,Foros Boavista
 100211,FOROS BOAVISTA,Foros Boavista
 100212,FOROS BOAVISTA,Foros Boavista
-100213,FOROS BOAVISTA (ESTR CIRCUNV) VIVENDA,Foros Boavista ( Estrada Circunv ) Vivenda
-100214,FOROS BOAVISTA (ESTR CIRCUNV) VIVENDA,Foros Boavista ( Estrada Circunv ) Vivenda
+100213,FOROS BOAVISTA (ESTR CIRCUNV) VIVENDA,Foros Boavista ( Estrada Circunvalação ) Vivenda
+100214,FOROS BOAVISTA (ESTR CIRCUNV) VIVENDA,Foros Boavista ( Estrada Circunvalação ) Vivenda
 100215,FOROS BOAVISTA ( MONTE SERÔDIOS),Foros Boavista ( Monte Serôdios )
 100216,FOROS BOAVISTA ( MONTE SERÔDIOS),Foros Boavista ( Monte Serôdios )
 100217,FOROS BOAVISTA (QTA VERÍSSIMOS),Foros Boavista ( Quinta Veríssimos )
@@ -5563,7 +5562,7 @@ stop_id,stop_name,tts_stop_name
 110295,R Alexandre Braga 4 D (Farmácia),Rua Alexandre Braga 4 D ( Farmácia )
 110297,R Augusto Gil 16 (Pombais),Rua Augusto Gil 16 ( Pombais )
 110299,R Paiã 136 (Patameiras),Rua Paiã 136 ( Patameiras )
-110301,Av Magalhães Cout (X) Aug Vasconcelos,Cruzamento Entre Avenida Magalhães Cout E Aug Vasconcelos
+110301,Av Magalhães Cout (X) Aug Vasconcelos,Cruzamento Entre Avenida Magalhães Coutinho E Augusto Vasconcelos
 110303,R Cerca 22 (Pedernais),Rua Cerca 22 ( Pedernais )
 110305,R 8 Março (Pedernais),Rua 8 Março ( Pedernais )
 110307,R João Augusto Gouveia 3 (Famões),Rua João Augusto Gouveia 3 ( Famões )
@@ -5835,7 +5834,7 @@ stop_id,stop_name,tts_stop_name
 110669,Av Miguel Torga 2,Avenida Miguel Torga 2
 110671,Av Miguel Torga (Igreja),Avenida Miguel Torga ( Igreja )
 110673,Sr Roubado (Metro),Santa Rua Roubado ( Metro )
-110675,B Comendadeiras) (X) R Faust Freitas,Cruzamento Entre Bairro Comendadeiras ) E Rua Faust Freitas
+110675,B Comendadeiras) (X) R Faust Freitas,Cruzamento Entre Bairro Comendadeiras ) E Rua Faustino Freitas
 110677,Av Fonte Luminosa (Rotunda),Avenida Fonte Luminosa ( Rotunda )
 110679,R Major João Luís Moura 156,Rua Major João Luís Moura 156
 110681,R Major João Luís Moura (P Combustível),Rua Major João Luís Moura ( Posto De Combustível )
@@ -5862,8 +5861,8 @@ stop_id,stop_name,tts_stop_name
 110710,R M Gomes Costa (Famões),Rua M Gomes Costa ( Famões )
 110711,R Mal Gomes Costa 93 (B Comendadeiras),Rua Mal Gomes Costa 93 ( Bairro Comendadeiras )
 110713,Av D Dinis 1,Avenida Dom Dinis 1
-110715,Av Dr Aug Pais Martins (C Comercial),Avenida Doutor Aug Pais Martins ( Centro Comercial )
-110716,Av Dr Aug Pais Martins (C Comercial),Avenida Doutor Aug Pais Martins ( Centro Comercial )
+110715,Av Dr Aug Pais Martins (C Comercial),Avenida Doutor Augusto Pais Martins ( Centro Comercial )
+110716,Av Dr Aug Pais Martins (C Comercial),Avenida Doutor Augusto Pais Martins ( Centro Comercial )
 110717,Av José Francisco Guerreiro (Escola),Avenida José Francisco Guerreiro ( Escola )
 110718,Av José Francisco Guerreiro (Escola),Avenida José Francisco Guerreiro ( Escola )
 110719,Av J Francisco Guerreiro (P Combutível),Avenida J Francisco Guerreiro ( Posto De Combutível )
@@ -6301,7 +6300,7 @@ stop_id,stop_name,tts_stop_name
 120445,R Ferreira Lapa 1,Rua Ferreira Lapa 1
 120447,R Ferreira Lapa 2,Rua Ferreira Lapa 2
 120448,R Ferreira Lapa 2,Rua Ferreira Lapa 2
-120449,R Qta Pinheiro (Fte X) R Alto Montijo,Cruzamento Entre Rua Quinta Pinheiro ( Frente E ) Rua Alto Montijo
+120449,R Qta Pinheiro (Fte X) R Alto Montijo,Rua Quinta Pinheiro ( Frente Cruzamento ) Rua Alto Montijo
 120450,R Qta Pinheiro (X) R Alto Montijo,Cruzamento Entre Rua Quinta Pinheiro E Rua Alto Montijo
 120451,R Dr Vitor de Sá Machado 3,Rua Doutor Vitor De Sá Machado 3
 120453,R Ant Navarro (X) R Ant Gomes Leal,Cruzamento Entre Rua António Navarro E Rua António Gomes Leal
@@ -6397,8 +6396,8 @@ stop_id,stop_name,tts_stop_name
 120572,Igreja Nossa Senhora da Piedade,Igreja Nossa Senhora Da Piedade
 120573,R Moinho,Rua Moinho
 120574,R Moinho,Rua Moinho
-120575,Estr Leceia (Fte X) Caminho Serra,Cruzamento Entre Estrada Leceia ( Frente E ) Caminho Serra
-120576,Estr Leceia (Fte X) Caminho Serra,Cruzamento Entre Estrada Leceia ( Frente E ) Caminho Serra
+120575,Estr Leceia (Fte X) Caminho Serra,Estrada Leceia ( Frente Cruzamento ) Caminho Serra
+120576,Estr Leceia (Fte X) Caminho Serra,Estrada Leceia ( Frente Cruzamento ) Caminho Serra
 120577,Estr Caminho da Serra (Simas),Estrada Caminho Da Serra ( Simas )
 120578,Estr Caminho da Serra (Simas),Estrada Caminho Da Serra ( Simas )
 120579,R Coop Pessoal Fábrica Pólvora,Rua Cooperativa Pessoal Fábrica Pólvora
@@ -6452,8 +6451,8 @@ stop_id,stop_name,tts_stop_name
 120641,R António Sena da Silva,Rua António Sena Da Silva
 120643,R Augusto Sousa Lobo (X) R Maluda,Cruzamento Entre Rua Augusto Sousa Lobo E Rua Maluda
 120644,R Augusto Sousa Lobo (X) R Maluda,Cruzamento Entre Rua Augusto Sousa Lobo E Rua Maluda
-120645,R Aug Sousa Lobo (X) Al Cal Gulbenk,Cruzamento Entre Rua Aug Sousa Lobo E Alameda Cal Gulbenk
-120646,R Aug Sousa Lobo (X) Al Cal Gulbenk,Cruzamento Entre Rua Aug Sousa Lobo E Alameda Cal Gulbenk
+120645,R Aug Sousa Lobo (X) Al Cal Gulbenk,Cruzamento Entre Rua Augusto Sousa Lobo E Alameda Calouste Gulbenkian
+120646,R Aug Sousa Lobo (X) Al Cal Gulbenk,Cruzamento Entre Rua Augusto Sousa Lobo E Alameda Calouste Gulbenkian
 120647,R S Gabriel 11A,Rua São Gabriel 11 A
 120648,R S Gabriel 18,Rua São Gabriel 18
 120649,Alto Lagoal (B Chelag),Alto Lagoal ( Bairro Chelag )
@@ -6544,7 +6543,7 @@ stop_id,stop_name,tts_stop_name
 120775,R Com Germano Dias 2,Rua Com Germano Dias 2
 120777,R Com Germano Dias (X) Av Copacabana,Cruzamento Entre Rua Com Germano Dias E Avenida Copacabana
 120779,Av Copacabana (X) Jaime Cortesão,Cruzamento Entre Avenida Copacabana E Jaime Cortesão
-120781,Av Emb Aug Castro (X) R Junção bem,Cruzamento Entre Avenida Emb Aug Castro E Rua Junção Bem
+120781,Av Emb Aug Castro (X) R Junção bem,Cruzamento Entre Avenida Embaixador Augusto Castro E Rua Junção Bem
 120783,Lgo Avião Lusitania 7,Largo Avião Lusitania 7
 120787,Oeiras (Estação Norte),Oeiras ( Estação Norte )
 120789,Oeiras (Piscina Oceânica),Oeiras ( Piscina Oceânica )
@@ -6627,7 +6626,7 @@ stop_id,stop_name,tts_stop_name
 120906,Estr Murganhal (Escola),Estrada Murganhal ( Escola )
 120907,Murganhal (Chafariz),Murganhal ( Chafariz )
 120908,Murganhal (Chafariz),Murganhal ( Chafariz )
-120909,Estr Cacém (Fte X) R Qta Moura,Cruzamento Entre Estrada Cacém ( Frente E ) Rua Quinta Moura
+120909,Estr Cacém (Fte X) R Qta Moura,Estrada Cacém ( Frente Cruzamento ) Rua Quinta Moura
 120910,Estr Cacém (X) R Qta Moura,Cruzamento Entre Estrada Cacém E Rua Quinta Moura
 120911,R da Pedreira Italiana,Rua Da Pedreira Italiana
 120913,Pça Dionísio Matias (Mercado),Praça Dionísio Matias ( Mercado )
@@ -6691,7 +6690,7 @@ stop_id,stop_name,tts_stop_name
 120990,R Quinta das Estrangeiras 20,Rua Quinta Das Estrangeiras 20
 120991,R S Jose 119,Rua São Jose 119
 120992,R S Jose Fte 119,Rua São Jose Frente 119
-120993,R Augusta (Fte X) R S José,Cruzamento Entre Rua Augusta ( Frente E ) Rua São José
+120993,R Augusta (Fte X) R S José,Rua Augusta ( Frente Cruzamento ) Rua São José
 120994,R Augusta (X) R S José,Cruzamento Entre Rua Augusta E Rua São José
 120995,Talaíde (B Naveg),Talaíde ( Bairro Naveg )
 120997,R Diogo Lopes Sequeira 77,Rua Diogo Lopes Sequeira 77
@@ -6833,7 +6832,7 @@ stop_id,stop_name,tts_stop_name
 121189,R D Filipa Lencastre 10,Rua Dona Filipa Lencastre 10
 121191,R Cândido dos Reis - PSP,Rua Cândido Dos Reis - Polícia
 121193,Av Moçambique - (PSP),Avenida Moçambique - ( Polícia )
-121195,Av Embaixador Aug Castro 18 D,Avenida Embaixador Aug Castro 18 D
+121195,Av Embaixador Aug Castro 18 D,Avenida Embaixador Augusto Castro 18 D
 121197,Av República 15,Avenida República 15
 121198,Av República 15,Avenida República 15
 121199,R das Escolas - Escola,Rua Das Escolas - Escola
@@ -6853,12 +6852,12 @@ stop_id,stop_name,tts_stop_name
 121223,R da Mina X Estr Quinta Agronómica,Cruzamento Entre Rua Da Mina E Estrada Quinta Agronómica
 121225,Av República (Pingo Doce),Avenida República ( Pingo Doce )
 121226,Av República (Supermercado),Avenida República ( Supermercado )
-121227,Av D José I (Qta do Barão),Avenida Dom José I ( Quinta Do Barão )
-121228,Av D José I (Qta do Barão),Avenida Dom José I ( Quinta Do Barão )
-121229,Av D José I fte 171A,Avenida Dom José I Frente 171 A
-121230,Av D José I fte 171A,Avenida Dom José I Frente 171 A
-121231,Av D José I 29 (C C Palmeiras),Avenida Dom José I 29 ( Centro Comercial Palmeiras )
-121232,Av D José I 29 (C C Palmeiras),Avenida Dom José I 29 ( Centro Comercial Palmeiras )
+121227,Av D José I (Qta do Barão),Avenida Dom José Primeiro ( Quinta Do Barão )
+121228,Av D José I (Qta do Barão),Avenida Dom José Primeiro ( Quinta Do Barão )
+121229,Av D José I fte 171A,Avenida Dom José Primeiro Frente 171 A
+121230,Av D José I fte 171A,Avenida Dom José Primeiro Frente 171 A
+121231,Av D José I 29 (C C Palmeiras),Avenida Dom José Primeiro 29 ( Centro Comercial Palmeiras )
+121232,Av D José I 29 (C C Palmeiras),Avenida Dom José Primeiro 29 ( Centro Comercial Palmeiras )
 121233,R Dr José Carlos Moreira 8,Rua Doutor José Carlos Moreira 8
 121234,R Dr José Carlos Moreira 8,Rua Doutor José Carlos Moreira 8
 121235,Oeiras (Estação Norte),Oeiras ( Estação Norte )
@@ -6997,16 +6996,16 @@ stop_id,stop_name,tts_stop_name
 130096,BREJOS DO ASSA CCI-6121,Brejos Do Assa Cci- 6121
 130097,BREJOS DO ASSA,Brejos Do Assa
 130098,BREJOS DO ASSA,Brejos Do Assa
-130099,BREJOS ASSA (m542 22),Brejos Assa ( M 542 22 )
-130100,BREJOS ASSA (m542 22),Brejos Assa ( M 542 22 )
-130101,BREJOS ASSA (M542 X R MANUEL SIMÕES),Cruzamento Entre Brejos Assa ( M 542 E Rua Manuel Simões )
-130102,BREJOS ASSA (M542 X R MANUEL SIMÕES),Cruzamento Entre Brejos Assa ( M 542 E Rua Manuel Simões )
+130099,BREJOS ASSA (m542 22),Brejos Assa ( Estrada Municipal 542 22 )
+130100,BREJOS ASSA (m542 22),Brejos Assa ( Estrada Municipal 542 22 )
+130101,BREJOS ASSA (M542 X R MANUEL SIMÕES),Cruzamento Entre Brejos Assa ( Estrada Municipal 542 E Rua Manuel Simões )
+130102,BREJOS ASSA (M542 X R MANUEL SIMÕES),Cruzamento Entre Brejos Assa ( Estrada Municipal 542 E Rua Manuel Simões )
 130103,ALGERUZ ( POSTO SAÚDE),Algeruz ( Posto Saúde )
 130104,ALGERUZ ( POSTO SAÚDE),Algeruz ( Posto Saúde )
 130105,ALGERUZ (KARTODROMO INTERN PALMELA),Algeruz ( Kartodromo Intern Palmela )
 130106,ALGERUZ (KARTODROMO INTERN PALMELA),Algeruz ( Kartodromo Intern Palmela )
-130107,ALGERUZ (M542 POSTO COMBUSTIVEL),Algeruz ( M 542 Posto De Combustivel )
-130108,ALGERUZ (M542 POSTO COMBUSTIVEL),Algeruz ( M 542 Posto De Combustivel )
+130107,ALGERUZ (M542 POSTO COMBUSTIVEL),Algeruz ( Estrada Municipal 542 Posto De Combustivel )
+130108,ALGERUZ (M542 POSTO COMBUSTIVEL),Algeruz ( Estrada Municipal 542 Posto De Combustivel )
 130109,ALGERUZ (R PRINCIPAL) FÁBRICA MARCÔA,Algeruz ( Rua Principal ) Fábrica Marcôa
 130111,ALGERUZ (ESTR LAGAMEÇAS X R 5 OUTUBRO),Cruzamento Entre Algeruz ( Estrada Lagameças E Rua 5 Outubro )
 130112,ALGERUZ (ESTR LAGAMEÇAS X R 5 OUTUBRO),Cruzamento Entre Algeruz ( Estrada Lagameças E Rua 5 Outubro )
@@ -7064,8 +7063,8 @@ stop_id,stop_name,tts_stop_name
 130166,POCEIRÃO (EM 533) X R GASPAR SILVA,Cruzamento Entre Poceirão ( Estrada Municipal 533 ) E Rua Gaspar Silva
 130167,LAGAMEÇAS (EM 533) X R CARDOSOS,Cruzamento Entre Lagameças ( Estrada Municipal 533 ) E Rua Cardosos
 130168,LAGAMEÇAS (EM 533) X R CARDOSOS,Cruzamento Entre Lagameças ( Estrada Municipal 533 ) E Rua Cardosos
-130169,LAGAMEÇAS (EM 533) JTO CTT,Lagameças ( Estrada Municipal 533 ) Jto Correios
-130170,LAGAMEÇAS (EM 533) JTO CTT,Lagameças ( Estrada Municipal 533 ) Jto Correios
+130169,LAGAMEÇAS (EM 533) JTO CTT,Lagameças ( Estrada Municipal 533 ) Junto Correios
+130170,LAGAMEÇAS (EM 533) JTO CTT,Lagameças ( Estrada Municipal 533 ) Junto Correios
 130171,LAGAMEÇAS (EM 533) X R JOÃO P MONTEIRO,Cruzamento Entre Lagameças ( Estrada Municipal 533 ) E Rua João P Monteiro
 130172,LAGAMEÇAS (EM 533) X R JOÃO P MONTEIRO,Cruzamento Entre Lagameças ( Estrada Municipal 533 ) E Rua João P Monteiro
 130173,LAGAMEÇAS (EM 533) X CAJADOS,Cruzamento Entre Lagameças ( Estrada Municipal 533 ) E Cajados
@@ -7172,18 +7171,18 @@ stop_id,stop_name,tts_stop_name
 130290,EM1040 (R ESPANHOIS)XR JOAQ R AZENHA,Cruzamento Entre Estrada Municipal 1040 ( Rua Espanhois ) E Rua Joaquim Rua Azenha
 130291,AGUALVA CIMA X R GOMES LOPES,Cruzamento Entre Agualva Cima E Rua Gomes Lopes
 130292,AGUALVA CIMA X R GOMES LOPES,Cruzamento Entre Agualva Cima E Rua Gomes Lopes
-130293,AGUALVA CIM(R ARTURES)XR AÇUDE MANETAS,Cruzamento Entre Agualva Cim ( Rua Artures ) E Rua Açude Manetas
-130294,AGUALVA CIM(R ARTURES)XR AÇUDE MANETAS,Cruzamento Entre Agualva Cim ( Rua Artures ) E Rua Açude Manetas
-130295,AGUALVA CIM(R J LOUREI)XR JOAQ R RILHÓ,Cruzamento Entre Agualva Cim ( Rua J Lourei ) E Rua Joaquim Rua Rilhó
-130296,AGUALVA CIM(R J LOUREI)XR JOAQ R RILHÓ,Cruzamento Entre Agualva Cim ( Rua J Lourei ) E Rua Joaquim Rua Rilhó
-130297,AGUALVA CIMXANTES PONTE E R ABEL FERR,Cruzamento Entre Agualva Cim E Antes Ponte E Rua Abel Ferr
-130298,AGUALVA CIMXANTES PONTE E R ABEL FERR,Cruzamento Entre Agualva Cim E Antes Ponte E Rua Abel Ferr
+130293,AGUALVA CIM(R ARTURES)XR AÇUDE MANETAS,Cruzamento Entre Agualva Cima ( Rua Artures ) E Rua Açude Manetas
+130294,AGUALVA CIM(R ARTURES)XR AÇUDE MANETAS,Cruzamento Entre Agualva Cima ( Rua Artures ) E Rua Açude Manetas
+130295,AGUALVA CIM(R J LOUREI)XR JOAQ R RILHÓ,Cruzamento Entre Agualva Cima ( Rua J Loureiro ) E Rua Joaquim Rua Rilhó
+130296,AGUALVA CIM(R J LOUREI)XR JOAQ R RILHÓ,Cruzamento Entre Agualva Cima ( Rua J Loureiro ) E Rua Joaquim Rua Rilhó
+130297,AGUALVA CIMXANTES PONTE E R ABEL FERR,Agualva Cima Cruzamento Antes Ponte E Rua Abel Ferreira
+130298,AGUALVA CIMXANTES PONTE E R ABEL FERR,Agualva Cima Cruzamento Antes Ponte E Rua Abel Ferreira
 130299,AGUALVA CIMA X R JOAQUIM ROMÃO,Cruzamento Entre Agualva Cima E Rua Joaquim Romão
 130300,AGUALVA CIMA X R JOAQUIM ROMÃO,Cruzamento Entre Agualva Cima E Rua Joaquim Romão
 130301,LAGAMEÇAS X R JOSÉ GARCIA SILVA,Cruzamento Entre Lagameças E Rua José Garcia Silva
 130303,LAGAMEÇAS X R CARDOSOS,Cruzamento Entre Lagameças E Rua Cardosos
 130305,LAGAMEÇAS (CM1040 510),Lagameças ( Caminho Municipal 1040 510 )
-130307,LAGAMEÇAS XANTES SUPER CTRO M P MARÇAL,Lagameças Xantes Super Ctro M P Marçal
+130307,LAGAMEÇAS XANTES SUPER CTRO M P MARÇAL,Lagameças Cruzamento Antes Super Centro M P Marçal
 130309,CAJADOS (R 25 ABRIL) DEPOIS PONTE AE,Cajados ( Rua 25 Abril ) Depois Ponte Auto-estrada
 130310,CAJADOS (R 25 ABRIL) DEPOIS PONTE AE,Cajados ( Rua 25 Abril ) Depois Ponte Auto-estrada
 130311,CAJADOS (R 25 ABRIL 112A),Cajados ( Rua 25 Abril 112 A )
@@ -7199,7 +7198,7 @@ stop_id,stop_name,tts_stop_name
 130323,ALGERUZ GARE (R JOSÉ PEIXOTO 1),Algeruz Gare ( Rua José Peixoto 1 )
 130325,ALGERUZ (FTE ANTIGA ESTAÇÃO CP),Algeruz ( Frente Antiga Estação Cp )
 130327,EN 10 (MOVALPA) VALE ABRUNHEIRA,Estrada Nacional 10 ( Movalpa ) Vale Abrunheira
-130329,LAGAMEÇAS XANTES SUPER CTRO M P MARÇAL,Lagameças Xantes Super Ctro M P Marçal
+130329,LAGAMEÇAS XANTES SUPER CTRO M P MARÇAL,Lagameças Cruzamento Antes Super Centro M P Marçal
 130331,AGUALVA CIMA (EN5)X R HUMBERTO CARDOSO,Cruzamento Entre Agualva Cima ( Estrada Nacional 5 ) E Rua Humberto Cardoso
 130333,QTA DO ANJO (RUA DOS LUSIADAS),Quinta Do Anjo ( Rua Dos Lusiadas )
 130335,QTA DO ANJO (AVENIDA DE JÁVEA),Quinta Do Anjo ( Avenida De Jávea )
@@ -7242,7 +7241,7 @@ stop_id,stop_name,tts_stop_name
 130397,AV GARCIA DA HORTA (X) R TRINDADE COELHO,Cruzamento Entre Avenida Garcia Da Horta E Rua Trindade Coelho
 130398,AV GARCIA DA HORTA (X) R TRINDADE COELHO,Cruzamento Entre Avenida Garcia Da Horta E Rua Trindade Coelho
 130399,AV GARCIA HORTA (X) R RAINHA STA ISABEL,Cruzamento Entre Avenida Garcia Horta E Rua Rainha Santa Isabel
-130400,M 1029 (X) R SOBRAL-BAIRRO SOUSA CINTRA,Cruzamento Entre M 1029 E Rua Sobral-bairro Sousa Cintra
+130400,M 1029 (X) R SOBRAL-BAIRRO SOUSA CINTRA,Cruzamento Entre Caminho Municipal 1029 E Rua Sobral-bairro Sousa Cintra
 130401,OLHOS ÁGUA (EN 379-2) X R LUIS CAMÕES,Cruzamento Entre Olhos Água ( Estrada Nacional 379 - 2 ) E Rua Luis Camões
 130402,OLHOS ÁGUA (EN 379-2) X R LUIS CAMÕES,Cruzamento Entre Olhos Água ( Estrada Nacional 379 - 2 ) E Rua Luis Camões
 130403,LAGOINHA (EN379-2) X ESTR QTA ANJO,Cruzamento Entre Lagoinha ( Estrada Nacional 379 - 2 ) E Estrada Quinta Anjo
@@ -7419,8 +7418,8 @@ stop_id,stop_name,tts_stop_name
 130606,ESTR RESTAURADORES CONCELHO PALMELA 56,Estrada Restauradores Concelho Palmela 56
 130607,LAGOINHA (EN 379-2 X AV LUSIADAS),Cruzamento Entre Lagoinha ( Estrada Nacional 379 - 2 E Avenida Lusiadas )
 130608,LAGOINHA (EN 379-2 X AV LUSIADAS),Cruzamento Entre Lagoinha ( Estrada Nacional 379 - 2 E Avenida Lusiadas )
-130609,LAGOINHA (EN379-2 XAV MAL COSTA GOMES),Lagoinha ( Estrada Nacional 379 - 2 Xav Mal Costa Gomes )
-130610,LAGOINHA (EN379-2 XAV MAL COSTA GOMES),Lagoinha ( Estrada Nacional 379 - 2 Xav Mal Costa Gomes )
+130609,LAGOINHA (EN379-2 XAV MAL COSTA GOMES),Lagoinha ( Estrada Nacional 379 - 2 Xavier Mal Costa Gomes )
+130610,LAGOINHA (EN379-2 XAV MAL COSTA GOMES),Lagoinha ( Estrada Nacional 379 - 2 Xavier Mal Costa Gomes )
 130611,LAGOINHA (EN 379-2) R PINHEIROS,Lagoinha ( Estrada Nacional 379 - 2 ) Rua Pinheiros
 130612,LAGOINHA (EN 379-2) R PINHEIROS,Lagoinha ( Estrada Nacional 379 - 2 ) Rua Pinheiros
 130613,VALE TOURO (EN 379-2) VIV CARVALHO,Vale Touro ( Estrada Nacional 379 - 2 ) Vivenda Carvalho
@@ -7513,7 +7512,7 @@ stop_id,stop_name,tts_stop_name
 130713,ALGERUZ (R PRINCIPAL) FÁBRICA MARCÔA,Algeruz ( Rua Principal ) Fábrica Marcôa
 130714,Bº ALENTEJANO (R PESSEGUEIROS),Bairro Alentejano ( Rua Pessegueiros )
 130715,Bº MARINHEIROS (R RAMIRO SILVA GRILO),Bairro Marinheiros ( Rua Ramiro Silva Grilo )
-130716,LAGAMEÇAS XANTES SUPER CTRO M P MARÇAL,Lagameças Xantes Super Ctro M P Marçal
+130716,LAGAMEÇAS XANTES SUPER CTRO M P MARÇAL,Lagameças Cruzamento Antes Super Centro M P Marçal
 130717,LAGAMEÇAS (CM1040 510),Lagameças ( Caminho Municipal 1040 510 )
 130718,LAGAMEÇAS X R CARDOSOS,Cruzamento Entre Lagameças E Rua Cardosos
 130719,LAGAMEÇAS X R JOSÉ GARCIA SILVA,Cruzamento Entre Lagameças E Rua José Garcia Silva
@@ -7544,8 +7543,8 @@ stop_id,stop_name,tts_stop_name
 130751,MARQUESA (RUA 25) ROTUNDA,Marquesa ( Rua 25 ) Rotunda
 130752,MARQUESA (RUA 30),Marquesa ( Rua 30 )
 130753,MARQUESA (RUA 30),Marquesa ( Rua 30 )
-130755,ALGERUZ (M542 STAND AUTO),Algeruz ( M 542 Stand Auto )
-130756,ALGERUZ (M542 STAND AUTO),Algeruz ( M 542 Stand Auto )
+130755,ALGERUZ (M542 STAND AUTO),Algeruz ( Estrada Municipal 542 Stand Auto )
+130756,ALGERUZ (M542 STAND AUTO),Algeruz ( Estrada Municipal 542 Stand Auto )
 130801,PALMELA (TERMINAL - P1),Palmela ( Terminal - P 1 )
 130802,PALMELA (TERMINAL - P2),Palmela ( Terminal - P 2 )
 130803,PALMELA (TERMINAL - P3),Palmela ( Terminal - P 3 )
@@ -8146,8 +8145,8 @@ stop_id,stop_name,tts_stop_name
 140752,VALE MILHAÇOS (AV LIBERDADE 117),Vale Milhaços ( Avenida Liberdade 117 )
 140753,MIRATEJO (R EÇA QUEIROZ 4) CERCISA,Miratejo ( Rua Eça Queiroz 4 ) Cercisa
 140755,QTA BRASILEIRO (R PALMEIRAS 12),Quinta Brasileiro ( Rua Palmeiras 12 )
-140757,CRUZ PAU R INF D AUG 82) C C BELSUL,Cruz Pau Rua Infante Dom Aug 82 ) Centro Comercial Belsul
-140758,CRUZ PAU R INF D AUG 82) C C BELSUL,Cruz Pau Rua Infante Dom Aug 82 ) Centro Comercial Belsul
+140757,CRUZ PAU R INF D AUG 82) C C BELSUL,Cruz Pau Rua Infante Dom Augusto 82 ) Centro Comercial Belsul
+140758,CRUZ PAU R INF D AUG 82) C C BELSUL,Cruz Pau Rua Infante Dom Augusto 82 ) Centro Comercial Belsul
 140759,QTA PRINCESA (QTA PAÇO N17A),Quinta Princesa ( Quinta Paço Número 17 A )
 140760,QTA PRINCESA (QTA PAÇO N17A),Quinta Princesa ( Quinta Paço Número 17 A )
 140761,QTA PRINCESA (ARIFA) R CID MAPUTO,Quinta Princesa ( Arifa ) Rua Cid Maputo
@@ -8205,8 +8204,8 @@ stop_id,stop_name,tts_stop_name
 140824,FLOR MATA (EN378-R 23 JUL 1933) QTA PALM,Flor Mata ( Estrada Nacional 378 - Rua 23 Julho 1933 ) Quinta Palm
 140825,FLOR MATA (EN378) POSTO ABAST,Flor Mata ( Estrada Nacional 378 ) Posto De Abastecimento
 140826,FLOR MATA (EN378) POSTO ABAST,Flor Mata ( Estrada Nacional 378 ) Posto De Abastecimento
-140827,FLOR MATA (EN378) R M AUG BORD PINH N34,Flor Mata ( Estrada Nacional 378 ) Rua M Aug Bord Pinh Número 34
-140828,FLOR MATA (EN378) R M AUG BORD PINH N34,Flor Mata ( Estrada Nacional 378 ) Rua M Aug Bord Pinh Número 34
+140827,FLOR MATA (EN378) R M AUG BORD PINH N34,Flor Mata ( Estrada Nacional 378 ) Rua M Augusto Bordalo Pinheiro Número 34
+140828,FLOR MATA (EN378) R M AUG BORD PINH N34,Flor Mata ( Estrada Nacional 378 ) Rua M Augusto Bordalo Pinheiro Número 34
 140829,FLOR MATA(EN378) ADEGA LAVR(PARAL R EDP),Flor Mata ( Estrada Nacional 378 ) Adega Lavr ( Paralelo Rua E. D. P. )
 140831,FERNÃO FERRO EN378 (X) R COLMEIAS,Cruzamento Entre Fernão Ferro Estrada Nacional 378 E Rua Colmeias
 140832,FERNÃO FERRO EN378 (X) R COLMEIAS,Cruzamento Entre Fernão Ferro Estrada Nacional 378 E Rua Colmeias
@@ -8214,8 +8213,8 @@ stop_id,stop_name,tts_stop_name
 140834,FERNÃO FERRO EN378 (X) R CAETANO LIMA,Cruzamento Entre Fernão Ferro Estrada Nacional 378 E Rua Caetano Lima
 140835,FERNÃO FERRO (EN 378) ARTESANATO,Fernão Ferro ( Estrada Nacional 378 ) Artesanato
 140836,FERNÃO FERRO (EN 378) ARTESANATO,Fernão Ferro ( Estrada Nacional 378 ) Artesanato
-140837,FERN FERRO (EN378) ESCADINHAS (R ESCOLA),Fernando Ferro ( Estrada Nacional 378 ) Escadinhas ( Rua Escola )
-140838,FERN FERRO (EN378) ESCADINHAS (R ESCOLA),Fernando Ferro ( Estrada Nacional 378 ) Escadinhas ( Rua Escola )
+140837,FERN FERRO (EN378) ESCADINHAS (R ESCOLA),Fernão Ferro ( Estrada Nacional 378 ) Escadinhas ( Rua Escola )
+140838,FERN FERRO (EN378) ESCADINHAS (R ESCOLA),Fernão Ferro ( Estrada Nacional 378 ) Escadinhas ( Rua Escola )
 140839,FERNÃO FERRO (AV 23 JULHO 1833 6),Fernão Ferro ( Avenida 23 Julho 1833 6 )
 140840,FERNÃO FERRO (AV 23 JULHO 1833 6),Fernão Ferro ( Avenida 23 Julho 1833 6 )
 140841,FERNÃO FERRO (EN 378)RESTAURANTE PARAGEM,Fernão Ferro ( Estrada Nacional 378 ) Restaurante Paragem
@@ -8346,19 +8345,19 @@ stop_id,stop_name,tts_stop_name
 150097,SAMPAIO (EN 379 (X) CALÇ OLIVEIRAS),Cruzamento Entre Sampaio ( Estrada Nacional 379 E Calçada Oliveiras )
 150099,CASAL SAPO (AV 10 JUNHO) SUPERMERCADO,Casal Sapo ( Avenida 10 Junho ) Supermercado
 150101,ALDEIA MECO (R PRAIA M BAIXO) CENTRO,Aldeia Meco ( Rua Praia M Baixo ) Centro
-150102,A MECO (R PRAIA M BAIXO) CENTRO,A Meco ( Rua Praia M Baixo ) Centro
+150102,A MECO (R PRAIA M BAIXO) CENTRO,Aldeia Do Meco ( Rua Praia M Baixo ) Centro
 150103,ALDEIA MECO (R PRAIA MOINHO BAIXO 20),Aldeia Meco ( Rua Praia Moinho Baixo 20 )
-150104,A MECO (R PRAIA MOINHO BAIXO 20),A Meco ( Rua Praia Moinho Baixo 20 )
-150105,A MECO (R PRAIA MOINHO BAIXO 46),A Meco ( Rua Praia Moinho Baixo 46 )
-150106,A MECO (R PRAIA MOINHO BAIXO 46),A Meco ( Rua Praia Moinho Baixo 46 )
-150107,A MECO (R PRAIA M BAIXO X R CURVAIS),Cruzamento Entre A Meco ( Rua Praia M Baixo E Rua Curvais )
-150108,A MECO (R PRAIA M BAI(X)O (X) R CURVAIS),Cruzamento Entre A Meco ( Rua Praia M Bai X O E Rua Curvais )
-150109,A MECO (R PRAIA MOINHO BAIXO 106),A Meco ( Rua Praia Moinho Baixo 106 )
-150110,A MECO (R PRAIA MOINHO BAIXO 106),A Meco ( Rua Praia Moinho Baixo 106 )
-150111,A MECO (R PRAIA M BAIXO) TORRÕES,A Meco ( Rua Praia M Baixo ) Torrões
-150112,A MECO (R PRAIA M BAIXO) TORRÕES,A Meco ( Rua Praia M Baixo ) Torrões
-150113,A MECO (ESTR MARCONI) ARTESANATO,A Meco ( Estrada Marconi ) Artesanato
-150114,A MECO (ESTR MARCONI) ARTESANATO,A Meco ( Estrada Marconi ) Artesanato
+150104,A MECO (R PRAIA MOINHO BAIXO 20),Aldeia Do Meco ( Rua Praia Moinho Baixo 20 )
+150105,A MECO (R PRAIA MOINHO BAIXO 46),Aldeia Do Meco ( Rua Praia Moinho Baixo 46 )
+150106,A MECO (R PRAIA MOINHO BAIXO 46),Aldeia Do Meco ( Rua Praia Moinho Baixo 46 )
+150107,A MECO (R PRAIA M BAIXO X R CURVAIS),Cruzamento Entre Aldeia Do Meco ( Rua Praia M Baixo E Rua Curvais )
+150108,A MECO (R PRAIA M BAI(X)O (X) R CURVAIS),Cruzamento Entre Aldeia Do Meco ( Rua Praia M Bai X O E Rua Curvais )
+150109,A MECO (R PRAIA MOINHO BAIXO 106),Aldeia Do Meco ( Rua Praia Moinho Baixo 106 )
+150110,A MECO (R PRAIA MOINHO BAIXO 106),Aldeia Do Meco ( Rua Praia Moinho Baixo 106 )
+150111,A MECO (R PRAIA M BAIXO) TORRÕES,Aldeia Do Meco ( Rua Praia M Baixo ) Torrões
+150112,A MECO (R PRAIA M BAIXO) TORRÕES,Aldeia Do Meco ( Rua Praia M Baixo ) Torrões
+150113,A MECO (ESTR MARCONI) ARTESANATO,Aldeia Do Meco ( Estrada Marconi ) Artesanato
+150114,A MECO (ESTR MARCONI) ARTESANATO,Aldeia Do Meco ( Estrada Marconi ) Artesanato
 150115,ALFARIM (EN377) CENTRO,Alfarim ( Estrada Nacional 377 ) Centro
 150116,ALFARIM (EN377) CENTRO,Alfarim ( Estrada Nacional 377 ) Centro
 150117,ALFARIM (EN377) ESCOLA,Alfarim ( Estrada Nacional 377 ) Escola
@@ -8384,14 +8383,14 @@ stop_id,stop_name,tts_stop_name
 150138,CASAL FIGUEIRAS (ESTR CERÂMICA) CENTRO,Casal Figueiras ( Estrada Cerâmica ) Centro
 150139,CASAL FIGUEIRAS (ESTR CERÂMICA) MÓVEIS,Casal Figueiras ( Estrada Cerâmica ) Móveis
 150140,CASAL FIGUEIRAS (ESTR CERÂMICA) MÓVEIS,Casal Figueiras ( Estrada Cerâmica ) Móveis
-150141,ZAMBUJAL BX (EM 521 (X) AIANA),Cruzamento Entre Zambujal Bx ( Estrada Municipal 521 E Aiana )
-150142,ZAMBUJAL BX(EM 521 (X) AIANA),Cruzamento Entre Zambujal Bx ( Estrada Municipal 521 E Aiana )
-150143,ZAMBUJAL BX (EM 521) MÁRMORES,Zambujal Bx ( Estrada Municipal 521 ) Mármores
-150144,ZAMBUJAL BX (EM 521) MÁRMORES,Zambujal Bx ( Estrada Municipal 521 ) Mármores
-150145,ZAMBUJAL BX (R PICANÇO REAL),Zambujal Bx ( Rua Picanço Real )
-150146,ZAMBUJAL BX (R PICANÇO REAL),Zambujal Bx ( Rua Picanço Real )
-150147,ZAMBUJAL BX ((X) AV 25 ABRIL) ZÉ GALO,Cruzamento Entre Zambujal Bx ( E Avenida 25 Abril ) Zé Galo
-150148,ZAMBUJAL BX ( (X) AV 25 ABRIL) ZÉ GALO,Cruzamento Entre Zambujal Bx ( E Avenida 25 Abril ) Zé Galo
+150141,ZAMBUJAL BX (EM 521 (X) AIANA),Cruzamento Entre Zambujal Baixo ( Estrada Municipal 521 E Aiana )
+150142,ZAMBUJAL BX(EM 521 (X) AIANA),Cruzamento Entre Zambujal Baixo ( Estrada Municipal 521 E Aiana )
+150143,ZAMBUJAL BX (EM 521) MÁRMORES,Zambujal Baixo ( Estrada Municipal 521 ) Mármores
+150144,ZAMBUJAL BX (EM 521) MÁRMORES,Zambujal Baixo ( Estrada Municipal 521 ) Mármores
+150145,ZAMBUJAL BX (R PICANÇO REAL),Zambujal Baixo ( Rua Picanço Real )
+150146,ZAMBUJAL BX (R PICANÇO REAL),Zambujal Baixo ( Rua Picanço Real )
+150147,ZAMBUJAL BX ((X) AV 25 ABRIL) ZÉ GALO,Zambujal Baixo ( Cruzamento Avenida 25 Abril ) Zé Galo
+150148,ZAMBUJAL BX ( (X) AV 25 ABRIL) ZÉ GALO,Zambujal Baixo ( Cruzamento Avenida 25 Abril ) Zé Galo
 150149,ZAMBUJAL (AV 25 ABRIL) FONTE ESQª,Zambujal ( Avenida 25 Abril ) Fonte Esqª
 150150,ZAMBUJAL (AV 25 ABRIL) FONTE ESQª,Zambujal ( Avenida 25 Abril ) Fonte Esqª
 150151,CORREDOURA (PARQUE 25 ABRIL) IGREJA,Corredoura ( Parque 25 Abril ) Igreja
@@ -8421,18 +8420,18 @@ stop_id,stop_name,tts_stop_name
 150180,AZÓIA (EST CABO ) MOINHO,Azóia ( Estação Cabo ) Moinho
 150181,AZÓIA (EST CABO (X) ALDEIA NOVA),Cruzamento Entre Azóia ( Estação Cabo E Aldeia Nova )
 150182,AZÓIA (EST CABO (X) ALDEIA NOVA),Cruzamento Entre Azóia ( Estação Cabo E Aldeia Nova )
-150183,FACHO AZÓIA (EST CABO) (X) ALD MECO,Cruzamento Entre Facho Azóia ( Estação Cabo ) E Ald Meco
-150184,FACHO AZÓIA (EST CABO) (X) ALD MECO,Cruzamento Entre Facho Azóia ( Estação Cabo ) E Ald Meco
+150183,FACHO AZÓIA (EST CABO) (X) ALD MECO,Cruzamento Entre Facho Azóia ( Estação Cabo ) E Aldeia Do Meco
+150184,FACHO AZÓIA (EST CABO) (X) ALD MECO,Cruzamento Entre Facho Azóia ( Estação Cabo ) E Aldeia Do Meco
 150185,FACHO AZÓIA (EST CABO) ZIMBROS,Facho Azóia ( Estação Cabo ) Zimbros
 150186,FACHO AZÓIA (EST CABO) ZIMBROS,Facho Azóia ( Estação Cabo ) Zimbros
 150187,FACHO AZÓIA (EST CABO) PINHEIRINHOS,Facho Azóia ( Estação Cabo ) Pinheirinhos
 150188,FACHO AZÓIA (EST CABO) PINHEIRINHOS,Facho Azóia ( Estação Cabo ) Pinheirinhos
 150189,FACHO AZÓIA (EST CABO) RIBEIRO DO CAVALO,Facho Azóia ( Estação Cabo ) Ribeiro Do Cavalo
 150190,FACHO AZÓIA (EST CABO) RIBEIRO DO CAVALO,Facho Azóia ( Estação Cabo ) Ribeiro Do Cavalo
-150191,ZAMBUJAL C (AV 25 ABRIL) TEXUGO,Zambujal C ( Avenida 25 Abril ) Texugo
-150192,ZAMBUJAL C (AV 25 ABRIL) TEXUGO,Zambujal C ( Avenida 25 Abril ) Texugo
-150193,ZAMBUJAL C (AV 25 ABRIL) TEXUGO,Zambujal C ( Avenida 25 Abril ) Texugo
-150194,ZAMBUJAL C (AV 25 ABRIL) EDUARDO,Zambujal C ( Avenida 25 Abril ) Eduardo
+150191,ZAMBUJAL C (AV 25 ABRIL) TEXUGO,Zambujal Cima ( Avenida 25 Abril ) Texugo
+150192,ZAMBUJAL C (AV 25 ABRIL) TEXUGO,Zambujal Cima ( Avenida 25 Abril ) Texugo
+150193,ZAMBUJAL C (AV 25 ABRIL) TEXUGO,Zambujal Cima ( Avenida 25 Abril ) Texugo
+150194,ZAMBUJAL C (AV 25 ABRIL) EDUARDO,Zambujal Cima ( Avenida 25 Abril ) Eduardo
 150195,ZAMBUJAL (AV 25 ABRIL (X) EN377 C ESPICHEL),Cruzamento Entre Zambujal ( Avenida 25 Abril E Estrada Nacional 377 C Espichel )
 150197,ZAMBUJAL (AV 25 ABRIL) CHURRASQUEIRA,Zambujal ( Avenida 25 Abril ) Churrasqueira
 150198,ZAMBUJAL (AV 25 ABRIL) CHURRASQUEIRA,Zambujal ( Avenida 25 Abril ) Churrasqueira
@@ -8467,21 +8466,21 @@ stop_id,stop_name,tts_stop_name
 150238,CARRASQUEIRA (R DOS AGAPANTOS),Carrasqueira ( Rua Dos Agapantos )
 150239,CAMINHO BRANCO (R CAMINHO BRANCO),Caminho Branco ( Rua Caminho Branco )
 150240,CAMINHO BRANCO (R CAMINHO BRANCO),Caminho Branco ( Rua Caminho Branco )
-150241,CH COTOVIA (R CH COTOVIA) PARQ CAMPISMO,Ch Cotovia ( Rua Ch Cotovia ) Parque De Campismo
-150242,CH COTOVIA (R CH COTOVIA) PARQ CAMPISMO,Ch Cotovia ( Rua Ch Cotovia ) Parque De Campismo
-150243,CH COTOVIA (R CH COTOVIA) URB QTA PINHEIRO,Ch Cotovia ( Rua Ch Cotovia ) Urbanização Quinta Pinheiro
-150244,CH COTOVIA (R CH COTOVIA) URB QTA PINHEIRO,Ch Cotovia ( Rua Ch Cotovia ) Urbanização Quinta Pinheiro
-150245,CH COTOVIA (R CH COTOVIA (X) B CARNEIRO),Cruzamento Entre Ch Cotovia ( Rua Ch Cotovia E B Carneiro )
-150246,CH COTOVIA (R CH COTOVIA (X) B CARNEIRO),Cruzamento Entre Ch Cotovia ( Rua Ch Cotovia E B Carneiro )
-150247,CH COTOVIA (R COTOVIA 2 (X) R S ANDREA),Cruzamento Entre Ch Cotovia ( Rua Cotovia 2 E Rua Santa Andrea )
-150248,CH COTOVIA (R COTOVIA 2 (X) R S ANDREA),Cruzamento Entre Ch Cotovia ( Rua Cotovia 2 E Rua Santa Andrea )
-150249,CH COTOVIA (R COTOVIA) URB PORTÃO,Ch Cotovia ( Rua Cotovia ) Urbanização Portão
-150250,CH COTOVIA (R COTOVIA) URB PORTÃO,Ch Cotovia ( Rua Cotovia ) Urbanização Portão
-150251,CH COTOVIA (R COTOVIA) URB PORTÃO,Ch Cotovia ( Rua Cotovia ) Urbanização Portão
-150252,CH COTOVIA (R COTOVIA) LOJA,Ch Cotovia ( Rua Cotovia ) Loja
-150253,CH COTOVIA (R COTOVIA 30),Ch Cotovia ( Rua Cotovia 30 )
-150254,CH COTOVIA (R COTOVIA 30),Ch Cotovia ( Rua Cotovia 30 )
-150255,CH COTOVIA (R COTOVIA (X)) ASSOCIAÇÃO,Cruzamento Entre Ch Cotovia ( Rua Cotovia E ) Associação
+150241,CH COTOVIA (R CH COTOVIA) PARQ CAMPISMO,Charneca Da Cotovia ( Rua Charneca Da Cotovia ) Parque De Campismo
+150242,CH COTOVIA (R CH COTOVIA) PARQ CAMPISMO,Charneca Da Cotovia ( Rua Charneca Da Cotovia ) Parque De Campismo
+150243,CH COTOVIA (R CH COTOVIA) URB QTA PINHEIRO,Charneca Da Cotovia ( Rua Charneca Da Cotovia ) Urbanização Quinta Pinheiro
+150244,CH COTOVIA (R CH COTOVIA) URB QTA PINHEIRO,Charneca Da Cotovia ( Rua Charneca Da Cotovia ) Urbanização Quinta Pinheiro
+150245,CH COTOVIA (R CH COTOVIA (X) B CARNEIRO),Cruzamento Entre Charneca Da Cotovia ( Rua Charneca Da Cotovia E B Carneiro )
+150246,CH COTOVIA (R CH COTOVIA (X) B CARNEIRO),Cruzamento Entre Charneca Da Cotovia ( Rua Charneca Da Cotovia E B Carneiro )
+150247,CH COTOVIA (R COTOVIA 2 (X) R S ANDREA),Cruzamento Entre Charneca Da Cotovia ( Rua Cotovia 2 E Rua Santa Andrea )
+150248,CH COTOVIA (R COTOVIA 2 (X) R S ANDREA),Cruzamento Entre Charneca Da Cotovia ( Rua Cotovia 2 E Rua Santa Andrea )
+150249,CH COTOVIA (R COTOVIA) URB PORTÃO,Charneca Da Cotovia ( Rua Cotovia ) Urbanização Portão
+150250,CH COTOVIA (R COTOVIA) URB PORTÃO,Charneca Da Cotovia ( Rua Cotovia ) Urbanização Portão
+150251,CH COTOVIA (R COTOVIA) URB PORTÃO,Charneca Da Cotovia ( Rua Cotovia ) Urbanização Portão
+150252,CH COTOVIA (R COTOVIA) LOJA,Charneca Da Cotovia ( Rua Cotovia ) Loja
+150253,CH COTOVIA (R COTOVIA 30),Charneca Da Cotovia ( Rua Cotovia 30 )
+150254,CH COTOVIA (R COTOVIA 30),Charneca Da Cotovia ( Rua Cotovia 30 )
+150255,CH COTOVIA (R COTOVIA (X)) ASSOCIAÇÃO,Charneca Da Cotovia ( Rua Cotovia Cruzamento ) Associação
 150257,SAMPAIO (AV D M S MARTINS) ESC SEC P NORTE,Sampaio ( Avenida Dom M São Martins ) Escola Secundária P Norte
 150258,SAMPAIO (AV D M S MARTINS) ESC SEC P NORTE,Sampaio ( Avenida Dom M São Martins ) Escola Secundária P Norte
 150259,SAMPAIO (ESCOLAS) TERMINAL,Sampaio ( Escolas ) Terminal
@@ -8489,12 +8488,12 @@ stop_id,stop_name,tts_stop_name
 150262,SAMPAIO (ESCOLA SECUNDÁRIA P SUL),Sampaio ( Escola Secundária P Sul )
 150263,SAMPAIO (R CASAIS RICOS) CERCIZIMBRA,Sampaio ( Rua Casais Ricos ) Cercizimbra
 150264,SAMPAIO (R CASAIS RICOS) CERCIZIMBRA,Sampaio ( Rua Casais Ricos ) Cercizimbra
-150265,CH COTOVIA (R COTOVIA (X)) ASSOCIAÇÃO,Cruzamento Entre Ch Cotovia ( Rua Cotovia E ) Associação
+150265,CH COTOVIA (R COTOVIA (X)) ASSOCIAÇÃO,Charneca Da Cotovia ( Rua Cotovia Cruzamento ) Associação
 150267,R DA FONTE - PARQ CAMPISMO,Rua Da Fonte - Parque De Campismo
 150269,FETAIS (R DA FONTE 31),Fetais ( Rua Da Fonte 31 )
 150270,FETAIS (R DA FONTE 31),Fetais ( Rua Da Fonte 31 )
-150271,A MECO (R CORVAIS),A Meco ( Rua Corvais )
-150272,A MECO (R CORVAIS),A Meco ( Rua Corvais )
+150271,A MECO (R CORVAIS),Aldeia Do Meco ( Rua Corvais )
+150272,A MECO (R CORVAIS),Aldeia Do Meco ( Rua Corvais )
 150273,CAIXAS (EN 377 X AIANA),Cruzamento Entre Caixas ( Estrada Nacional 377 E Aiana )
 150274,CAIXAS (EN 377 X AIANA),Cruzamento Entre Caixas ( Estrada Nacional 377 E Aiana )
 150275,CAIXAS (EN 377 (X) R LIBERDADE),Cruzamento Entre Caixas ( Estrada Nacional 377 E Rua Liberdade )
@@ -8518,10 +8517,10 @@ stop_id,stop_name,tts_stop_name
 150294,FORNOS (R PONTE LTE A),Fornos ( Rua Ponte Lote A )
 150295,FACHO AZÓIA (AV FORÇAS ARMADAS 90),Facho Azóia ( Avenida Forças Armadas 90 )
 150296,FACHO AZÓIA (AV FORÇAS ARMADAS 90),Facho Azóia ( Avenida Forças Armadas 90 )
-150297,A MECO (AV F ARMADAS) C STª FILOMENA,A Meco ( Avenida F Armadas ) C Santa Filomena
-150298,A MECO (AV F ARMADAS) C STª FILOMENA,A Meco ( Avenida F Armadas ) C Santa Filomena
-150299,A MECO (AV FORÇAS ARMADAS 174),A Meco ( Avenida Forças Armadas 174 )
-150300,A MECO (AV FORÇAS ARMADAS 174),A Meco ( Avenida Forças Armadas 174 )
+150297,A MECO (AV F ARMADAS) C STª FILOMENA,Aldeia Do Meco ( Avenida Forças Armadas ) C Santa Filomena
+150298,A MECO (AV F ARMADAS) C STª FILOMENA,Aldeia Do Meco ( Avenida Forças Armadas ) C Santa Filomena
+150299,A MECO (AV FORÇAS ARMADAS 174),Aldeia Do Meco ( Avenida Forças Armadas 174 )
+150300,A MECO (AV FORÇAS ARMADAS 174),Aldeia Do Meco ( Avenida Forças Armadas 174 )
 150301,LAGOA A (AV ALCAIDE (X) R D JOSÉ),Cruzamento Entre Lagoa A ( Avenida Alcaide E Rua Dom José )
 150302,AV DO ALCAIDE X R DOM JOSÉ,Cruzamento Entre Avenida Do Alcaide E Rua Dom José
 150303,LAGOA A (AV ALCAIDE (X) R SOBREIROS),Cruzamento Entre Lagoa A ( Avenida Alcaide E Rua Sobreiros )
@@ -8542,18 +8541,18 @@ stop_id,stop_name,tts_stop_name
 150318,LAGOA A (EST CASALÃO) MERCADO,Lagoa A ( Estação Casalão ) Mercado
 150319,LAGOA A (EST CASALÃO (X) AV ALCAIDE),Cruzamento Entre Lagoa A ( Estação Casalão E Avenida Alcaide )
 150320,LAGOA A (EST CASALÃO (X) AV ALCAIDE),Cruzamento Entre Lagoa A ( Estação Casalão E Avenida Alcaide )
-150321,LAGOA A (EN 377 (X)),Cruzamento Entre Lagoa A ( Estrada Nacional 377 E )
-150322,LAGOA A (EN 377 (X)),Cruzamento Entre Lagoa A ( Estrada Nacional 377 E )
+150321,LAGOA A (EN 377 (X)),Lagoa A ( Estrada Nacional 377 Cruzamento )
+150322,LAGOA A (EN 377 (X)),Lagoa A ( Estrada Nacional 377 Cruzamento )
 150323,ALFARIM (EN 377) (X) CAMPO FUTEBOL,Cruzamento Entre Alfarim ( Estrada Nacional 377 ) E Campo Futebol
 150324,ALFARIM (EN 377) (X) CAMPO FUTEBOL,Cruzamento Entre Alfarim ( Estrada Nacional 377 ) E Campo Futebol
 150325,ALFARIM (EN 377) R DOS ARNEIROS,Alfarim ( Estrada Nacional 377 ) Rua Dos Arneiros
 150326,ALFARIM (EN 377) R DOS ARNEIROS,Alfarim ( Estrada Nacional 377 ) Rua Dos Arneiros
-150327,ZAMBUJAL BX (EM 521) CASCUZ,Zambujal Bx ( Estrada Municipal 521 ) Cascuz
-150328,ZAMBUJAL BX (EM 521) CASCUZ,Zambujal Bx ( Estrada Municipal 521 ) Cascuz
-150329,ZAMBUJAL BX (EM520) (X) R CISNES,Cruzamento Entre Zambujal Bx ( Estrada Municipal 520 ) E Rua Cisnes
-150330,ZAMBUJAL BX (EM520) (X) R CISNES,Cruzamento Entre Zambujal Bx ( Estrada Municipal 520 ) E Rua Cisnes
-150331,ZAMBUJAL BX M520 (X) R DOS LAVRADORES,Cruzamento Entre Zambujal Bx M 520 E Rua Dos Lavradores
-150332,ZAMBUJAL BX M520 (X) R DOS LAVRADORES,Cruzamento Entre Zambujal Bx M 520 E Rua Dos Lavradores
+150327,ZAMBUJAL BX (EM 521) CASCUZ,Zambujal Baixo ( Estrada Municipal 521 ) Cascuz
+150328,ZAMBUJAL BX (EM 521) CASCUZ,Zambujal Baixo ( Estrada Municipal 521 ) Cascuz
+150329,ZAMBUJAL BX (EM520) (X) R CISNES,Cruzamento Entre Zambujal Baixo ( Estrada Municipal 520 ) E Rua Cisnes
+150330,ZAMBUJAL BX (EM520) (X) R CISNES,Cruzamento Entre Zambujal Baixo ( Estrada Municipal 520 ) E Rua Cisnes
+150331,ZAMBUJAL BX M520 (X) R DOS LAVRADORES,Cruzamento Entre Zambujal Baixo Estrada Municipal 520 E Rua Dos Lavradores
+150332,ZAMBUJAL BX M520 (X) R DOS LAVRADORES,Cruzamento Entre Zambujal Baixo Estrada Municipal 520 E Rua Dos Lavradores
 150333,LAGOA A (AV MARGINAL LAGOA),Lagoa A ( Avenida Marginal Lagoa )
 150335,LAGOA A (PARQUE) PRAIA,Lagoa A ( Parque ) Praia
 150337,LAGOA A (EST DOS MURTINHAIS),Lagoa A ( Estação Dos Murtinhais )
@@ -8601,12 +8600,12 @@ stop_id,stop_name,tts_stop_name
 150382,QUINTINHA (AV LUÍS CAMÕES) URBAN,Quintinha ( Avenida Luís Camões ) Urban
 150383,QUINTINHA (AV EÇA QUEIROZ 12),Quintinha ( Avenida Eça Queiroz 12 )
 150385,FONTE SESIMBRA (X) R ROBERTO DOS SANTOS,Cruzamento Entre Fonte Sesimbra E Rua Roberto Dos Santos
-150387,PINHAL C (R JOÃO AGUIAR) CARPINTARIA,Pinhal C ( Rua João Aguiar ) Carpintaria
-150388,PINHAL C (R JOÃO AGUIAR) CARPINTARIA,Pinhal C ( Rua João Aguiar ) Carpintaria
-150389,PINHAL C (R FRANCISCO HOLANDA (X)),Cruzamento Entre Pinhal C ( Rua Francisco Holanda E )
-150390,PINHAL C (R FRANCISCO HOLANDA (X)),Cruzamento Entre Pinhal C ( Rua Francisco Holanda E )
-150391,PINHAL C (R FRANCISCO HOLANDA 33),Pinhal C ( Rua Francisco Holanda 33 )
-150392,PINHAL C (R FRANCISCO HOLANDA 33),Pinhal C ( Rua Francisco Holanda 33 )
+150387,PINHAL C (R JOÃO AGUIAR) CARPINTARIA,Pinhal Cima ( Rua João Aguiar ) Carpintaria
+150388,PINHAL C (R JOÃO AGUIAR) CARPINTARIA,Pinhal Cima ( Rua João Aguiar ) Carpintaria
+150389,PINHAL C (R FRANCISCO HOLANDA (X)),Pinhal Cima ( Rua Francisco Holanda Cruzamento )
+150390,PINHAL C (R FRANCISCO HOLANDA (X)),Pinhal Cima ( Rua Francisco Holanda Cruzamento )
+150391,PINHAL C (R FRANCISCO HOLANDA 33),Pinhal Cima ( Rua Francisco Holanda 33 )
+150392,PINHAL C (R FRANCISCO HOLANDA 33),Pinhal Cima ( Rua Francisco Holanda 33 )
 150393,ALMOÍNHA (R ALMOINHA) CAMPO TÉNIS,Almoínha ( Rua Almoinha ) Campo Ténis
 150394,ALMOINHA (R ALMOINHA) CAMPO TÉNIS,Almoinha ( Rua Almoinha ) Campo Ténis
 150395,ALMOINHA (URBANIZAÇÃO ) MINIMERCADO,Almoinha ( Urbanização ) Minimercado
@@ -8621,8 +8620,8 @@ stop_id,stop_name,tts_stop_name
 150404,ALMOINHA (R ALMOINHA) CENTRO,Almoinha ( Rua Almoinha ) Centro
 150405,ALMOINHA (R ALMOINHA 48),Almoinha ( Rua Almoinha 48 )
 150406,ALMOINHA (R ALMOINHA 48),Almoinha ( Rua Almoinha 48 )
-150407,SANTANA (R ALMOINHA) P TÁXIS,Santana ( Rua Almoinha ) P Táxis
-150408,SANTANA (R ALMOINHA) P TÁXIS,Santana ( Rua Almoinha ) P Táxis
+150407,SANTANA (R ALMOINHA) P TÁXIS,Santana ( Rua Almoinha ) Praça Táxis
+150408,SANTANA (R ALMOINHA) P TÁXIS,Santana ( Rua Almoinha ) Praça Táxis
 150409,PINHAL DO CABEDAL - ROTUNDA,Pinhal Do Cabedal - Rotunda
 150411,FONTE SESIMBRA (X) R ROBERTO DOS SANTOS,Cruzamento Entre Fonte Sesimbra E Rua Roberto Dos Santos
 150413,ALTO VINHAS (R SERRA DE MONTE FIGO),Alto Vinhas ( Rua Serra De Monte Figo )
@@ -8659,8 +8658,8 @@ stop_id,stop_name,tts_stop_name
 150467,EST ARGÉIS - COOP CHEZIMBRA,Estação Argéis - Cooperativa Chezimbra
 150469,VARANDAS MAR 30 - ESCADAS,Varandas Mar 30 - Escadas
 150471,R VARANDAS MAR 30 (X) J C MAURÍCIO,Cruzamento Entre Rua Varandas Mar 30 E J C Maurício
-150473,EDIF FALÉSIA - TRIBUNAL,Edif Falésia - Tribunal
-150475,PARQUE ESTAC CALIFÓRNIA,Parque Estação Califórnia
+150473,EDIF FALÉSIA - TRIBUNAL,Edifício Falésia - Tribunal
+150475,PARQUE ESTAC CALIFÓRNIA,Parque De Estacionamento Califórnia
 150477,R CRUZ 2 (X) R MAREANTES DE SESIMBRA,Cruzamento Entre Rua Cruz 2 E Rua Mareantes De Sesimbra
 150479,R CRUZ - REFEITÓRIO CMS,Rua Cruz - Refeitório Cms
 150481,R AMÉLIA FRADE 26,Rua Amélia Frade 26
@@ -8709,14 +8708,14 @@ stop_id,stop_name,tts_stop_name
 150531,R BENTO JESUS CARAÇA,Rua Bento Jesus Caraça
 150533,QTA CONDE (AV 1º MAIO) ROT SUL,Quinta Conde ( Avenida Primeiro De Maio ) Rotunda Sul
 150534,QTA CONDE (AV 1º MAIO) ROT SUL,Quinta Conde ( Avenida Primeiro De Maio ) Rotunda Sul
-150535,FONTAÍNHAS (AV F ARMADAS (X) AV 10 JUNHO),Cruzamento Entre Fontaínhas ( Avenida F Armadas E Avenida 10 Junho )
-150536,FONTAÍNHAS (AV F ARMADAS (X) AV 10 JUNHO),Cruzamento Entre Fontaínhas ( Avenida F Armadas E Avenida 10 Junho )
-150537,FONTAÍNHAS (AV F ARMADAS) PAV DESPORTIVO,Fontaínhas ( Avenida F Armadas ) Pav Desportivo
-150538,FONTAÍNHAS (AV F ARMADAS) PAV DESPORTIVO,Fontaínhas ( Avenida F Armadas ) Pav Desportivo
+150535,FONTAÍNHAS (AV F ARMADAS (X) AV 10 JUNHO),Cruzamento Entre Fontaínhas ( Avenida Forças Armadas E Avenida 10 Junho )
+150536,FONTAÍNHAS (AV F ARMADAS (X) AV 10 JUNHO),Cruzamento Entre Fontaínhas ( Avenida Forças Armadas E Avenida 10 Junho )
+150537,FONTAÍNHAS (AV F ARMADAS) PAV DESPORTIVO,Fontaínhas ( Avenida Forças Armadas ) Pav Desportivo
+150538,FONTAÍNHAS (AV F ARMADAS) PAV DESPORTIVO,Fontaínhas ( Avenida Forças Armadas ) Pav Desportivo
 150539,FONTAÍNHAS (AV FORÇAS ARMADAS 33),Fontaínhas ( Avenida Forças Armadas 33 )
 150540,FONTAÍNHAS (AV FORÇAS ARMADAS 33),Fontaínhas ( Avenida Forças Armadas 33 )
-150541,FONTAÍNHAS (AV F ARMADAS) FÁB MÁRMORES,Fontaínhas ( Avenida F Armadas ) Fábrica Mármores
-150542,FONTAÍNHAS (AV F ARMADAS) FÁB MÁRMORES,Fontaínhas ( Avenida F Armadas ) Fábrica Mármores
+150541,FONTAÍNHAS (AV F ARMADAS) FÁB MÁRMORES,Fontaínhas ( Avenida Forças Armadas ) Fábrica Mármores
+150542,FONTAÍNHAS (AV F ARMADAS) FÁB MÁRMORES,Fontaínhas ( Avenida Forças Armadas ) Fábrica Mármores
 150543,FONTAÍNHAS (LARGO 25 ABRIL),Fontaínhas ( Largo 25 Abril )
 150544,FONTAÍNHAS (LARGO 25 ABRIL),Fontaínhas ( Largo 25 Abril )
 150545,FONTAÍNHAS (R LIBERDADE) PARQ CAMPISMO,Fontaínhas ( Rua Liberdade ) Parque De Campismo
@@ -8819,7 +8818,7 @@ stop_id,stop_name,tts_stop_name
 160054,SETÚBAL (ESC SEC D MANUEL MARTINS),Setúbal ( Escola Secundária Dom Manuel Martins )
 160055,SETÚBAL (AV ANTÓNIO SÉRGIO 8),Setúbal ( Avenida António Sérgio 8 )
 160056,SETÚBAL (AV ANTÓNIO SÉRGIO 8),Setúbal ( Avenida António Sérgio 8 )
-160057,SETÚBAL (AV B JESUS CARAÇA) ESC LANCHOA,Setúbal ( Avenida B Jesus Caraça ) Escola Lanchoa
+160057,SETÚBAL (AV B JESUS CARAÇA) ESC LANCHOA,Setúbal ( Avenida Bento De Jesus Caraça ) Escola Lanchoa
 160059,SETÚBAL (AV JAIME CORTESÃO 4),Setúbal ( Avenida Jaime Cortesão 4 )
 160060,SETÚBAL (AV JAIME CORTESÃO 4),Setúbal ( Avenida Jaime Cortesão 4 )
 160061,SETÚBAL (AV JAIME CORTESÃO) FARMÁCIA PT,Setúbal ( Avenida Jaime Cortesão ) Farmácia Pt
@@ -9390,8 +9389,8 @@ stop_id,stop_name,tts_stop_name
 160796,ALAMBRE,Alambre
 160797,CASAIS DA SERRA,Casais Da Serra
 160798,CASAIS DA SERRA,Casais Da Serra
-160799,X ARRÁBIDA,X Arrábida
-160800,X ARRÁBIDA,X Arrábida
+160799,X ARRÁBIDA,Cruzamento Arrábida
+160800,X ARRÁBIDA,Cruzamento Arrábida
 160801,PRAIA DO CREIRO,Praia Do Creiro
 160802,PRAIA DO CREIRO,Praia Do Creiro
 160803,BREJOS AZEITÃO (EN10 KM24 500) P COMB,Brejos De Azeitão ( Estrada Nacional 10 Quilómetro 24 500 ) Posto De Combustível
@@ -9501,10 +9500,10 @@ stop_id,stop_name,tts_stop_name
 160942,R DA ESCOLA 3,Rua Da Escola 3
 160943,ALDEIA PIEDADE (LG DIOGO SILVA CARVALHO),Aldeia Piedade ( Largo Diogo Silva Carvalho )
 160944,ALDEIA PIEDADE (LG DIOGO SILVA CARVALHO),Aldeia Piedade ( Largo Diogo Silva Carvalho )
-160946,ALD PIEDADE (ESTR S PEDRO) QTA MAGNÓLIAS,Ald Piedade ( Estrada São Pedro ) Quinta Magnólias
+160946,ALD PIEDADE (ESTR S PEDRO) QTA MAGNÓLIAS,Aldeia Piedade ( Estrada São Pedro ) Quinta Magnólias
 160947,ALDEIA PIEDADE (ESTR S PEDRO),Aldeia Piedade ( Estrada São Pedro )
 160948,ALDEIA PIEDADE (ESTR S PEDRO),Aldeia Piedade ( Estrada São Pedro )
-160949,ALD PIEDADE (ESTR S PEDRO) QTA MAGNÓLIAS,Ald Piedade ( Estrada São Pedro ) Quinta Magnólias
+160949,ALD PIEDADE (ESTR S PEDRO) QTA MAGNÓLIAS,Aldeia Piedade ( Estrada São Pedro ) Quinta Magnólias
 160951,PINHAL NEGREIROS (R POETA BOCAGE 20),Pinhal Negreiros ( Rua Poeta Bocage 20 )
 160952,PINHAL NEGREIROS (R POETA BOCAGE 20),Pinhal Negreiros ( Rua Poeta Bocage 20 )
 160953,R POE CALAFATE 110,Rua Poeta Calafate 110
@@ -9771,23 +9770,23 @@ stop_id,stop_name,tts_stop_name
 170250,Estr Mercês 92,Estrada Mercês 92
 170251,Estr Mercês 68,Estrada Mercês 68
 170252,Estr Mercês 68,Estrada Mercês 68
-170253,Estr Mercês (X) Av Emb Arist S Mendes,Cruzamento Entre Estrada Mercês E Avenida Emb Arist São Mendes
+170253,Estr Mercês (X) Av Emb Arist S Mendes,Cruzamento Entre Estrada Mercês E Avenida Embaixador Arist Sousa Mendes
 170254,Estr Mercês (Mcdonald 's),Estrada Mercês ( Mcdonald 's )
-170255,Av Emb Aristídes S Mendes Supermercado,Avenida Emb Aristídes São Mendes Supermercado
-170256,Av Emb Aristídes S Mendes Supermercado,Avenida Emb Aristídes São Mendes Supermercado
+170255,Av Emb Aristídes S Mendes Supermercado,Avenida Embaixador Aristídes Sousa Mendes Supermercado
+170256,Av Emb Aristídes S Mendes Supermercado,Avenida Embaixador Aristídes Sousa Mendes Supermercado
 170257,R Escola (Escola Visconde Juromanha),Rua Escola ( Escola Visconde Juromanha )
 170258,R Escola (Escola Visconde Juromanha),Rua Escola ( Escola Visconde Juromanha )
-170259,Av Emb Aristídes S Mendes (Fte Finanças),Avenida Emb Aristídes São Mendes ( Frente Finanças )
-170260,Av Emb Aristídes S Mendes (Finanças),Avenida Emb Aristídes São Mendes ( Finanças )
-170261,Av Emb Aristídes Sousa Mendes (Farmác),Avenida Emb Aristídes Sousa Mendes ( Farmácia )
-170263,Av Emb Aristídes Sousa Mendes 81,Avenida Emb Aristídes Sousa Mendes 81
+170259,Av Emb Aristídes S Mendes (Fte Finanças),Avenida Embaixador Aristídes Sousa Mendes ( Frente Finanças )
+170260,Av Emb Aristídes S Mendes (Finanças),Avenida Embaixador Aristídes Sousa Mendes ( Finanças )
+170261,Av Emb Aristídes Sousa Mendes (Farmác),Avenida Embaixador Aristídes Sousa Mendes ( Farmácia )
+170263,Av Emb Aristídes Sousa Mendes 81,Avenida Embaixador Aristídes Sousa Mendes 81
 170265,Av Miguel Torga 74,Avenida Miguel Torga 74
 170266,Av Miguel Torga 55,Avenida Miguel Torga 55
 170267,R Padre Alberto Neto 26 (Escola),Rua Padre Alberto Neto 26 ( Escola )
 170269,Av Miguel Torga 41 (Mercado),Avenida Miguel Torga 41 ( Mercado )
 170271,Mercês (Estação Norte),Mercês ( Estação Norte )
 170273,Av Miguel Torga 46,Avenida Miguel Torga 46
-170275,Av Emb Aristídes Sousa Mendes 3C,Avenida Emb Aristídes Sousa Mendes 3 C
+170275,Av Emb Aristídes Sousa Mendes 3C,Avenida Embaixador Aristídes Sousa Mendes 3 C
 170277,Estr Acad Força Aérea (Qta Sonhos),Estrada Acad Força Aérea ( Quinta Sonhos )
 170279,R Cidade de Leiria (X) Cid Santarém,Cruzamento Entre Rua Cidade De Leiria E Cid Santarém
 170281,Av Marginal 108,Avenida Marginal 108
@@ -9813,7 +9812,7 @@ stop_id,stop_name,tts_stop_name
 170306,R Cidade de Lagos (Supermercado),Rua Cidade De Lagos ( Supermercado )
 170307,Portela Sintra (Estação Norte),Portela Sintra ( Estação Norte )
 170309,R D Coutinho Pais 123,Rua Dom Coutinho Pais 123
-170311,Av R Solnado (X) Av Amália Rodrigues,Cruzamento Entre Avenida Rua Solnado E Avenida Amália Rodrigues
+170311,Av R Solnado (X) Av Amália Rodrigues,Cruzamento Entre Avenida Raúl Solnado E Avenida Amália Rodrigues
 170313,Estr de Mem Martins (Posto Abast),Estrada De Mem Martins ( Posto De Abastecimento )
 170315,R Eng Carlos Santos 1,Rua Engenheiro Carlos Santos 1
 170317,R de Angola 19,Rua De Angola 19
@@ -9909,8 +9908,8 @@ stop_id,stop_name,tts_stop_name
 170425,R Natalia Correia Fte 16,Rua Natalia Correia Frente 16
 170427,R Manuel Fonseca (X) Pcta M Judite Carv,Cruzamento Entre Rua Manuel Fonseca E Praceta M Judite Carv
 170428,R Manuel Fonseca (X) pcta M Judite Carv,Cruzamento Entre Rua Manuel Fonseca E Praceta M Judite Carv
-170429,R Manuel Fonseca (Fte X) R Ant Boto,Cruzamento Entre Rua Manuel Fonseca ( Frente E ) Rua António Boto
-170430,R Manuel Fonseca (Fte X) R Ant Boto,Cruzamento Entre Rua Manuel Fonseca ( Frente E ) Rua António Boto
+170429,R Manuel Fonseca (Fte X) R Ant Boto,Rua Manuel Fonseca ( Frente Cruzamento ) Rua António Boto
+170430,R Manuel Fonseca (Fte X) R Ant Boto,Rua Manuel Fonseca ( Frente Cruzamento ) Rua António Boto
 170431,Cacém (Cemitério),Cacém ( Cemitério )
 170433,R José Gomes Ferreira Fte 3,Rua José Gomes Ferreira Frente 3
 170434,R J Gomes Ferreira (X) Estr Vale Mourão,Cruzamento Entre Rua J Gomes Ferreira E Estrada Vale Mourão
@@ -10617,12 +10616,12 @@ stop_id,stop_name,tts_stop_name
 171358,Av Amílcar a Gil 220 (Qta Cosme),Avenida Amílcar A Gil 220 ( Quinta Cosme )
 171359,Av Amílcar Augusto Gil (X) R Acácias,Cruzamento Entre Avenida Amílcar Augusto Gil E Rua Acácias
 171360,Av Amílcar Augusto Gil (X) R Acácias,Cruzamento Entre Avenida Amílcar Augusto Gil E Rua Acácias
-171361,Av Amílcar Aug Gil Casa da Rampa,Avenida Amílcar Aug Gil Casa Da Rampa
-171362,Av Amílcar Aug Gil (Casa da Rampa),Avenida Amílcar Aug Gil ( Casa Da Rampa )
+171361,Av Amílcar Aug Gil Casa da Rampa,Avenida Amílcar Augusto Gil Casa Da Rampa
+171362,Av Amílcar Aug Gil (Casa da Rampa),Avenida Amílcar Augusto Gil ( Casa Da Rampa )
 171363,Av Amílcar Augusto Gil 119,Avenida Amílcar Augusto Gil 119
 171364,Av Amílcar Augusto Gil 121,Avenida Amílcar Augusto Gil 121
 171365,Av Amílcar Augusto Gil 81,Avenida Amílcar Augusto Gil 81
-171366,Av Amílcar Aug Gil 81- Casa das Nozes,Avenida Amílcar Aug Gil 81 - Casa Das Nozes
+171366,Av Amílcar Aug Gil 81- Casa das Nozes,Avenida Amílcar Augusto Gil 81 - Casa Das Nozes
 171367,Av Amílcar Augusto Gil 60,Avenida Amílcar Augusto Gil 60
 171368,Av Amílcar Augusto Gil (VV Mira Sol),Avenida Amílcar Augusto Gil ( Vivenda Mira Sol )
 171369,EN 247 (X) R Carlos Mazetti,Cruzamento Entre Estrada Nacional 247 E Rua Carlos Mazetti
@@ -10697,14 +10696,14 @@ stop_id,stop_name,tts_stop_name
 171443,R Dr Ant Brandão Vasconcelois 31,Rua Doutor António Brandão Vasconcelois 31
 171445,R Dr Ant Brandão Vasc (Lgo P António),Rua Doutor António Brandão Vasc ( Largo P António )
 171446,R Dr Ant Brandão Vasc (Lgo P António),Rua Doutor António Brandão Vasc ( Largo P António )
-171447,Av Luís Aug Colares 108 (Lg Marcelino),Avenida Luís Aug Colares 108 ( Largo Marcelino )
-171448,Av Luís Aug Colares 9 (Lg Marcelino),Avenida Luís Aug Colares 9 ( Largo Marcelino )
+171447,Av Luís Aug Colares 108 (Lg Marcelino),Avenida Luís Augusto Colares 108 ( Largo Marcelino )
+171448,Av Luís Aug Colares 9 (Lg Marcelino),Avenida Luís Augusto Colares 9 ( Largo Marcelino )
 171449,Av Luís Augusto de Colares 74,Avenida Luís Augusto De Colares 74
 171450,Av Luís Augusto de Colares 74,Avenida Luís Augusto De Colares 74
-171451,Av Luís Aug Colares (Csl Três Marias),Avenida Luís Aug Colares ( Csl Três Marias )
-171452,Av Luís Aug Colares (Csl Três Marias),Avenida Luís Aug Colares ( Csl Três Marias )
-171453,Av Luís Aug Colares (X) R Alberto Tota,Cruzamento Entre Avenida Luís Aug Colares E Rua Alberto Tota
-171454,Av Luís Aug Colares (X) R Alberto Tota,Cruzamento Entre Avenida Luís Aug Colares E Rua Alberto Tota
+171451,Av Luís Aug Colares (Csl Três Marias),Avenida Luís Augusto Colares ( Casal Três Marias )
+171452,Av Luís Aug Colares (Csl Três Marias),Avenida Luís Augusto Colares ( Casal Três Marias )
+171453,Av Luís Aug Colares (X) R Alberto Tota,Cruzamento Entre Avenida Luís Augusto Colares E Rua Alberto Tota
+171454,Av Luís Aug Colares (X) R Alberto Tota,Cruzamento Entre Avenida Luís Augusto Colares E Rua Alberto Tota
 171455,Av Luís Augusto de Colares 16,Avenida Luís Augusto De Colares 16
 171456,Av Luís Augusto de Colares 16,Avenida Luís Augusto De Colares 16
 171457,Av Eugene Levy 142,Avenida Eugene Levy 142
@@ -10867,7 +10866,7 @@ stop_id,stop_name,tts_stop_name
 171641,R Nª Srª Consolação 66 (X) Almargem,Cruzamento Entre Rua Nossa Senhora Consolação 66 E Almargem
 171642,R Nª Srª Consolação 66,Rua Nossa Senhora Consolação 66
 171643,R Nª Srª Consolação 1,Rua Nossa Senhora Consolação 1
-171644,R Nª Srª Consolação 1 (Csl Ermidas),Rua Nossa Senhora Consolação 1 ( Csl Ermidas )
+171644,R Nª Srª Consolação 1 (Csl Ermidas),Rua Nossa Senhora Consolação 1 ( Casal Ermidas )
 171645,Estr São João 287 (Albuquerque),Estrada São João 287 ( Albuquerque )
 171646,Estr de São João (Casa Terra do Poço),Estrada De São João ( Casa Terra Do Poço )
 171647,Estr de São João(x) R Almograve,Cruzamento Entre Estrada De São João E Rua Almograve
@@ -11105,6 +11104,7 @@ stop_id,stop_name,tts_stop_name
 171929,R Barbosa Du Bocage (Palácio Seteais),Rua Barbosa Du Bocage ( Palácio Seteais )
 171931,R Visconde Monserrate (Qta Monserrate),Rua Visconde Monserrate ( Quinta Monserrate )
 171933,Pq Monserrate (Palácio de Monserrate),Parque Monserrate ( Palácio De Monserrate )
+171934,Estrada Nova Rainha (Gigarós),Estrada Nova Rainha ( Gigarós )
 171935,Av D brand Vasconcelos (Casas Novas),Avenida Dom Brand Vasconcelos ( Casas Novas )
 171936,Av D Brand Vasconcelos (Casas Novas),Avenida Dom Brand Vasconcelos ( Casas Novas )
 171937,Av D Brandão Vasconcelos (Qta Arriaga),Avenida Dom Brandão Vasconcelos ( Quinta Arriaga )
@@ -11310,8 +11310,8 @@ stop_id,stop_name,tts_stop_name
 172218,R Álv A R Vilela 142 (Qta Serra),Rua Álvaro A Rua Vilela 142 ( Quinta Serra )
 172219,R Álvaro Augusto Rodr Vilela 99,Rua Álvaro Augusto Rodrigo Vilela 99
 172220,R Álvaro Augusto Rodr Vilela 99,Rua Álvaro Augusto Rodrigo Vilela 99
-172221,R Álvaro Aug Rodrigues Vilela (Lgo),Rua Álvaro Aug Rodrigues Vilela ( Largo )
-172222,R Álvaro Aug Rodrigues Vilela (Lgo),Rua Álvaro Aug Rodrigues Vilela ( Largo )
+172221,R Álvaro Aug Rodrigues Vilela (Lgo),Rua Álvaro Augusto Rodrigues Vilela ( Largo )
+172222,R Álvaro Aug Rodrigues Vilela (Lgo),Rua Álvaro Augusto Rodrigues Vilela ( Largo )
 172223,Albarraque (X),Albarraque Cruzamento
 172225,R da Boavista 2,Rua Da Boavista 2
 172226,R da Boavista 2,Rua Da Boavista 2
@@ -11463,7 +11463,7 @@ stop_id,stop_name,tts_stop_name
 172394,R Gen Barnabé António Ferreira 100,Rua General Barnabé António Ferreira 100
 172395,R Gen Barnabé António Ferreira 168,Rua General Barnabé António Ferreira 168
 172396,R Gen Barnabé António Ferreira 149,Rua General Barnabé António Ferreira 149
-172397,Estr M539 (X) R Moínho,Cruzamento Entre Estrada M 539 E Rua Moínho
+172397,Estr M539 (X) R Moínho,Cruzamento Entre Estrada Municipal 539 E Rua Moínho
 172399,R Sargento Francisco Pontes 3 (Igreja),Rua Sargento Francisco Pontes 3 ( Igreja )
 172401,R Gen Barn Ant Ferr 129,Rua General Barn António Ferreira 129
 172402,R Gen Barn Ant Ferr 129,Rua General Barn António Ferreira 129
@@ -11490,8 +11490,8 @@ stop_id,stop_name,tts_stop_name
 172423,R 5 Outubro 24,Rua 5 Outubro 24
 172427,R do Celão (Igreja),Rua Do Celão ( Igreja )
 172429,R da Serra (Campo Futebol),Rua Da Serra ( Campo Futebol )
-172433,Estr M542 312 (Escola),Estrada M 542 312 ( Escola )
-172434,Estr M542 (Escola),Estrada M 542 ( Escola )
+172433,Estr M542 312 (Escola),Estrada Municipal 542 312 ( Escola )
+172434,Estr M542 (Escola),Estrada Municipal 542 ( Escola )
 172435,R Prof Dr Joaquim Fontes 229,Rua Professor Doutor Joaquim Fontes 229
 172436,R Dr Joaquim Fontes 222,Rua Doutor Joaquim Fontes 222
 172437,R Prof Dr Joaquim Fontes 119,Rua Professor Doutor Joaquim Fontes 119
@@ -11502,9 +11502,9 @@ stop_id,stop_name,tts_stop_name
 172442,R Dr Joaquim Fontes 130,Rua Doutor Joaquim Fontes 130
 172443,R P Dr Joaquim Fontes (X) Casal Serra,Cruzamento Entre Rua Professor Doutor Joaquim Fontes E Casal Serra
 172444,R P Dr Joaquim Fontes (X) Casal Serra,Cruzamento Entre Rua Professor Doutor Joaquim Fontes E Casal Serra
-172445,Estr M542 218A,Estrada M 542 218 A
-172446,Estr M542 218A,Estrada M 542 218 A
-172447,Estr M542 (X) Bairro Ginjal,Cruzamento Entre Estrada M 542 E Bairro Ginjal
+172445,Estr M542 218A,Estrada Municipal 542 218 A
+172446,Estr M542 218A,Estrada Municipal 542 218 A
+172447,Estr M542 (X) Bairro Ginjal,Cruzamento Entre Estrada Municipal 542 E Bairro Ginjal
 172448,Camarões (X) Bairro Ginjal,Cruzamento Entre Camarões E Bairro Ginjal
 172449,R Pedra Alta (X) R Bom Pastor,Cruzamento Entre Rua Pedra Alta E Rua Bom Pastor
 172450,R Pedra Alta (X) R B Pastor (Almargem),Cruzamento Entre Rua Pedra Alta E Rua B Pastor ( Almargem )
@@ -11605,7 +11605,7 @@ stop_id,stop_name,tts_stop_name
 172556,Av D Nuno Álvares Pereira 30,Avenida Dom Nuno Álvares Pereira 30
 172557,Av D Nuno Álvares Pereira 70A,Avenida Dom Nuno Álvares Pereira 70 A
 172558,R Olival (Esc Ribeiro Carvalho),Rua Olival ( Escola Ribeiro Carvalho )
-172559,Av Lápias (Fte X) R Casal Ossos,Cruzamento Entre Avenida Lápias ( Frente E ) Rua Casal Ossos
+172559,Av Lápias (Fte X) R Casal Ossos,Avenida Lápias ( Frente Cruzamento ) Rua Casal Ossos
 172560,Av Lápias (X) R Casal Ossos,Cruzamento Entre Avenida Lápias E Rua Casal Ossos
 172561,Avenida Liberdade (Fte Supermercado),Avenida Liberdade ( Frente Supermercado )
 172562,Avenida Liderdade (Supermercado),Avenida Liderdade ( Supermercado )
@@ -11665,7 +11665,7 @@ stop_id,stop_name,tts_stop_name
 172619,En 539-3 27,Estrada Nacional 539 - 3 27
 172620,En 539-3 27,Estrada Nacional 539 - 3 27
 172621,Av Bons Amigos (Largo),Avenida Bons Amigos ( Largo )
-172622,R Álv Aug Rodrig Vilela (X) R Chafariz,Cruzamento Entre Rua Álvaro Aug Rodrig Vilela E Rua Chafariz
+172622,R Álv Aug Rodrig Vilela (X) R Chafariz,Cruzamento Entre Rua Álvaro Augusto Rodrig Vilela E Rua Chafariz
 172623,R Maestro Álvaro Sousa 19,Rua Maestro Álvaro Sousa 19
 172624,EN 9 Fte Supermercado,Estrada Nacional 9 Frente Supermercado
 172625,Av D António Correia De Sá 4,Avenida Dom António Correia De Sá 4
@@ -11937,12 +11937,12 @@ stop_id,stop_name,tts_stop_name
 180314,Castanheira Do Ribatejo (Estação),Castanheira Do Ribatejo ( Estação )
 180315,Largo Dona Júlia Palha 11A (Jardim),Largo Dona Júlia Palha 11 A ( Jardim )
 180316,Largo Dona Júlia Palha 11A (Jardim),Largo Dona Júlia Palha 11 A ( Jardim )
-180317,R Palha Blanco 95,Rua Palha Blanco 95
-180319,R Palha Blanco 240 (Castanheira),Rua Palha Blanco 240 ( Castanheira )
-180321,En 1 (Fábrica),Estrada Nacional 1 ( Fábrica )
-180322,En 1 (Fábrica),Estrada Nacional 1 ( Fábrica )
-180323,En 1 (X) Quintas,Cruzamento Entre Estrada Nacional 1 E Quintas
-180325,Estrada da.Vala do Carregado,Estrada Da.vala Do Carregado
+180317,Rua Palha Blanco 95,Rua Palha Blanco 95
+180319,Rua Palha Blanco 202,Rua Palha Blanco 202
+180321,EN 1 (Fábrica),Estrada Nacional 1 ( Fábrica )
+180322,EN 1 (Fábrica),Estrada Nacional 1 ( Fábrica )
+180323,EN 1 (X) Quintas,Cruzamento Entre Estrada Nacional 1 E Quintas
+180325,Estrada da Vala do Carregado,Estrada Da Vala Do Carregado
 180326,Estrada da Vala do Carregado,Estrada Da Vala Do Carregado
 180327,Estr Bairro 10 (B Atral Cipan),Estrada Bairro 10 ( Bairro Atral Cipan )
 180329,Estr Vala 123 (Cascalheira),Estrada Vala 123 ( Cascalheira )
@@ -11971,8 +11971,8 @@ stop_id,stop_name,tts_stop_name
 180359,R Alves Redol (Museu),Rua Alves Redol ( Museu )
 180361,Lgo Casal Bandeira (Cachoeiras),Largo Casal Bandeira ( Cachoeiras )
 180362,Lgo Casal Bandeira (Cachoeiras),Largo Casal Bandeira ( Cachoeiras )
-180363,R Gago Coutinho (X) Azinh Bandeira,Cruzamento Entre Rua Gago Coutinho E Azinh Bandeira
-180364,R Gago Coutinho (X) Azinh Bandeira,Cruzamento Entre Rua Gago Coutinho E Azinh Bandeira
+180363,R Gago Coutinho (X) Azinh Bandeira,Cruzamento Entre Rua Gago Coutinho E Azinhaga Bandeira
+180364,R Gago Coutinho (X) Azinh Bandeira,Cruzamento Entre Rua Gago Coutinho E Azinhaga Bandeira
 180365,R Gago Coutinho 1 (Igreja),Rua Gago Coutinho 1 ( Igreja )
 180366,R Gago Coutinho 1 (Igreja),Rua Gago Coutinho 1 ( Igreja )
 180367,Lgo Cap José M Silva Guedes 2,Largo Capitão José M Silva Guedes 2
@@ -11998,9 +11998,9 @@ stop_id,stop_name,tts_stop_name
 180387,CM 1239 (C Rolim),Caminho Municipal 1239 ( Casal Rolim )
 180389,R Calouste Gulbenkian 1 (Castanheira),Rua Calouste Gulbenkian 1 ( Castanheira )
 180390,R Calouste Gulbenkian 1 (Castanheira),Rua Calouste Gulbenkian 1 ( Castanheira )
-180391,R C Gulbenkian (X) J Veríssimo,Cruzamento Entre Rua C Gulbenkian E J Veríssimo
-180392,R C Gulbenkian (X) J Veríssimo,Cruzamento Entre Rua C Gulbenkian E J Veríssimo
-180393,R Palha Blanco 145 (Castanheira),Rua Palha Blanco 145 ( Castanheira )
+180391,R C Gulbenkian (X) J Veríssimo,Cruzamento Entre Rua Calouste Gulbenkian E J Veríssimo
+180392,R C Gulbenkian (X) J Veríssimo,Cruzamento Entre Rua Calouste Gulbenkian E J Veríssimo
+180393,Av. Luís César Rodrigues Pereira,Avenida Luís César Rodrigues Pereira
 180397,Em 524 (X) Monte Gordo,Cruzamento Entre Estrada Municipal 524 E Monte Gordo
 180398,Em 524 (X) Monte Gordo,Cruzamento Entre Estrada Municipal 524 E Monte Gordo
 180399,Em 524 104 (Qta Farrobo),Estrada Municipal 524 104 ( Quinta Farrobo )
