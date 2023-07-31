@@ -22,9 +22,11 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, ' Cruzamento $1');
   regex = /(^|[\(])[\s]*[\(]?X[\)]?\s/giu;
   thisString = thisString.replace(regex, '$1 Cruzamento ');
+  regex = /([gpsgqvzt])X/giu;
+  thisString = thisString.replace(regex, '$1 X ');
   regex = /([^aEIBXN])X([^XTaeIO])/giu;
   thisString = thisString.replace(regex, '$1 X $2');
-  regex = /([^aeiouãõâêîôûáéíóúàèìòùbxn\)\s])([\(]?X[\)]?)/giu;
+  regex = /([^aeiouãõâêîôûáéíóúàèìòùbxn\)\s])([\(]?X[\)]?)(?![aeiou])/giu;
   thisString = thisString.replace(regex, '$1 X ');
   regex = /([\(]?X[\)]?)([^xaieouãõâêîôûáéíóúàèìòùt\(\s)])/giu;
   thisString = thisString.replace(regex, ' X $2');
@@ -88,6 +90,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, ' Alameda ');
   regex = /\b(Alm[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Almirante ');
+  regex = /\bM\s+R\s+(?=Bastos)/giu;
+  thisString = thisString.replace(regex, 'Major Rosa ');
   regex = /\b(B[oº][\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Bairro$2');
   regex = /(^|\(|\sX)[\s]?B[oº]?[\.]?(\s)/giu;
@@ -222,7 +226,9 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Escola ');
   regex = /\b(Cid[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Cidade ');
-  regex = /\b(Univ[\.]?)\s/giu;
+  regex = /(?<=Cidade)[\s]*(Univ(ers)?[\.]?)\s/giu;
+  thisString = thisString.replace(regex, ' Universitária ');
+  regex = /\b(Univ(ers)?[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Universidade ');
   regex = /\b(Hosp[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Hospital ');
@@ -331,6 +337,12 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Forças Armadas');
   regex = /\b(C[o]?v[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Cova ');
+  regex = /\b(Oei[r]?[\.]?)\s/giu;
+  thisString = thisString.replace(regex, 'Oeiras ');
+  regex = /\b(Morad[\.]?)\s/giu;
+  thisString = thisString.replace(regex, 'Moradores ');
+  regex = /\b(Trab[\.]?)\s/giu;
+  thisString = thisString.replace(regex, 'Trabalhadores ');
   regex = /\b(C[\.]?)\s(?=Pau)/giu;
   thisString = thisString.replace(regex, 'Cruz ');
   regex = /\b(A[l]?[d]?[\.]?)\s(?=Meco)/giu;
@@ -363,14 +375,18 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Depósito$3');
   regex = /\b(Av[e]?[n]?[\.]?[aª]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Avenida$2');
-  regex = /(?<!Rua\s|Avenida\s|Alameda\s|Praceta\s)\b(R[\.]?)(\s)/giu;
-  thisString = thisString.replace(regex, 'Rua$2');
+  regex = /(?<!Rua|Avenida|Alameda|Praceta|Travessa|Estrada)(\s|^)R[\.]?(\s)/iu;
+  while (thisString.match(regex)){
+    thisString = thisString.replace(regex, ' Rua$2');
+  }
   regex = /\b(Desp[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Desportivo$2');
   regex = /(?<!C\s|Costa\s|Mte\s|Monte\s|Jo[ãa]o\s)\b(Cap[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Capitão ');
   regex = /\b(Inf[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Infante$2');
+  regex = /\b(Mal[\.]?)(\s)/giu;
+  thisString = thisString.replace(regex, 'Marechal$2');
   regex = /\b(Gen[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'General$2');
   regex = /\b(Cel[\.]?)(\s)/giu;
@@ -632,7 +648,7 @@ module.exports = (p) => {
     thisString = thisString2;
   }
   /* Resolve Santa */
-  regex = /((\s|^)S[\.]?[t]?[aª][\.]?)(\s)/giu;
+  regex = /((\s|^)S[\.]?[t]?[aª][\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, ' Santa$3');
   regex = /((\s|^)S[\.]?[t]?[aª]?[\.]?)(\s[^\s]*[a]\b)/giu;
   thisString = thisString.replace(regex, ' Santa$3');
@@ -701,9 +717,9 @@ module.exports = (p) => {
   regex = /([oº]|Manuel|Luis|Henrique|Henriques\b)(\s[V])(\s|$)/giu;
   thisString = thisString.replace(regex, '$1 Quinto ');
   /* Replace crossings */
-  regex = /\((([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
+  regex = /[\(](([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
   thisString = thisString.replace(regex, '( Cruzamento entre $1 e $4 ');
-  regex = /(?<=[A-Za-z]\s)((?:Rua|Avenida|Estrada)([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
+  regex = /(?<=[A-Za-z]\s)((?:Rua|Avenida|Alameda|Praceta|Travessa|Estrada)([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
   thisString = thisString.replace(regex, '( Cruzamento entre $1 e $4 )');
   regex = /((.)*)[\s]+(X)[\s]+((.)*)/giu;
   thisString = thisString.replace(regex, 'Cruzamento entre $1 e $4');
