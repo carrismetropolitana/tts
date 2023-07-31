@@ -8252,6 +8252,7 @@ stop_id,stop_name,tts_stop_name
 140878,Paio Pires (R Eusébio Leão),Paio Pires ( Rua Eusébio Leão )
 140879,R António Gedeão 177,Rua António Gedeão 177
 140880,R António Gedeão (x) Al. Diego de Velasquez,Cruzamento Entre Rua António Gedeão E Alameda Diego De Velasquez
+149000,ATALAIA (FESTA DO AVANTE),Atalaia ( Festa Do Avante )
 149001,R GIL VICENTE (ESCOLA),Rua Gil Vicente ( Escola )
 149002,Estação de Coina P4,Estação De Coina P 4
 149003,Estação do Fogueteiro P7,Estação Do Fogueteiro P 7
