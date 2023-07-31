@@ -134,9 +134,9 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Rotunda');
   regex = /\b(F[r]?t[e]?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Frente');
-  regex = /\b(T[r]?[a]?[v][\.]?)\b/giu;
+  regex = /\b(T[r]?[a]?v[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Travessa');
-  regex = /\b(T[r][a]?[v]?[\.]?)\b/giu;
+  regex = /\b(Tr(?![êeoiu])[a]?[v]?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Travessa');
   regex = /\b(Urb[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Urbanização');
