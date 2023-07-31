@@ -127,3 +127,6 @@ dist
 .pnp.*
 package-lock.json
 .DS_Store
+stops.txt
+stops_tts.txt
+stops_tts_summary.txt
