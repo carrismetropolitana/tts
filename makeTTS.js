@@ -32,7 +32,7 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, ' X $2');
   regex = /([\(]?X[\)]?)(?=Estr)/giu;
   thisString = thisString.replace(regex, ' X ');
-  regex = /([^aeioutfcrpbndâêîôûáéíóúàèìòù\s])(R\s)/giu;
+  regex = /([^aeioutfcsrpbndâêîôûáéíóúàèìòù\s])(R\s)/giu;
   thisString = thisString.replace(regex, '$1 R ');
   /* Add spaces around parenthesis */
   regex = /([^\s])\(([^X])/giu;
@@ -382,8 +382,10 @@ module.exports = (p) => {
   regex = /\b(Av[e]?[n]?[\.]?[aª]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Avenida$2');
   regex = /(?<!Rua|Avenida|Alameda|Praceta|Travessa|Estrada)(\s|^)R[\.]?(\s)/iu;
-  while (thisString.match(regex)){
+  let regex2 = /(Rua|Avenida|Alameda|Praceta|Travessa|Estrada)[\s]+[^\s]+[\s]+R[\.]?\s/iu
+  while (thisString.match(regex) && !thisString.match(regex2)){
     thisString = thisString.replace(regex, ' Rua$2');
+
   }
   regex = /\b(Desp[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Desportivo$2');
@@ -576,15 +578,15 @@ module.exports = (p) => {
     thisString = thisString2;
   }
   /* Resolve Sra */
-  regex = /\s(Sr[\.]?[aª][\.]?)(\s)/giu;
-  thisString = thisString.replace(regex, ' Senhora$2');
-  regex = /\s(Sr[\.]?[\.]?)(\s[^\s]*[a]\b)/giu;
-  thisString = thisString.replace(regex, ' Senhora$2');
-  regex = /\s(Sr[\.]?[aª]?[\.]?)(\s(Isabel|Inês|Ines|Beatriz|Matilde|Gertrudes|Judite|Leonor|Lurdes)\b)/giu;
-  thisString2 = thisString.replace(regex, ' Senhora$2');
+  regex = /(\s|^)(Sr[\.]?[aª][\.]?)(\s)/giu;
+  thisString = thisString.replace(regex, ' Senhora ');
+  regex = /(\s|^)(Sr[\.]?[\.]?)(\s[^\s]*[a]\b)/giu;
+  thisString = thisString.replace(regex, ' Senhora ');
+  regex = /(\s|^)(Sr[\.]?[aª]?[\.]?)(\s(Isabel|Inês|Ines|Beatriz|Matilde|Gertrudes|Judite|Leonor|Lurdes)\b)/giu;
+  thisString2 = thisString.replace(regex, ' Senhora ');
   if (thisString2 === thisString) {
-    regex = /\s(Sr[\.]?)(\s\w)/giu;
-    thisString = thisString.replace(regex, ' Senhor$2');
+    regex = /(\s|^)(Sr[\.]?)\s(?=\w)/giu;
+    thisString = thisString.replace(regex, ' Senhor ');
   } else {
     thisString = thisString2;
   }
