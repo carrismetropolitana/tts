@@ -9,8 +9,52 @@ function titleCase(str) {
   return splitStr.join(' ').trim();
 }
 
-module.exports = (p) => {
+module.exports = (p, streetNominatim) => {
   let thisString = p;
+  console.log(streetNominatim);
+  let streetWords = streetNominatim.address.road.split(/[\s]+(?!d[aeo][s]?)/);
+  let bagOfWords = [...streetNominatim.address.road.split(/[\s]+(?!d[aeo][s]?)/), 
+  ...streetNominatim.address.neighbourhood.split(/[\s]+(?!d[aeo][s]?)/),
+  ...streetNominatim.address.city_district.split(/[\s]+(?!d[aeo][s]?)/), 
+  ...streetNominatim.address.town.split(/[\s]+(?!d[aeo][s]?)/)];
+  console.log(thisString);
+  for (let index = 0; index < bagOfWords.length; index++){
+    let regexString = '';
+    if(bagOfWords[index][0].match(/[^\.\s\(\)\-\+\\\/]/)){
+      /* Trim spaces */
+      thisString = thisString.replace(/\s+/g, ' ');
+      /* Try higher 3,2-order matches first */
+      if (bagOfWords[index].length-3 > 1){
+        regexString = '\(\^|\s\)'+bagOfWords[index].slice(0,3)+`[^\\s]\{${bagOfWords[index].length-3}\}\([\\s]|\$\)`;
+        generatedRegex = new RegExp(regexString, 'iu');
+        thisString = thisString.replace(generatedRegex, bagOfWords[index]+' ');
+      }
+      if (bagOfWords[index].length-2 > 1){
+        regexString = '\(\^|\s\)'+bagOfWords[index].slice(0,2)+`[^\\s]\{${bagOfWords[index].length-2}\}\([\\s]|\$\)`;
+        generatedRegex = new RegExp(regexString, 'iu');
+        thisString = thisString.replace(generatedRegex, bagOfWords[index]+' ');
+      }
+    }
+  }
+  for (let index = 0; index < streetWords.length; index++){
+    let regexString = '';
+    if(streetWords[index][0].match(/[^\.\s\(\)\-\+\\\/]/)){
+        /* Trim spaces */
+        thisString = thisString.replace(/\s+/g, ' ');
+        /* Try 1-order matches */
+        if (index == streetWords.length-1){
+          regexString = '\(\?\<\=\s'+bagOfWords[index-1][0]+'\)'+`[^\\s]\{0,${streetWords[index-1].length-1}\}[\\s]+`+bagOfWords[index][0]+'\([\\s]\+\|\$\)';
+          generatedRegex = new RegExp(regexString, 'iu');
+          thisString = thisString.replace(generatedRegex, ' '+bagOfWords[index]+' ');  
+        }
+        else{
+          regexString = '\(\^\|\[\\s\]\+\|\\(|\\)\)'+streetWords[index][0]+`[^\\s]\{0,${streetWords[index].length-1}\}[\\s]+(?=`+ streetWords[index+1][0]+ ')'
+          generatedRegex = new RegExp(regexString, 'iu');
+          thisString = thisString.replace(generatedRegex, ' '+streetWords[index]+' ');
+        }
+    }
+  }
+  console.log(thisString);
   /* Uniformize crossing to (X), add spaces around crossing */
   let regex = /\(X\)/giu;
   thisString = thisString.replace(regex, ' X ');
