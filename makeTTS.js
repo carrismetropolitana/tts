@@ -554,12 +554,14 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Augusto ');
   regex = /\b(Quir[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Quirino ');
-  regex = /\b(Rod[\.]?)(\s|$)/giu;
+  regex = /\b(Rod[r]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Rodrigo ');
   regex = /\b(Ferr[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Ferreira ');
   regex = /\b(Marq[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Marques ');
+  regex = /\b(Antun[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Antunes ');
   /* Resolve Dona */
   regex = /\s(D[\.]?[ª]?[\.]?)(\s[^\s]*[a]\b)/giu;
   thisString = thisString.replace(regex, ' Dona$2');
