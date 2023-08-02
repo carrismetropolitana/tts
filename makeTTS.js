@@ -184,7 +184,7 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, ' Câmara ');
   regex = /\b(C(al)?ç[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Calçada ');
-  regex = /\s(Mun[i]?(ci)?(p)?[\.]?)\b/giu;
+  regex = /\s(Mun[i]?[c]?(?![í])[i]?(p)?[\.]?)\b/giu;
   thisString = thisString.replace(regex, ' Municipal');
   regex = /\b([C][a]?[m]?[\s]?M[u]?[n]?)[\s]*(?=[\d])/giu;
   thisString = thisString.replace(regex, 'Caminho Municipal ');
@@ -224,6 +224,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Escola Básica ');
   regex = /\b(Esc[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Escola ');
+  regex = /\b(Col[\.]?)\s/giu;
+  thisString = thisString.replace(regex, 'Colégio ');
   regex = /\b(Cid[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Cidade ');
   regex = /(?<=Cidade)[\s]*(Univ(ers)?[\.]?)\s/giu;
@@ -238,7 +240,9 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Secundária ');
   regex = /\s(C[\s]?[+][\s]?S)\b/giu;
   thisString = thisString.replace(regex, ' Básica e Secundária');
-  regex = /\b(C(e|en|ent|entr|entro)?[\.]?)([\s]?Com(er)?[c]?(ial)?)/giu;
+  regex = /\b2[\s]+3\s/giu;
+  thisString = thisString.replace(regex, ' Segundo e Terceiro ');
+  regex = /\b(C(e|en|ent|entr|entro)?[\.]?)([\s]?Com(?!uni)(er)?[c]?(ial)?)/giu;
   thisString = thisString.replace(regex, 'Centro Comercial');
   regex = /\b(C(a|as|asa)?[\.]?)\s*(?=Mis)/giu;
   thisString = thisString.replace(regex, 'Casa ');
@@ -264,6 +268,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Centro de ');
   regex = /\b(C(e|en|ent|tro)?[\.]?)(\s)(?=Empres)/giu;
   thisString = thisString.replace(regex, 'Centro ');
+  regex = /\b(C(e|en|ent|tro)?[\.]?)(\s)(?=Comun)/giu;
+  thisString = thisString.replace(regex, 'Centro ');
   regex = /\b(C(e|en|ent|tro)?[\.]?)(\s)(de\s)?(?=Jard)/giu;
   thisString = thisString.replace(regex, 'Centro ');
   regex = /\b(C(e|en|ent)?[\.]?)(\s)(de\s)?(?=Ref)/giu;
@@ -278,6 +284,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Centro ');
   regex = /\b(Ctro[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Centro');
+  regex = /\b(Comun[i]?[t]?[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Comunitário ');
   regex = /\b(C[\.]?)(\s)(?=Bra)/giu;
   thisString = thisString.replace(regex, 'Casa ');
   regex = /\bEmpres[\.]?\b/giu;
@@ -385,7 +393,6 @@ module.exports = (p) => {
   let regex2 = /(Rua|Avenida|Alameda|Praceta|Travessa|Estrada)[\s]+[^\s]+[\s]+R[\.]?\s/iu
   while (thisString.match(regex) && !thisString.match(regex2)){
     thisString = thisString.replace(regex, ' Rua$2');
-
   }
   regex = /\b(Desp[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Desportivo$2');
@@ -443,7 +450,7 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Bordalo ');
   regex = /(?<=Bordalo)[\s]*P(in)?[h]?(ei)?[r]?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' Pinheiro');
-  regex = /(?<=Magalh[ãa]es)[\s]*C(ou)?[t]?(inh)?[\.]?\b/giu;
+  regex = /\sC(ou)?[t]?(inh)?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' Coutinho');
   regex = /\bDps[\.]?(\s)/giu;
   thisString = thisString.replace(regex, 'Depois ');
@@ -547,7 +554,7 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Augusto ');
   regex = /\b(Quir[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Quirino ');
-  regex = /\b(Rodr[\.]?)(\s|$)/giu;
+  regex = /\b(Rod[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Rodrigo ');
   regex = /\b(Ferr[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Ferreira ');
