@@ -450,7 +450,7 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Bordalo ');
   regex = /(?<=Bordalo)[\s]*P(in)?[h]?(ei)?[r]?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' Pinheiro');
-  regex = /\sC(ou)?[t]?(inh)?[\.]?\b/giu;
+  regex = /(?<=Gago|Magalh[aã]es)[\s]*C(ou)?[t]?(inh)?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' Coutinho');
   regex = /\bDps[\.]?(\s)/giu;
   thisString = thisString.replace(regex, 'Depois ');
