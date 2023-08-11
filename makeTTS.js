@@ -466,6 +466,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, ' Pinheiro');
   regex = /(?<=Gago|Magalh[aã]es)[\s]*C(ou)?[t]?(inh)?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' Coutinho');
+  regex = /\sG(a|ag)?(\s)*(?=Cout)/giu;
+  thisString = thisString.replace(regex, ' Gago ');
   regex = /\bDps[\.]?(\s)/giu;
   thisString = thisString.replace(regex, 'Depois ');
   regex = /\bJto[\.]?(\s)/giu;
