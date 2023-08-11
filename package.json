@@ -6,6 +6,8 @@
         "start": "node index.js"
     },
     "dependencies": {
-        "papaparse": "^5.4.1"
+        "@googlemaps/google-maps-services-js": "^3.3.35",
+        "papaparse": "^5.4.1",
+        "react-geocode": "^0.2.3"
     }
 }
