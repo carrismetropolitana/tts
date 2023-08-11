@@ -258,6 +258,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Zona Industrial');
   regex = /\sZ\s/giu;
   thisString = thisString.replace(regex, ' Zona ');
+  regex = /\bCC\b/giu;
+  thisString = thisString.replace(regex, 'Centro Comercial');
   regex = /\b(P[o]?[\.]?(s|st|sto)?[\.]?)([\s]?Abast[^\s]*)/giu;
   thisString = thisString.replace(regex, 'Posto de Abastecimento');
   regex = /\b(P[o]?[\.]?(s|st|sto)?[\.]?)\s(?=Comb)/giu;
@@ -294,6 +296,10 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Casa ');
   regex = /\bEmpres[\.]?\b/giu;
   thisString = thisString.replace(regex, 'Empresarial');
+  regex = /\bL[o]?j[\.]?\s/giu;
+  thisString = thisString.replace(regex, 'Loja ');
+  regex = /\bSolid([áa]r)?[\.]?\s/giu;
+  thisString = thisString.replace(regex, 'Solidária ');
   regex = /\bJardm\b/giu;
   thisString = thisString.replace(regex, 'Jardim');
   regex = /\bCtt\b/giu;
@@ -307,7 +313,7 @@ module.exports = (p) => {
   regex = /\bFarm([aá]c)?[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, 'Farmácia ');
   regex = /\b(Ter([m]?|mi|min)[\.]?)(\s|$)/giu;
-  thisString = thisString.replace(regex, 'Terminal ');
+  thisString = thisString.replace(regex, ' Terminal ');
   regex = /\b(Merc[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Mercado ');
   regex = /\b(Superm(erc)?[\.]?)(\s|$)/giu;
