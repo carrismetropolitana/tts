@@ -459,7 +459,7 @@ module.exports = (p) => {
   regex = /\b(Lib[\.]?)(\s)+(?=Galv)/giu;
   thisString = thisString.replace(regex, 'Libânia ');
   regex = /\b(Lib(er)?[\.]?)(\s)+(?=Timor)/giu;
-  thisString = thisString.replace(regex, 'Libertadores ');
+  thisString = thisString.replace(regex, 'Libertadores de ');
   regex = /\bLor(o)?(sae)?\b/giu;
   thisString = thisString.replace(regex, ' Loro Sae ');
   regex = /\bT\s*(?=Lor)/giu;
