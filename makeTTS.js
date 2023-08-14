@@ -357,6 +357,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, ' Alto dos Bonecos ');
   regex = /\bP[\.]?\s(?=Pires)/giu;
   thisString = thisString.replace(regex, ' Paio ');
+  regex = /\bR[ée]p[\.]?(\s|$|\))/giu;
+  thisString = thisString.replace(regex, ' República ');
   regex = /\bCs[l]?\b/giu;
   thisString = thisString.replace(regex, 'Casal');
   regex = /\b(C[\.\s]*)(?=Camb)/giu;
