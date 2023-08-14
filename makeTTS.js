@@ -206,6 +206,12 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Militar ');
   regex = /\b(Seg[\.]?)\s(?=Soc)/giu;
   thisString = thisString.replace(regex, 'Segurança ');
+  regex = /(?<=Segurança)[\s]*Soc(i)?(a)?(l)?(\s|$|\))/giu;
+  thisString = thisString.replace(regex, ' Social ');
+  regex = /\b(Res[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Reserva ');
+  regex = /\b(Nat[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Natural ');
   regex = /\b(J(un)?[t]?[a]?[\.]?)\s(de\s)?(Freg(uesia)?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Junta de Freguesia ');
   regex = /\b(Ass[o]?[c]?[\.]?)(\s|$)/giu;
