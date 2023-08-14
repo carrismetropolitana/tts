@@ -494,7 +494,7 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, ' Coutinho');
   regex = /\sG(a|ag)?(\s)*(?=Cout)/giu;
   thisString = thisString.replace(regex, ' Gago ');
-  regex = /\s(Alf[\.]?)(\s|$|\))/giu;
+  regex = /\s(Alf[r]?[\.]?)(\s|$|\))/giu;
   thisString = thisString.replace(regex, ' Alfredo ');
   regex = /(?<=Alfredo)[\s]*Vit[\.]?\s/giu;
   thisString = thisString.replace(regex, ' Vitorino ');
@@ -562,6 +562,8 @@ module.exports = (p) => {
   thisString = thisString.replace(regex, 'Manuel ');
   regex = /\b(Isid[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Isidoro ');
+  regex = /\s(Per[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, ' Pereira ');
   regex = /\b(Xa[v]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Xavier ');
   regex = /\b(Fran[c]?[\.]?)(\s|$)/giu;
