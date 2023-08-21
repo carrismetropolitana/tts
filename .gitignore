@@ -126,7 +126,15 @@ dist
 .yarn/install-state.gz
 .pnp.*
 package-lock.json
+
+# Finder
 .DS_Store
+
+# Inputs
 stops.txt
-stops_tts.txt
-stops_tts_summary.txt
+
+# Credentials
+/credentials
+
+# outputs
+/outputs
