@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "main": "index.js",
     "scripts": {
-        "stop-to-tts": "node stop-to-tts.js",
-        "tts-to-mp3": "node tts-to-mp3.js"
+        "tts-text": "node run-tts-text.js",
+        "tts-audio": "node run-tts-audio.js"
     },
     "dependencies": {
         "@google-cloud/text-to-speech": "^5.0.0",
