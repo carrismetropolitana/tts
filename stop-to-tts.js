@@ -7,30 +7,36 @@
 /* IMPORTS */
 const fs = require('fs');
 const Papa = require('papaparse');
-const makeTTS = require('./makeTTS');
+const makeTTS = require('./services/makeTTS');
 
-const formatStops = async () => {
+const buildTtsStringFromStopName = async () => {
   //
 
-  //
-  // 0. Get latest data from Intermodal
+  // 0.
+  // Log progress
+  console.log('• Parsing stops.txt file...');
 
-  console.log('• Parsing latest stops...');
-
+  // 1.
+  // Import stops.txt file
   const txtData = fs.readFileSync('stops.txt', { encoding: 'utf8' });
 
+  // 2.
+  // Parse csv file
   const originalStops = Papa.parse(txtData, { header: true });
 
-  //
-  // 1. Format the raw data from Intermodal
-
-  const updatedStops = [];
-  const updatedStopsSummary = [];
-
+  // 3.
+  // Log progress
   console.log('• Preparing ' + originalStops.data.length + ' stops...');
   console.log();
 
+  // 4.
+  // Define variables to hold results
+  const updatedStops = [];
+
+  // 5.
+  // Iterate on each stop to build
   for (const [index, stop] of originalStops.data.entries()) {
+    //
     process.stdout.clearLine();
     process.stdout.cursorTo(0);
     process.stdout.write(`Updating stop ${stop.stop_id} (${index}/${originalStops.data.length})`);
@@ -38,11 +44,6 @@ const formatStops = async () => {
     const ttsStopName = makeTTS(stop.stop_name);
     //
     updatedStops.push({
-      ...stop,
-      tts_stop_name: ttsStopName,
-    });
-    //
-    updatedStopsSummary.push({
       stop_id: stop.stop_id,
       stop_name: stop.stop_name,
       tts_stop_name: ttsStopName,
@@ -50,21 +51,17 @@ const formatStops = async () => {
     //
   }
 
-  //
-  // 2. Save the formatted data into a JSON file
-
+  // 6.
+  // Save the formatted data into a CSV file
   console.log('• Saving data to CSV file.');
-
-  // Use papaparse to produce the CSV string
-  const csvData = Papa.unparse(updatedStops, { skipEmptyLines: 'greedy' });
-  const csvDataSummary = Papa.unparse(updatedStopsSummary, { skipEmptyLines: 'greedy' });
-  // Append the csv string to the file
-  fs.writeFileSync(`stops_tts.txt`, csvData);
+  const csvDataSummary = Papa.unparse(updatedStops, { skipEmptyLines: 'greedy' });
   fs.writeFileSync(`stops_tts_summary.txt`, csvDataSummary);
 
-  //
-
+  // 7.
+  // Log progress
   console.log('• Done! Updated ' + updatedStops.length + ' stops.');
+
+  //
 };
 
 /* * *
@@ -78,7 +75,7 @@ const formatStops = async () => {
   console.log('> Parsing started on ' + start.toISOString());
 
   /* * * * * * * * * * * * */
-  /* */ await formatStops();
+  /* */ await buildTtsStringFromStopName();
   /* * * * * * * * * * * * */
 
   const syncDuration = new Date() - start;
