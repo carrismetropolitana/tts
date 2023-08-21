@@ -1,11 +1,15 @@
 {
-    "name": "intermodal-parser",
-    "version": "1.0.0",
+    "name": "@carrismetropolitana/tts",
+    "version": "2.0.0",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js"
+        "stop-to-tts": "node stop-to-tts.js",
+        "tts-to-mp3": "node tts-to-mp3.js"
     },
     "dependencies": {
+        "@google-cloud/text-to-speech": "^5.0.0",
+        "axios": "^1.4.0",
+        "google-tts-api": "^2.0.2",
         "papaparse": "^5.4.1"
     }
 }
