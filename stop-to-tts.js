@@ -9,7 +9,16 @@ const fs = require('fs');
 const Papa = require('papaparse');
 const makeTTS = require('./services/makeTTS');
 
-const buildTtsStringFromStopName = async () => {
+/* * *
+ * ONE TIME EXECUTION
+ */
+(async () => {
+  console.log();
+  console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
+  console.log('> PARSER');
+  const start = new Date();
+  console.log('> Parsing started on ' + start.toISOString());
+
   //
 
   // 0.
@@ -52,31 +61,22 @@ const buildTtsStringFromStopName = async () => {
   }
 
   // 6.
+  // Create the output directory if it does not exist
+  const dirname = 'outputs/tts-summary';
+  const filename = 'stops_tts_summary.txt';
+  if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
+
+  // 7.
   // Save the formatted data into a CSV file
   console.log('• Saving data to CSV file.');
   const csvDataSummary = Papa.unparse(updatedStops, { skipEmptyLines: 'greedy' });
-  fs.writeFileSync(`stops_tts_summary.txt`, csvDataSummary);
+  fs.writeFileSync(`${dirname}/${filename}`, csvDataSummary);
 
-  // 7.
+  // 8.
   // Log progress
   console.log('• Done! Updated ' + updatedStops.length + ' stops.');
 
   //
-};
-
-/* * *
- * ONE TIME EXECUTION
- */
-(async () => {
-  console.log();
-  console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
-  console.log('> PARSER');
-  const start = new Date();
-  console.log('> Parsing started on ' + start.toISOString());
-
-  /* * * * * * * * * * * * */
-  /* */ await buildTtsStringFromStopName();
-  /* * * * * * * * * * * * */
 
   const syncDuration = new Date() - start;
   console.log('> Operation took ' + syncDuration / 1000 + ' seconds.');

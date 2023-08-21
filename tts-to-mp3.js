@@ -6,13 +6,20 @@
 /* * */
 /* IMPORTS */
 const fs = require('fs');
-const util = require('util');
-const axios = require('axios');
 const Papa = require('papaparse');
-const googleTranslateApi = require('google-tts-api');
-const textToSpeech = require('@google-cloud/text-to-speech');
+const GoogleTranslateAPI = require('./services/GoogleTranslateAPI');
+const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
 
-const formatStops = async () => {
+/* * *
+ * ONE TIME EXECUTION
+ */
+(async () => {
+  console.log();
+  console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
+  console.log('> PARSER');
+  const start = new Date();
+  console.log('> Parsing started on ' + start.toISOString());
+
   //
 
   // 0.
@@ -32,81 +39,26 @@ const formatStops = async () => {
   console.log('• Preparing ' + originalStops.data.length + ' stops...');
   console.log();
 
-  // 4.
-  // Create a new Google TTS client
-  const googleCloudTTSClient = new textToSpeech.TextToSpeechClient();
-
   // 5.
   // Iterate on each stop to build
   for (const [index, stop] of originalStops.data.entries()) {
     //
-    const filename = `${stop.stop_id}.mp3`;
+    process.stdout.clearLine();
+    process.stdout.cursorTo(0);
+    process.stdout.write(`Updating stop ${stop.stop_id} (${index}/${originalStops.data.length})`);
 
-    //
     // OPTION A
     // This uses the free Google Translate API
-    const urlFreeUsingGoogleTranslate = googleTranslateApi.getAudioUrl(stop.stop_name, {
-      lang: 'pt',
-      slow: false,
-      host: 'https://translate.google.com',
-    });
-    //
-    await downloadMP3(urlFreeUsingGoogleTranslate, filename);
+    await GoogleTranslateAPI(stop);
 
-    //
     // OPTION B
     // This uses the paid Google Cloud TTS API, however with a generous free-tier
-    const [response] = await googleCloudTTSClient.synthesizeSpeech({
-      input: { text: stop.stop_name },
-      voice: { name: 'pt-PT-Standard-D' }, // Can go from 'pt-PT-Standard-A' to 'pt-PT-Standard-D'
-      audioConfig: { audioEncoding: 'MP3' },
-    });
-    // Write the binary audio content to a local file
-    const writeFile = util.promisify(fs.writeFile);
-    await writeFile(filename, response.audioContent, 'binary');
+    // await GoogleCloudTTSAPI(stop);
+
+    //
   }
 
   //
-};
-
-async function downloadMP3(url, outputFile) {
-  try {
-    const response = await axios({
-      method: 'get',
-      url: url,
-      responseType: 'stream',
-    });
-
-    response.data.pipe(fs.createWriteStream(outputFile));
-
-    return new Promise((resolve, reject) => {
-      response.data.on('end', () => {
-        console.log('MP3 file saved:', outputFile);
-        resolve();
-      });
-      response.data.on('error', (error) => {
-        console.error('Error downloading MP3:', error.message);
-        reject();
-      });
-    });
-  } catch (error) {
-    console.error('Failed to fetch MP3:', error.message);
-  }
-}
-
-/* * *
- * ONE TIME EXECUTION
- */
-(async () => {
-  console.log();
-  console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
-  console.log('> PARSER');
-  const start = new Date();
-  console.log('> Parsing started on ' + start.toISOString());
-
-  /* * * * * * * * * * * * */
-  /* */ await formatStops();
-  /* * * * * * * * * * * * */
 
   const syncDuration = new Date() - start;
   console.log('> Operation took ' + syncDuration / 1000 + ' seconds.');
