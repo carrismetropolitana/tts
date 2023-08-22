@@ -4,7 +4,7 @@
     "main": "index.js",
     "scripts": {
         "tts-text": "node run-tts-text.js",
-        "tts-audio": "node run-tts-audio.js"
+        "tts-audio": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node run-tts-audio.js"
     },
     "dependencies": {
         "@google-cloud/text-to-speech": "^5.0.0",
