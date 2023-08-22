@@ -15,40 +15,31 @@ const makeTTS = require('./services/makeTTS');
 (async () => {
   console.log();
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
-  console.log('> PARSER');
+  console.log('* TTS TEXT');
   const start = new Date();
-  console.log('> Parsing started on ' + start.toISOString());
+  console.log('* Run started on ' + start.toISOString());
 
-  //
-
-  // 0.
-  // Log progress
-  console.log('• Parsing stops.txt file...');
-
-  // 1.
   // Import stops.txt file
+  console.log('* Reading stops.txt file from disk...');
   const txtData = fs.readFileSync('stops.txt', { encoding: 'utf8' });
 
-  // 2.
   // Parse csv file
+  console.log('* Parsing stops.txt file using Papaparse...');
   const originalStops = Papa.parse(txtData, { header: true });
 
-  // 3.
   // Log progress
-  console.log('• Preparing ' + originalStops.data.length + ' stops...');
-  console.log();
+  console.log('* Preparing ' + originalStops.data.length + ' stops...');
 
-  // 4.
-  // Define variables to hold results
+  // Define variable to hold results
   const updatedStops = [];
 
-  // 5.
-  // Iterate on each stop to build
+  // Iterate on each stop
   for (const [index, stop] of originalStops.data.entries()) {
     //
     process.stdout.clearLine();
+    process.stdout.write(`* Processing stop ${stop.stop_id} (${index}/${originalStops.data.length})`);
     process.stdout.cursorTo(0);
-    process.stdout.write(`Updating stop ${stop.stop_id} (${index}/${originalStops.data.length})`);
+
     //
     const ttsStopName = makeTTS(stop.stop_name);
     //
@@ -60,26 +51,21 @@ const makeTTS = require('./services/makeTTS');
     //
   }
 
-  // 6.
   // Create the output directory if it does not exist
   const dirname = 'outputs/tts-summary';
   const filename = 'stops_tts_summary.txt';
   if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
 
-  // 7.
   // Save the formatted data into a CSV file
-  console.log('• Saving data to CSV file.');
+  process.stdout.clearLine();
+  console.log('* Saving result to CSV file...');
   const csvDataSummary = Papa.unparse(updatedStops, { skipEmptyLines: 'greedy' });
   fs.writeFileSync(`${dirname}/${filename}`, csvDataSummary);
 
-  // 8.
-  // Log progress
-  console.log('• Done! Updated ' + updatedStops.length + ' stops.');
-
   //
-
+  console.log('* Processed ' + originalStops.data.length + ' stops.');
   const syncDuration = new Date() - start;
-  console.log('> Operation took ' + syncDuration / 1000 + ' seconds.');
+  console.log('* Run took ' + syncDuration / 1000 + ' seconds.');
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
   console.log();
 })();
