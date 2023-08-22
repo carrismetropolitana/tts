@@ -6,7 +6,7 @@ module.exports = async (stopData) => {
   //
 
   // Export settings
-  const dirname = 'outputs/google-translate-api';
+  const dirname = 'outputs/google-cloud-tts-api';
   const filename = `${stopData.stop_id}.mp3`;
 
   // Create the output directory if it does not exist
@@ -18,13 +18,13 @@ module.exports = async (stopData) => {
   // This uses the paid Google Cloud TTS API, however with a generous free-tier
   const [response] = await googleCloudTTSClient.synthesizeSpeech({
     input: { text: stopData.stop_name },
-    voice: { name: 'pt-PT-Standard-D' }, // Can go from 'pt-PT-Standard-A' to 'pt-PT-Standard-D'
+    voice: { languageCode: 'pt-PT', name: 'pt-PT-Standard-D' }, // Can go from 'pt-PT-Standard-A' to 'pt-PT-Standard-D'
     audioConfig: { audioEncoding: 'MP3' },
   });
 
   // Write the binary audio content to a local file
   const writeFile = util.promisify(fs.writeFile);
-  await writeFile(filename, response.audioContent, { encoding: 'binary' });
+  await writeFile(`${dirname}/${filename}`, response.audioContent, { encoding: 'binary' });
 
   //
 };
