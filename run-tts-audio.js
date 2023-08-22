@@ -61,6 +61,7 @@ const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
   //
 
   const syncDuration = new Date() - start;
+  console.log();
   console.log('> Operation took ' + syncDuration / 1000 + ' seconds.');
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
   console.log();
