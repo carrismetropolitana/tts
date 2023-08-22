@@ -13,7 +13,7 @@ module.exports = async (stopData) => {
   if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
 
   // Build the TTS audio URL
-  const urlFreeUsingGoogleTranslate = googleTranslateApi.getAudioUrl(stopData.stop_name, { lang: 'pt', slow: false });
+  const urlFreeUsingGoogleTranslate = googleTranslateApi.getAudioUrl(stopData.tts_stop_name, { lang: 'pt', slow: false });
 
   // Fetch the audio file
   const response = await axios({ method: 'get', url: urlFreeUsingGoogleTranslate, responseType: 'stream' });

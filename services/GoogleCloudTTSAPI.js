@@ -17,7 +17,7 @@ module.exports = async (stopData) => {
 
   // This uses the paid Google Cloud TTS API, however with a generous free-tier
   const [response] = await googleCloudTTSClient.synthesizeSpeech({
-    input: { text: stopData.stop_name },
+    input: { text: stopData.tts_stop_name },
     voice: { languageCode: 'pt-PT', name: 'pt-PT-Standard-D' }, // Can go from 'pt-PT-Standard-A' to 'pt-PT-Standard-D'
     audioConfig: { audioEncoding: 'MP3' },
   });
