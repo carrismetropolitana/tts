@@ -35,11 +35,11 @@ const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
 
     // OPTION A
     // This uses the free Google Translate API
-    await GoogleTranslateAPI(stop);
+    // await GoogleTranslateAPI(stop);
 
     // OPTION B
     // This uses the paid Google Cloud TTS API, however with a generous free-tier
-    // await GoogleCloudTTSAPI(stop);
+    await GoogleCloudTTSAPI(stop);
 
     //
   }
