@@ -16,7 +16,7 @@ function addTransfer(p, modes){
 
   function needsAnd (numTr, addedTr){ return (numTr > 1 && addedTr == numTr-1); }
 
-  p = p + ' . ( Há correspondencia ) com '
+  p = p + ' . ( Há correspondência ) com '
   if(modes.light_rail == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro ligeiro '; addedTr += 1;}
   if(modes.subway == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro '; addedTr += 1;}
   if(modes.train == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'combóio '; addedTr += 1;}

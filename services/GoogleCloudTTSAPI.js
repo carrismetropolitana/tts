@@ -7,7 +7,7 @@ module.exports = async (stopData, skipIfExists = true) => {
 
   // Export settings
   const dirname = 'outputs/google-cloud-tts-api-voice-b';
-  const filename = `${stopData.stop_id}.mp3`;
+  const filename = `${stopData.stop_id} - ${stopData.tts_stop_name}.mp3`;
   const pathname = `${dirname}/${filename}`;
 
   // Create the output directory if it does not exist
