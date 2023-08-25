@@ -16,13 +16,13 @@ function addTransfer(p, modes){
 
   function needsAnd (numTr, addedTr){ return (numTr > 1 && addedTr == numTr-1); }
 
-  p = p + ' - há correspondência com '
-  if(modes.light_rail == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro ligeiro - '; addedTr += 1;}
-  if(modes.subway == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro - '; addedTr += 1;}
-  if(modes.train == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'combóio - '; addedTr += 1;}
-  if(modes.boat == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'barco - '; addedTr += 1;}
-  if(modes.bike_sharing == 1){p = p + (needsAnd(numTr, addedTr) ? 'e ' : '') + 'biciclétas partilhadas - '; addedTr += 1;}
-  if(modes.airport == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o') + 'aéroporto (air port) - '; addedTr += 1;}
+  p = p + ' . ( Há correspondencia ) com '
+  if(modes.light_rail == 1){p = p + (needsAnd(numTr, addedTr) ? 'e (o ' : '(o ') + 'métro ligeiro) '; addedTr += 1;}
+  if(modes.subway == 1){p = p + (needsAnd(numTr, addedTr) ? 'e (o ' : '(o ') + 'métro) '; addedTr += 1;}
+  if(modes.train == 1){p = p + (needsAnd(numTr, addedTr) ? 'e (o ' : '(o ') + 'combóio) '; addedTr += 1;}
+  if(modes.boat == 1){p = p + (needsAnd(numTr, addedTr) ? 'e (o ' : '(o ') + 'barco) '; addedTr += 1;}
+  if(modes.bike_sharing == 1){p = p + (needsAnd(numTr, addedTr) ? 'e (' : '(') + 'biciclétas partilhadas) '; addedTr += 1;}
+  if(modes.airport == 1){p = p + (needsAnd(numTr, addedTr) ? 'e (o ' : '(o') + 'aéroporto (air port)) '; addedTr += 1;}
   return p;
 }
 
