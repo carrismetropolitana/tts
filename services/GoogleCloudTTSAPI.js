@@ -23,7 +23,7 @@ module.exports = async (stopData, skipIfExists = true) => {
   const [response] = await googleCloudTTSClient.synthesizeSpeech({
     input: { text: stopData.tts_stop_name },
     voice: { languageCode: 'pt-PT', name: 'pt-PT-Standard-B' }, // Can go from 'pt-PT-Standard-A' to 'pt-PT-Standard-D'
-    audioConfig: { audioEncoding: 'MP3' , speakingRate: 0.9, effectsProfileId: ['large-automotive-class-device']},
+    audioConfig: { audioEncoding: 'MP3' , speakingRate: 0.95, effectsProfileId: ['large-automotive-class-device'], pitch: 2, volumeGainDb: 3},
   });
 
   // Write the binary audio content to a local file
