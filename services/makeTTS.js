@@ -550,8 +550,8 @@ module.exports = (p, modes) => {
   regex = /\bEstal[\.]?\b/giu;
   thisString = thisString.replace(regex, 'Estaleiro');
   /* TTS specific optimizations */
-  regex = /tejo/giu;
-  thisString = thisString.replace(regex, 'téjo');
+  regex = /ribatejo/giu;
+  thisString = thisString.replace(regex, 'riba-tejo');
   regex = /samou/giu;
   thisString = thisString.replace(regex, 'Sámou');
   regex = /abraão/giu;
