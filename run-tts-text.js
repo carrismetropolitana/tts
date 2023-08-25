@@ -32,6 +32,7 @@ const makeTTS = require('./services/makeTTS');
 
   // Define variable to hold results
   const updatedStops = [];
+  const modifiedOriginalStops = [];
 
   // Iterate on each stop
   for (const [index, stop] of originalStops.data.entries()) {
@@ -40,15 +41,21 @@ const makeTTS = require('./services/makeTTS');
     process.stdout.write(`* Processing stop ${stop.stop_id} (${index}/${originalStops.data.length})`);
     process.stdout.cursorTo(0);
 
+    // Assemble transfer modes
+    let modes = (({ light_rail, subway, train, boat, bike_sharing, airport }) => ({ light_rail, subway, train, boat, bike_sharing, airport }))(stop);
     //
-    const ttsStopName = makeTTS(stop.stop_name);
+    const ttsStopName = makeTTS(stop.stop_name, modes);
     //
     updatedStops.push({
       stop_id: stop.stop_id,
       stop_name: stop.stop_name,
       tts_stop_name: ttsStopName,
     });
-    //
+
+    if (stop.tts_stop_name != ttsStopName){
+      stop.tts_stop_name = ttsStopName;
+      modifiedOriginalStops.push(stop);
+    }    //
   }
 
   // Create the output directory if it does not exist
@@ -61,6 +68,10 @@ const makeTTS = require('./services/makeTTS');
   console.log('* Saving result to CSV file...');
   const csvDataSummary = Papa.unparse(updatedStops, { skipEmptyLines: 'greedy' });
   fs.writeFileSync(`${dirname}/${filename}`, csvDataSummary);
+
+  // Required for Ricardo's validation workflow (diff)
+  const csvDataSummaryModified = Papa.unparse(modifiedOriginalStops, { skipEmptyLines: 'greedy' });
+  fs.writeFileSync(`stops_modified.txt`, csvDataSummaryModified);
 
   //
   console.log('* Processed ' + originalStops.data.length + ' stops.');

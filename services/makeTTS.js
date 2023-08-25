@@ -9,7 +9,24 @@ function titleCase(str) {
   return splitStr.join(' ').trim();
 }
 
-module.exports = (p) => {
+function addTransfer(p, modes){
+  const numTr = Object.values(modes).reduce((total,x) => total+(x==1), 0);
+  let addedTr = 0;
+  if (numTr == 0){ return p; }
+
+  function needsAnd (numTr, addedTr){ return (numTr > 1 && addedTr == numTr-1); }
+
+  p = p + ' - há correspondência com '
+  if(modes.light_rail == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro ligeiro - '; addedTr += 1;}
+  if(modes.subway == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro - '; addedTr += 1;}
+  if(modes.train == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'combóio - '; addedTr += 1;}
+  if(modes.boat == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'barco - '; addedTr += 1;}
+  if(modes.bike_sharing == 1){p = p + (needsAnd(numTr, addedTr) ? 'e ' : '') + 'biciclétas partilhadas - '; addedTr += 1;}
+  if(modes.airport == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o') + 'aéroporto (air port) - '; addedTr += 1;}
+  return p;
+}
+
+module.exports = (p, modes) => {
   let thisString = p;
   /* Uniformize crossing to (X), add spaces around crossing */
   let regex = /\(X\)/giu;
@@ -827,5 +844,5 @@ module.exports = (p) => {
   /* Reset "e" casing*/
   // thisString = thisString.replace(/\sE\s/g, ' e ');
   // Return result
-  return thisString
+  return addTransfer(thisString, modes);
 };
