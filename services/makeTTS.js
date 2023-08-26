@@ -66,7 +66,7 @@ module.exports = (p, modes) => {
   regex = /\bN([\d]{3})-(\d)\b/giu;
   thisString = thisString.replace(regex, ' Estrada Nacional $1 $2 ');
   regex = /(?!\sE)\sN[.\s]*[º]?[\s]?((\d)+[a-g]?)[\s]*([\(\)]?)$/giu;
-  thisString = thisString.replace(regex, ' Número $1 $3');
+  thisString = thisString.replace(regex, ' ( Número $1 $3 ) ');
   regex = /1[\.]?[º]?[\s]*(?=Mai|Dez)/giu;
   thisString = thisString.replace(regex, 'Primeiro de ');
   regex = /([^\s\d])(\d)/giu;
@@ -199,6 +199,8 @@ module.exports = (p, modes) => {
   thisString = thisString.replace(regex, ' Auto-estrada ');
   regex = /\s[A](\s|$)/giu;
   thisString = thisString.replace(regex, ' Á ');
+  regex = /(?<=[\d])\s*[C](\s|$)/giu;
+  thisString = thisString.replace(regex, ' Cê ');
   regex = /\b([P]\s?[\d]+)(\s|$)/giu;
   thisString = thisString.replace(regex, '( $1 ) '); 
   regex = /\b(Km[\.]?)(\s|$)/giu;
@@ -557,14 +559,19 @@ module.exports = (p, modes) => {
   regex = /abraão/giu;
   thisString = thisString.replace(regex, 'Abrão');
   regex = /este/giu;
-  thisString = thisString.replace(regex, 'Éste');
-  regex = /oeste/giu;
-  thisString = thisString.replace(regex, 'Óeste');
+  thisString = thisString.replace(regex, 'És-te');
   regex = /\bFomega\b/giu;
   thisString = thisString.replace(regex, 'Fómega');
+  regex = /Linda-a-velha/giu;
+  thisString = thisString.replace(regex, 'Linda-á-Velha');
+  regex = /Monta[\s]*chique/giu;
+  thisString = thisString.replace(regex, 'Montáchique');
   /* Leave towards all unmatched lonely C */
   regex = /(^|\()[\s]?C[\.]?\s(?!C\s)/giu;
   thisString = thisString.replace(regex, '$1 Casal ');
+  /* Celsius correction */
+  regex = /(^|\(|\s)[C](\s|$)/giu;
+  thisString = thisString.replace(regex, ' Cê ');
   /* Resolve common name abbreviations to determine gramatical gender */
   regex = /\b(M[\.]?[ªa])(\s|$)/giu;
   thisString = thisString.replace(regex, 'Maria ');
