@@ -1,12 +1,18 @@
+/* * * * * */
+/* MAKE TTS STOP NAMES */
+/* * */
+/* * */
+
+/* * */
+/* IMPORTS */
 const fs = require('fs');
 const Papa = require('papaparse');
-const GoogleTranslateAPI = require('./services/GoogleTranslateAPI');
+const makeTTS = require('./services/makeTTS');
 const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
 
 /* * *
  * ONE TIME EXECUTION
  */
-
 (async () => {
   console.log();
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
@@ -25,7 +31,10 @@ const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
   // Log progress
   console.log('* Preparing ' + originalStops.data.length + ' stops...');
 
-  // 4.
+  // Define variable to hold results
+  const updatedStops = [];
+  const modifiedOriginalStops = [];
+
   // Iterate on each stop
   for (const [index, stop] of originalStops.data.entries()) {
     //
@@ -33,20 +42,44 @@ const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
     process.stdout.write(`* Processing stop ${stop.stop_id} (${index}/${originalStops.data.length})`);
     process.stdout.cursorTo(0);
 
-    // OPTION A
-    // This uses the free Google Translate API
-    // await GoogleTranslateAPI(stop, true);
+    // Assemble transfer modes
+    let modes = (({ light_rail, subway, train, boat, bike_sharing, airport }) => ({ light_rail, subway, train, boat, bike_sharing, airport }))(stop);
+    //
+    const ttsStopName = makeTTS(stop.stop_name, modes);
+    //
+    updatedStops.push({
+      stop_id: stop.stop_id,
+      stop_name: stop.stop_name,
+      tts_stop_name: ttsStopName,
+    });
 
-    // OPTION B
-    // This uses the paid Google Cloud TTS API, however with a generous free-tier
-    await GoogleCloudTTSAPI(stop, true);
-
+    if (stop.tts_stop_name != ttsStopName) {
+      stop.tts_stop_name = ttsStopName;
+      modifiedOriginalStops.push(stop);
+      await GoogleCloudTTSAPI(stop, true);
+    }
     //
   }
-
   //
   process.stdout.clearLine();
+
+  // Create the output directory if it does not exist
+  const dirname = 'outputs/tts-summary';
+  const filename = 'stops_tts_summary.txt';
+  if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
+
+  // Save the formatted data into a CSV file
+  process.stdout.clearLine();
+  console.log('* Saving result to CSV file...');
+  const csvDataSummary = Papa.unparse(updatedStops, { skipEmptyLines: 'greedy' });
+  fs.writeFileSync(`${dirname}/${filename}`, csvDataSummary);
+
+  // Required for Ricardo's validation workflow (diff)
+  const csvDataSummaryModified = Papa.unparse(modifiedOriginalStops, { skipEmptyLines: 'greedy' });
+  fs.writeFileSync(`tts_tracker.txt`, csvDataSummaryModified);
+
   console.log('* Processed ' + originalStops.data.length + ' stops.');
+  console.log('* Updated ' + modifiedOriginalStops.length + ' stops.');
   const syncDuration = new Date() - start;
   console.log('* Run took ' + syncDuration / 1000 + ' seconds.');
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');

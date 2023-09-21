@@ -52,10 +52,10 @@ const makeTTS = require('./services/makeTTS');
       tts_stop_name: ttsStopName,
     });
 
-    if (stop.tts_stop_name != ttsStopName){
+    if (stop.tts_stop_name != ttsStopName) {
       stop.tts_stop_name = ttsStopName;
       modifiedOriginalStops.push(stop);
-    }    //
+    } //
   }
 
   // Create the output directory if it does not exist

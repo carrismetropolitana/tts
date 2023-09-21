@@ -4,12 +4,11 @@
     "main": "index.js",
     "scripts": {
         "tts-text": "node run-tts-text.js",
-        "tts-audio": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node run-tts-audio.js",
-        "tts-update": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node update-tts-audio.js"
+        "tts-audio": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node run-tts-audio.js"
     },
     "dependencies": {
-        "@google-cloud/text-to-speech": "^5.0.0",
-        "axios": "^1.4.0",
+        "@google-cloud/text-to-speech": "^5.0.1",
+        "axios": "^1.5.0",
         "google-tts-api": "^2.0.2",
         "papaparse": "^5.4.1"
     }
