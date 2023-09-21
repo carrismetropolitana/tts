@@ -62,7 +62,7 @@ const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
       // If TTS has changed, then generate a new audio file for this stop
       try {
         stop.tts_stop_name = ttsStopName;
-        //   await GoogleCloudTTSAPI(stop, true);
+        await GoogleCloudTTSAPI(stop, true);
         updatedTtsTrackerCount++;
       } catch (error) {
         console.log(error);
