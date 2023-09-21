@@ -20,66 +20,68 @@ const GoogleCloudTTSAPI = require('./services/GoogleCloudTTSAPI');
   const start = new Date();
   console.log('* Run started on ' + start.toISOString());
 
-  // Import stops.txt file
+  // Read stops.txt file
   console.log('* Reading stops.txt file from disk...');
-  const txtData = fs.readFileSync('stops.txt', { encoding: 'utf8' });
+  const stopsTxt = fs.readFileSync('stops.txt', { encoding: 'utf8' });
+  const stopsTxtData = Papa.parse(stopsTxt, { header: true });
 
-  // Parse csv file
-  console.log('* Parsing stops.txt file using Papaparse...');
-  const originalStops = Papa.parse(txtData, { header: true });
+  // Read tts_tracker.txt file
+  console.log('* Reading tts_tracker.txt file from disk...');
+  const ttsTracker = fs.readFileSync('tts_tracker.txt', { encoding: 'utf8' });
+  const ttsTrackerData = Papa.parse(ttsTracker, { header: true });
 
   // Log progress
-  console.log('* Preparing ' + originalStops.data.length + ' stops...');
+  console.log('* Preparing ' + stopsTxtData.data.length + ' stops...');
 
   // Define variable to hold results
-  const updatedStops = [];
-  const modifiedOriginalStops = [];
+  const updatedTtsTracker = [];
+  let updatedTtsTrackerCount = 0;
 
   // Iterate on each stop
-  for (const [index, stop] of originalStops.data.entries()) {
+  for (const [index, stop] of stopsTxtData.data.entries()) {
     //
     process.stdout.clearLine();
-    process.stdout.write(`* Processing stop ${stop.stop_id} (${index}/${originalStops.data.length})`);
+    process.stdout.write(`* Processing stop ${stop.stop_id} (${index}/${stopsTxtData.data.length})`);
     process.stdout.cursorTo(0);
 
-    // Assemble transfer modes
+    // 1.
+    // Generate fresh TTS for this stop
     let modes = (({ light_rail, subway, train, boat, bike_sharing, airport }) => ({ light_rail, subway, train, boat, bike_sharing, airport }))(stop);
-    //
     const ttsStopName = makeTTS(stop.stop_name, modes);
-    //
-    updatedStops.push({
-      stop_id: stop.stop_id,
-      stop_name: stop.stop_name,
-      tts_stop_name: ttsStopName,
-    });
 
-    if (stop.tts_stop_name != ttsStopName) {
-      stop.tts_stop_name = ttsStopName;
-      modifiedOriginalStops.push(stop);
-      await GoogleCloudTTSAPI(stop, true);
+    // 2.
+    // Check if tts_tracker already has this entry,
+    // and if this entry tts_name differs from the generated TTS
+    const trackerEntry = ttsTrackerData.data.find((item) => item.stop_id === stop.stop_id);
+    const ttsHasChanged = ttsStopName !== trackerEntry?.tts_stop_name;
+
+    // 3.
+    // If TTS has changed, then generate a new audio file for this stop
+    if (ttsHasChanged) {
+      // 3.1.
+      // If TTS has changed, then generate a new audio file for this stop
+      try {
+        stop.tts_stop_name = ttsStopName;
+        //   await GoogleCloudTTSAPI(stop, true);
+        updatedTtsTrackerCount++;
+      } catch (error) {
+        console.log(error);
+      }
     }
+
+    updatedTtsTracker.push(stop);
+
     //
   }
   //
   process.stdout.clearLine();
 
-  // Create the output directory if it does not exist
-  const dirname = 'outputs/tts-summary';
-  const filename = 'stops_tts_summary.txt';
-  if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
-
-  // Save the formatted data into a CSV file
-  process.stdout.clearLine();
-  console.log('* Saving result to CSV file...');
-  const csvDataSummary = Papa.unparse(updatedStops, { skipEmptyLines: 'greedy' });
-  fs.writeFileSync(`${dirname}/${filename}`, csvDataSummary);
-
   // Required for Ricardo's validation workflow (diff)
-  const csvDataSummaryModified = Papa.unparse(modifiedOriginalStops, { skipEmptyLines: 'greedy' });
-  fs.writeFileSync(`tts_tracker.txt`, csvDataSummaryModified);
+  const csvDataUpdatedTtsTracker = Papa.unparse(updatedTtsTracker, { skipEmptyLines: 'greedy' });
+  fs.writeFileSync(`tts_tracker.txt`, csvDataUpdatedTtsTracker);
 
-  console.log('* Processed ' + originalStops.data.length + ' stops.');
-  console.log('* Updated ' + modifiedOriginalStops.length + ' stops.');
+  console.log('* Processed ' + stopsTxtData.data.length + ' stops.');
+  console.log('* Updated ' + updatedTtsTrackerCount + ' stops.');
   const syncDuration = new Date() - start;
   console.log('* Run took ' + syncDuration / 1000 + ' seconds.');
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
