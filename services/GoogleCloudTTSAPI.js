@@ -2,6 +2,8 @@ const fs = require('fs');
 const util = require('util');
 const textToSpeech = require('@google-cloud/text-to-speech');
 
+let googleCloudTTSClient;
+
 module.exports = async ({ string, filename, dirname, replaceIfExists = false }) => {
   //
 
@@ -15,7 +17,7 @@ module.exports = async ({ string, filename, dirname, replaceIfExists = false }) 
   if (!replaceIfExists && fs.existsSync(pathname)) return;
 
   // Create a new Google TTS client
-  const googleCloudTTSClient = new textToSpeech.TextToSpeechClient();
+  if (!googleCloudTTSClient) googleCloudTTSClient = new textToSpeech.TextToSpeechClient();
 
   // This uses the paid Google Cloud TTS API, however with a generous free-tier
   const [response] = await googleCloudTTSClient.synthesizeSpeech({
@@ -25,7 +27,7 @@ module.exports = async ({ string, filename, dirname, replaceIfExists = false }) 
   });
 
   // Write the binary audio content to a local file
-  const writeFile = util.promisify(fs.writeFile);
+  const writeFile = util.promisify(fs.writeFileSync);
   await writeFile(pathname, response.audioContent, { encoding: 'binary' });
 
   //

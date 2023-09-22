@@ -1,7 +1,13 @@
 const fs = require('fs');
 const Papa = require('papaparse');
 
+const OUTPUTS_DIRNAME = 'outputs';
 const TRACKERS_DIRNAME = 'trackers';
+
+const init = (name) => {
+  if (!fs.existsSync(TRACKERS_DIRNAME)) fs.mkdirSync(TRACKERS_DIRNAME, { recursive: true });
+  if (!fs.existsSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`)) fs.writeFileSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`, '');
+};
 
 const get = ({ name }) => {
   init(name);
@@ -17,9 +23,14 @@ const set = ({ name, data }) => {
   fs.writeFileSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`, trackerCsvUpdated);
 };
 
-const init = (name) => {
-  if (!fs.existsSync(TRACKERS_DIRNAME)) fs.mkdirSync(TRACKERS_DIRNAME, { recursive: true });
-  if (!fs.existsSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`)) fs.writeFileSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`, '');
+const clean = ({ name }) => {
+  const directoryContents = fs.readdirSync(`${OUTPUTS_DIRNAME}/${name}`, { withFileTypes: true });
+  const trackerData = get({ name: name });
+  const allTrackerItemIds = trackerData.map((item) => String(item.id));
+  for (const existingFile of directoryContents) {
+    if (allTrackerItemIds.includes(existingFile.name)) continue;
+    fs.rmSync(`${OUTPUTS_DIRNAME}/${name}/${existingFile.name}`, { recursive: true, force: true });
+  }
 };
 
-module.exports = { get, set };
+module.exports = { get, set, clean };

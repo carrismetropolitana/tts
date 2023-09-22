@@ -29,7 +29,7 @@ module.exports = async () => {
 
     // Check if tracker already has this entry,
     // and if it differs from the given TTS.
-    const trackerEntry = trackerData.find((item) => item.stop_id === stopData.id);
+    const trackerEntry = trackerData.find((item) => item.id === stopData.id);
     const ttsHasChanged = stopData.tts_name !== trackerEntry?.tts;
 
     if (ttsHasChanged) {
@@ -37,19 +37,21 @@ module.exports = async () => {
         await GoogleCloudTTSAPI({ string: stopData.tts_name, filename: stopData.id, dirname: 'outputs/stops', replaceIfExists: true });
         console.log(`* [${stopIndex}/${allStopsData.length}] Generated | Stop ${stopData.id} | ${stopData.tts_name}`);
       } catch (error) {
-        Tracker.set({ name: 'stops', data: trackerDataUpdated });
+        console.log(`* [${stopIndex}/${allStopsData.length}] ERROR | Stop ${stopData.id}`);
         console.log(error);
-        process.exit(1);
       }
     }
 
-    trackerDataUpdated.push({ stop_id: stopData.id, tts: stopData.tts_name });
+    trackerDataUpdated.push({ id: stopData.id, tts: stopData.tts_name });
 
     //
   }
 
   // Save updated tracker
   Tracker.set({ name: 'stops', data: trackerDataUpdated });
+
+  // Clean directory
+  Tracker.clean({ name: 'patterns' });
 
   //
   console.log();

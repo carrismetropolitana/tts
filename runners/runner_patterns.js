@@ -54,7 +54,7 @@ module.exports = async () => {
 
       // Check if tracker already has this entry,
       // and if it differs from the generated TTS.
-      const trackerEntry = trackerData.find((item) => item.pattern_id === patternId);
+      const trackerEntry = trackerData.find((item) => item.id === patternId);
       const ttsHasChanged = patternTTs !== trackerEntry?.tts;
 
       if (ttsHasChanged) {
@@ -62,14 +62,12 @@ module.exports = async () => {
           await GoogleCloudTTSAPI({ string: patternTTs, filename: patternId, dirname: 'outputs/patterns', replaceIfExists: true });
           console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTTs}`);
         } catch (error) {
-          Tracker.set({ name: 'patterns', data: trackerDataUpdated });
           console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] ERROR | Line ${lineData.id} | Pattern ${patternData.id}`);
           console.log(error);
-          process.exit(1);
         }
       }
 
-      trackerDataUpdated.push({ pattern_id: patternId, tts: patternTTs });
+      trackerDataUpdated.push({ id: patternId, tts: patternTTs });
 
       //
     }
@@ -77,6 +75,9 @@ module.exports = async () => {
 
   // Save updated tracker
   Tracker.set({ name: 'patterns', data: trackerDataUpdated });
+
+  // Clean directory
+  Tracker.clean({ name: 'patterns' });
 
   //
   console.log();
