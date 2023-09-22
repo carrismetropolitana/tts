@@ -49,7 +49,7 @@ module.exports = async () => {
   Tracker.set({ name: 'stops', data: trackerDataUpdated });
 
   // Clean directory
-  Tracker.clean({ name: 'patterns' });
+  Tracker.clean({ name: 'stops' });
 
   //
   console.log();
