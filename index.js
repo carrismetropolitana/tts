@@ -9,8 +9,8 @@ const runnerStops = require('./runners/runner_stops');
 
   let TASK_IS_RUNNING = false;
 
-  await runnerPatterns();
-  await runnerStops();
+  //   await runnerPatterns();
+  //   await runnerStops();
 
   setInterval(async () => {
     //
@@ -19,8 +19,9 @@ const runnerStops = require('./runners/runner_stops');
 
     TASK_IS_RUNNING = true;
 
-    await runnerPatterns();
-    await runnerStops();
+    // await runnerPatterns();
+    // await runnerStops();
+    console.log('ping');
 
     TASK_IS_RUNNING = false;
 
