@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const Papa = require('papaparse');
 const settings = require('../config/settings');
 
@@ -24,13 +25,10 @@ const set = (name, data) => {
 const clean = (name) => {
   const trackerData = get(name);
   const allTrackerItemIds = trackerData.map((item) => String(item.id));
-  const directoryContents = fs.readdirSync(`${settings.OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: false });
-
-  console.log('allTrackerItemIds', allTrackerItemIds);
-  console.log('directoryContents', directoryContents);
+  const directoryContents = fs.readdirSync(`${settings.OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: true });
   for (const existingFile of directoryContents) {
-    console.log('existingFile.name', existingFile.name);
-    if (allTrackerItemIds.includes(existingFile.name)) continue;
+    const filenameWithoutExtension = path.parse(existingFile.name).name;
+    if (allTrackerItemIds.includes(filenameWithoutExtension)) continue;
     fs.rmSync(`${settings.OUTPUTS_DIRNAME}/${name}/${existingFile.name}`, { recursive: true, force: true });
   }
 };
