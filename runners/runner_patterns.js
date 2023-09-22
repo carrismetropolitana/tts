@@ -1,13 +1,7 @@
-/* * * * * */
-/* MAKE TTS STOP NAMES */
-/* * */
-/* * */
-
-/* * */
-/* IMPORTS */
-const GoogleCloudTTSAPI = require('../services/GoogleCloudTTSAPI');
+const settings = require('../config/settings');
 const makeTTS = require('../services/makeTTS');
 const Tracker = require('../services/Tracker');
+const GoogleCloudTTSAPI = require('../services/GoogleCloudTTSAPI');
 
 /* * */
 
@@ -58,7 +52,7 @@ module.exports = async () => {
       const ttsHasChanged = patternTTs !== trackerEntry?.tts;
 
       if (ttsHasChanged) {
-        await GoogleCloudTTSAPI({ string: patternTTs, filename: patternId, dirname: 'outputs/patterns', replaceIfExists: true });
+        await GoogleCloudTTSAPI({ string: patternTTs, filename: patternId, dirname: `${settings.OUTPUTS_DIRNAME}/patterns`, replaceIfExists: true });
         console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTTs}`);
       }
 

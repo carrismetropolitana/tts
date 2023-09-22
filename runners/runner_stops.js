@@ -1,5 +1,6 @@
-const GoogleCloudTTSAPI = require('../services/GoogleCloudTTSAPI');
+const settings = require('../config/settings');
 const Tracker = require('../services/Tracker');
+const GoogleCloudTTSAPI = require('../services/GoogleCloudTTSAPI');
 
 /* * */
 
@@ -35,7 +36,7 @@ module.exports = async () => {
     const ttsHasChanged = stopData.tts_name !== trackerEntry?.tts;
 
     if (ttsHasChanged) {
-      await GoogleCloudTTSAPI({ string: stopData.tts_name, filename: stopData.id, dirname: 'outputs/stops', replaceIfExists: true });
+      await GoogleCloudTTSAPI({ string: stopData.tts_name, filename: stopData.id, dirname: `${settings.OUTPUTS_DIRNAME}/stops`, replaceIfExists: true });
       console.log(`* [${stopIndex}/${allStopsData.length}] Generated | Stop ${stopData.id} | ${stopData.tts_name}`);
     }
 

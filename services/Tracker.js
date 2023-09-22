@@ -1,18 +1,16 @@
 const fs = require('fs');
 const Papa = require('papaparse');
-
-const OUTPUTS_DIRNAME = 'outputs';
-const TRACKERS_DIRNAME = 'trackers';
+const settings = require('../config/settings');
 
 const init = (name) => {
-  if (!fs.existsSync(TRACKERS_DIRNAME)) fs.mkdirSync(TRACKERS_DIRNAME, { recursive: true });
-  if (!fs.existsSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`)) fs.writeFileSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`, '');
+  if (!fs.existsSync(settings.TRACKERS_DIRNAME)) fs.mkdirSync(settings.TRACKERS_DIRNAME, { recursive: true });
+  if (!fs.existsSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`)) fs.writeFileSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`, '');
 };
 
 const get = ({ name }) => {
   init(name);
   console.log(`* Reading tracker_${name}.csv file from disk...`);
-  const trackerCsv = fs.readFileSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`, { encoding: 'utf8' });
+  const trackerCsv = fs.readFileSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`, { encoding: 'utf8' });
   const trackerPapa = Papa.parse(trackerCsv, { header: true });
   return trackerPapa.data;
 };
@@ -20,20 +18,20 @@ const get = ({ name }) => {
 const set = ({ name, data }) => {
   init(name);
   const trackerCsvUpdated = Papa.unparse(data, { skipEmptyLines: 'greedy' });
-  fs.writeFileSync(`${TRACKERS_DIRNAME}/tracker_${name}.csv`, trackerCsvUpdated);
+  fs.writeFileSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`, trackerCsvUpdated);
 };
 
 const clean = ({ name }) => {
   const trackerData = get({ name: name });
   const allTrackerItemIds = trackerData.map((item) => String(item.id));
-  const directoryContents = fs.readdirSync(`${OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: true });
+  const directoryContents = fs.readdirSync(`${settings.OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: true });
 
   console.log('allTrackerItemIds', allTrackerItemIds);
   console.log('directoryContents', directoryContents);
   for (const existingFile of directoryContents) {
     console.log('existingFile.name', existingFile.name);
     if (allTrackerItemIds.includes(existingFile.name)) continue;
-    fs.rmSync(`${OUTPUTS_DIRNAME}/${name}/${existingFile.name}`, { recursive: true, force: true });
+    fs.rmSync(`${settings.OUTPUTS_DIRNAME}/${name}/${existingFile.name}`, { recursive: true, force: true });
   }
 };
 
