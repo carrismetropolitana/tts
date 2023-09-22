@@ -24,7 +24,7 @@ const set = (name, data) => {
 const clean = (name) => {
   const trackerData = get({ name: name });
   const allTrackerItemIds = trackerData.map((item) => String(item.id));
-  const directoryContents = fs.readdirSync(`${settings.OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: true });
+  const directoryContents = fs.readdirSync(`${settings.OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: false });
 
   console.log('allTrackerItemIds', allTrackerItemIds);
   console.log('directoryContents', directoryContents);
