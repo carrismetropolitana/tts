@@ -1,6 +1,7 @@
 const settings = require('./config/settings');
-const runnerPatterns = require('./runners/runner_patterns');
+const runnerCommon = require('./runners/runner_common');
 const runnerStops = require('./runners/runner_stops');
+const runnerPatterns = require('./runners/runner_patterns');
 
 //
 
@@ -9,8 +10,9 @@ const runnerStops = require('./runners/runner_stops');
 
   let TASK_IS_RUNNING = false;
 
-  await runnerPatterns();
+  await runnerCommon();
   await runnerStops();
+  await runnerPatterns();
 
   setInterval(async () => {
     //
@@ -19,8 +21,9 @@ const runnerStops = require('./runners/runner_stops');
 
     TASK_IS_RUNNING = true;
 
-    await runnerPatterns();
+    await runnerCommon();
     await runnerStops();
+    await runnerPatterns();
 
     TASK_IS_RUNNING = false;
 
