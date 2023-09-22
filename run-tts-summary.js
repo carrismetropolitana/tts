@@ -44,16 +44,11 @@ const makeTTS = require('./services/makeTTS');
     //
   }
 
-  // Create the output directory if it does not exist
-  const dirname = 'outputs';
-  const filename = 'stops_tts_summary.txt';
-  if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
-
   // Save the formatted data into a CSV file
   process.stdout.clearLine();
   console.log('* Saving result to CSV file...');
   const ttsSummaryCsv = Papa.unparse(ttsSummary, { skipEmptyLines: 'greedy' });
-  fs.writeFileSync(`${dirname}/${filename}`, ttsSummaryCsv);
+  fs.writeFileSync('stops_tts_summary.txt', ttsSummaryCsv);
 
   //
   console.log('* Processed ' + ttsSummary.length + ' stops.');
