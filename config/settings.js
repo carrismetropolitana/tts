@@ -1,6 +1,6 @@
 module.exports = {
   //
-  RUN_INTERVAL: 10000, // 10 seconds
+  RUN_INTERVAL: 1080000, // 3 hours in milliseconds
 
   //
 };

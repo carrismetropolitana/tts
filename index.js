@@ -10,7 +10,7 @@ const runnerStops = require('./runners/runner_stops');
   let TASK_IS_RUNNING = false;
 
   await runnerLines();
-  //   await runnerStops();
+  await runnerStops();
 
   setInterval(async () => {
     //
@@ -20,7 +20,7 @@ const runnerStops = require('./runners/runner_stops');
     TASK_IS_RUNNING = true;
 
     await runnerLines();
-    // await runnerStops();
+    await runnerStops();
 
     TASK_IS_RUNNING = false;
 

@@ -59,7 +59,7 @@ module.exports = async () => {
 
       if (ttsHasChanged) {
         try {
-          //   await GoogleCloudTTSAPI({ string: patternTTs, filename: patternId, dirname: 'outputs/lines', replaceIfExists: true });
+          await GoogleCloudTTSAPI({ string: patternTTs, filename: patternId, dirname: 'outputs/lines', replaceIfExists: true });
           console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTTs}`);
         } catch (error) {
           Tracker.set({ name: 'lines', data: trackerDataUpdated });
