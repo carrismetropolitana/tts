@@ -50,6 +50,9 @@ module.exports = async () => {
   // Clean directory
   Tracker.clean('common');
 
+  // Zip directory
+  Tracker.zip('common');
+
   //
   console.log();
   console.log(`* Processed ${trackerDataUpdated.length} common.`);
