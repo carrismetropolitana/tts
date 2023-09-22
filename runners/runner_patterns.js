@@ -68,6 +68,9 @@ module.exports = async () => {
   // Clean directory
   Tracker.clean('patterns');
 
+  // Zip directory
+  Tracker.zip('patterns');
+
   //
   console.log();
   console.log(`* Processed ${trackerDataUpdated.length} patterns.`);

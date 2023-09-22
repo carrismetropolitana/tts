@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Papa = require('papaparse');
+const AdmZip = require('adm-zip');
 const settings = require('../config/settings');
 
 const init = (name) => {
@@ -35,4 +36,11 @@ const clean = (name) => {
   }
 };
 
-module.exports = { get, set, clean };
+const zip = (name) => {
+  console.log(`* Zipping ${name}...`);
+  const outputZip = new AdmZip();
+  outputZip.addLocalFolder(`${settings.OUTPUTS_DIRNAME}/${name}/`);
+  outputZip.writeZip(`${settings.OUTPUTS_DIRNAME}/${name}/all.zip`);
+};
+
+module.exports = { get, set, clean, zip };

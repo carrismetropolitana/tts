@@ -49,9 +49,6 @@ module.exports = async () => {
   // Clean directory
   Tracker.clean('stops');
 
-  // Zip directory
-  Tracker.zip('stops');
-
   //
   console.log();
   console.log(`* Processed ${trackerDataUpdated.length} stops.`);
