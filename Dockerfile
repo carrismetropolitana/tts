@@ -11,4 +11,4 @@ RUN npm --omit=dev install
 COPY . .
 
 # Start the program
-CMD ["GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json'", "node", "index.js"]
+CMD ["node", "index.js"]
