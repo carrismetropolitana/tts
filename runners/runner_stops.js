@@ -33,13 +33,8 @@ module.exports = async () => {
     const ttsHasChanged = stopData.tts_name !== trackerEntry?.tts;
 
     if (ttsHasChanged) {
-      try {
-        await GoogleCloudTTSAPI({ string: stopData.tts_name, filename: stopData.id, dirname: 'outputs/stops', replaceIfExists: true });
-        console.log(`* [${stopIndex}/${allStopsData.length}] Generated | Stop ${stopData.id} | ${stopData.tts_name}`);
-      } catch (error) {
-        console.log(`* [${stopIndex}/${allStopsData.length}] ERROR | Stop ${stopData.id}`);
-        console.log(error);
-      }
+      await GoogleCloudTTSAPI({ string: stopData.tts_name, filename: stopData.id, dirname: 'outputs/stops', replaceIfExists: true });
+      console.log(`* [${stopIndex}/${allStopsData.length}] Generated | Stop ${stopData.id} | ${stopData.tts_name}`);
     }
 
     trackerDataUpdated.push({ id: stopData.id, tts: stopData.tts_name });

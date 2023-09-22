@@ -27,7 +27,7 @@ module.exports = async ({ string, filename, dirname, replaceIfExists = false }) 
   });
 
   // Write the binary audio content to a local file
-  const writeFile = util.promisify(fs.writeFileSync);
+  const writeFile = util.promisify(fs.writeFile);
   await writeFile(pathname, response.audioContent, { encoding: 'binary' });
 
   //
