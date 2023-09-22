@@ -16,7 +16,7 @@ module.exports = async ({ string, filename, dirname, replaceIfExists = false }) 
   // If flag is set and file exists, skip this stop
   if (!replaceIfExists && fs.existsSync(pathname)) return;
 
-  fs.writeFileSync(pathname, 'guygy', { encoding: 'binary' });
+  fs.writeFileSync(pathname, 'guygy');
 
   // Create a new Google TTS client
   if (!googleCloudTTSClient) googleCloudTTSClient = new textToSpeech.TextToSpeechClient();
