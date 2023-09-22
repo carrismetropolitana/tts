@@ -52,7 +52,7 @@ module.exports = async () => {
 
   //
   console.log();
-  console.log(`* Processed ${allStopsData.length} stops.`);
+  console.log(`* Processed ${trackerDataUpdated.length} stops.`);
   const syncDuration = new Date() - start;
   console.log(`* Run took ${syncDuration / 1000} seconds.`);
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
