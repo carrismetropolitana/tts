@@ -14,12 +14,12 @@ const Tracker = require('../services/Tracker');
 module.exports = async () => {
   console.log();
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
-  console.log('* TTS LINES');
+  console.log('* TTS PATTERNS');
   const start = new Date();
   console.log(`* Run started on ${start.toISOString()}`);
 
   // Setup tracker
-  const trackerData = Tracker.get({ name: 'lines' });
+  const trackerData = Tracker.get({ name: 'patterns' });
   const trackerDataUpdated = [];
 
   // Get all lines
@@ -62,7 +62,7 @@ module.exports = async () => {
           await GoogleCloudTTSAPI({ string: patternTTs, filename: patternId, dirname: 'outputs/lines', replaceIfExists: true });
           console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTTs}`);
         } catch (error) {
-          Tracker.set({ name: 'lines', data: trackerDataUpdated });
+          Tracker.set({ name: 'patterns', data: trackerDataUpdated });
           console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] ERROR | Line ${lineData.id} | Pattern ${patternData.id}`);
           console.log(error);
           process.exit(1);
@@ -76,7 +76,7 @@ module.exports = async () => {
   }
 
   // Save updated tracker
-  Tracker.set({ name: 'lines', data: trackerDataUpdated });
+  Tracker.set({ name: 'patterns', data: trackerDataUpdated });
 
   //
   console.log();
