@@ -8,7 +8,7 @@ module.exports = async ({ string, filename, dirname, replaceIfExists = false }) 
   //
 
   // Export settings
-  const pathname = `${dirname}/${filename}.mp3`;
+  const pathname = `${dirname}/${filename}.txt`;
 
   // Create the output directory if it does not exist
   if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
