@@ -9,24 +9,46 @@ function titleCase(str) {
   return splitStr.join(' ').trim();
 }
 
-function addTransfer(p, modes){
-  const numTr = Object.values(modes).reduce((total,x) => total+(x==1), 0);
+function addTransfer(p, modes) {
+  const numTr = Object.values(modes).reduce((total, x) => total + (x == 1), 0);
   let addedTr = 0;
-  if (numTr == 0){ return p; }
+  if (numTr == 0) {
+    return p;
+  }
 
-  function needsAnd (numTr, addedTr){ return (numTr > 1 && addedTr == numTr-1); }
+  function needsAnd(numTr, addedTr) {
+    return numTr > 1 && addedTr == numTr - 1;
+  }
 
-  p = p + ' . ( Há correspondência ) com '
-  if(modes.light_rail == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro ligeiro '; addedTr += 1;}
-  if(modes.subway == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro '; addedTr += 1;}
-  if(modes.train == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'combóio '; addedTr += 1;}
-  if(modes.boat == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'barco '; addedTr += 1;}
-  if(modes.bike_sharing == 1){p = p + (needsAnd(numTr, addedTr) ? 'e ' : '') + 'biciclétas partilhadas '; addedTr += 1;}
-  if(modes.airport == 1){p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o') + 'aéroporto (air port) '; addedTr += 1;}
+  p = p + ' . ( Há correspondência ) com ';
+  if (modes.light_rail == 1) {
+    p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro ligeiro ';
+    addedTr += 1;
+  }
+  if (modes.subway == 1) {
+    p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'métro ';
+    addedTr += 1;
+  }
+  if (modes.train == 1) {
+    p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'combóio ';
+    addedTr += 1;
+  }
+  if (modes.boat == 1) {
+    p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o ') + 'barco ';
+    addedTr += 1;
+  }
+  if (modes.bike_sharing == 1) {
+    p = p + (needsAnd(numTr, addedTr) ? 'e ' : '') + 'biciclétas partilhadas ';
+    addedTr += 1;
+  }
+  if (modes.airport == 1) {
+    p = p + (needsAnd(numTr, addedTr) ? 'e o ' : 'o') + 'aéroporto (air port) ';
+    addedTr += 1;
+  }
   return p;
 }
 
-module.exports = (p, modes) => {
+module.exports = (p, modes = {}) => {
   let thisString = p;
   /* Uniformize crossing to (X), add spaces around crossing */
   let regex = /\(X\)/giu;
@@ -202,7 +224,7 @@ module.exports = (p, modes) => {
   regex = /(?<=[\d])\s*[C](\s|$)/giu;
   thisString = thisString.replace(regex, ' Cê ');
   regex = /\b([P]\s?[\d]+)(\s|$)/giu;
-  thisString = thisString.replace(regex, '( $1 ) '); 
+  thisString = thisString.replace(regex, '( $1 ) ');
   regex = /\b(Km[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Quilómetro ');
   regex = /s\s(Mun(ici)?(p)?[\.]?)\b/giu;
@@ -433,7 +455,7 @@ module.exports = (p, modes) => {
   regex = /\bV[e]?nd(as)?[\.]?[\s]?Az(eit[ãa]o)?/giu;
   thisString = thisString.replace(regex, 'Vendas de Azeitão');
   regex = /\bM(ar)?(c)?[\.]?[\s]?Grilo/giu;
-  thisString = thisString.replace(regex, 'Marco do Grilo'); 
+  thisString = thisString.replace(regex, 'Marco do Grilo');
   regex = /\bG[\s]?Bravo\b/giu;
   thisString = thisString.replace(regex, 'Gato Bravo');
   regex = /\bAmora/giu;
@@ -449,8 +471,8 @@ module.exports = (p, modes) => {
   regex = /\b(Av[e]?[n]?[\.]?[aª]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Avenida$2');
   regex = /(?<!Rua|Avenida|Alameda|Praceta|Travessa|Estrada)(\s|^)R[\.]?(\s)/iu;
-  let regex2 = /(Rua|Avenida|Alameda|Praceta|Travessa|Estrada)[\s]+[^\s\)\/]+[\s]+R[\.]?\s/iu
-  while (thisString.match(regex) && !thisString.match(regex2)){
+  let regex2 = /(Rua|Avenida|Alameda|Praceta|Travessa|Estrada)[\s]+[^\s\)\/]+[\s]+R[\.]?\s/iu;
+  while (thisString.match(regex) && !thisString.match(regex2)) {
     thisString = thisString.replace(regex, ' Rua$2');
   }
   regex = /\b(Desp[\.]?)(\s)/giu;
@@ -779,7 +801,7 @@ module.exports = (p, modes) => {
     thisString = thisString.replace(regex, ' Embaixador$2');
   } else {
     thisString = thisString2;
-  }  
+  }
   /* Resolve Dra */
   regex = /\s(Dr[\.]?[aª][\.]?)(\s)/giu;
   thisString = thisString.replace(regex, ' Doutora$2');

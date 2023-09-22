@@ -1,15 +1,15 @@
 {
     "name": "@carrismetropolitana/tts",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "main": "index.js",
     "scripts": {
-        "tts-text": "node run-tts-text.js",
-        "tts-audio": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node run-tts-audio.js"
+        "start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node index.js",
+        "tts-summary": "node run-tts-summary.js"
     },
     "dependencies": {
-        "@google-cloud/text-to-speech": "^5.0.1",
-        "axios": "^1.5.0",
-        "google-tts-api": "^2.0.2",
-        "papaparse": "^5.4.1"
+        "@google-cloud/text-to-speech": "5.0.1",
+        "axios": "1.5.0",
+        "google-tts-api": "2.0.2",
+        "papaparse": "5.4.1"
     }
 }
