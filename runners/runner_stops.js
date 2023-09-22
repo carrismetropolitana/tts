@@ -27,7 +27,7 @@ module.exports = async () => {
   for (const [stopIndex, stopData] of allStopsData.entries()) {
     //
 
-    if (stopIndex > 20) break;
+    if (stopIndex > 20) continue;
 
     // Check if tracker already has this entry,
     // and if it differs from the given TTS.
