@@ -7,7 +7,7 @@ const init = (name) => {
   if (!fs.existsSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`)) fs.writeFileSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`, '');
 };
 
-const get = ({ name }) => {
+const get = (name) => {
   init(name);
   console.log(`* Reading tracker_${name}.csv file from disk...`);
   const trackerCsv = fs.readFileSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`, { encoding: 'utf8' });
@@ -15,13 +15,13 @@ const get = ({ name }) => {
   return trackerPapa.data;
 };
 
-const set = ({ name, data }) => {
+const set = (name, data) => {
   init(name);
   const trackerCsvUpdated = Papa.unparse(data, { skipEmptyLines: 'greedy' });
   fs.writeFileSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`, trackerCsvUpdated);
 };
 
-const clean = ({ name }) => {
+const clean = (name) => {
   const trackerData = get({ name: name });
   const allTrackerItemIds = trackerData.map((item) => String(item.id));
   const directoryContents = fs.readdirSync(`${settings.OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: true });

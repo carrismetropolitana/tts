@@ -12,7 +12,7 @@ module.exports = async () => {
   console.log(`* Run started on ${start.toISOString()}`);
 
   // Setup tracker
-  const trackerData = Tracker.get({ name: 'stops' });
+  const trackerData = Tracker.get('stops');
   const trackerDataUpdated = [];
 
   // Get all stops
@@ -46,10 +46,10 @@ module.exports = async () => {
   }
 
   // Save updated tracker
-  Tracker.set({ name: 'stops', data: trackerDataUpdated });
+  Tracker.set('stops', trackerDataUpdated);
 
   // Clean directory
-  Tracker.clean({ name: 'stops' });
+  Tracker.clean('stops');
 
   //
   console.log();
