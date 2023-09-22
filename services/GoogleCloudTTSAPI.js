@@ -7,15 +7,13 @@ module.exports = async ({ string, filename, dirname, replaceIfExists = false }) 
   //
 
   // Export settings
-  const pathname = `${dirname}/${filename}.txt`;
+  const pathname = `${dirname}/${filename}.mp3`;
 
   // Create the output directory if it does not exist
   if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
 
   // If flag is set and file exists, skip this stop
   if (!replaceIfExists && fs.existsSync(pathname)) return;
-
-  fs.writeFileSync(pathname, 'guygy');
 
   // Create a new Google TTS client
   if (!googleCloudTTSClient) googleCloudTTSClient = new textToSpeech.TextToSpeechClient();

@@ -18,11 +18,13 @@ const get = (name) => {
 
 const set = (name, data) => {
   init(name);
+  console.log(`* Saving tracker_${name}.csv file to disk...`);
   const trackerCsvUpdated = Papa.unparse(data, { skipEmptyLines: 'greedy' });
   fs.writeFileSync(`${settings.TRACKERS_DIRNAME}/tracker_${name}.csv`, trackerCsvUpdated);
 };
 
 const clean = (name) => {
+  console.log(`* Cleaning ${name}...`);
   const trackerData = get(name);
   const allTrackerItemIds = trackerData.map((item) => String(item.id));
   const directoryContents = fs.readdirSync(`${settings.OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: true });
