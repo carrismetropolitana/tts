@@ -76,7 +76,7 @@ module.exports = async () => {
 
   //
   console.log();
-  console.log(`* Processed ${allLinesData.length} lines and ${trackerDataUpdated.length} patterns.`);
+  console.log(`* Processed ${trackerDataUpdated.length} patterns.`);
   const syncDuration = new Date() - start;
   console.log(`* Run took ${syncDuration / 1000} seconds.`);
   console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
