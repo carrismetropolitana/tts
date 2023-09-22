@@ -1,5 +1,4 @@
 const fs = require('fs');
-const settings = require('../config/settings');
 const textToSpeech = require('@google-cloud/text-to-speech');
 
 let googleCloudTTSClient;
