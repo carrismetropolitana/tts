@@ -27,6 +27,8 @@ module.exports = async () => {
   for (const [stopIndex, stopData] of allStopsData.entries()) {
     //
 
+    if (stopIndex > 20) break;
+
     // Check if tracker already has this entry,
     // and if it differs from the given TTS.
     const trackerEntry = trackerData.find((item) => item.id === stopData.id);
