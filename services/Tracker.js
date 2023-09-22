@@ -26,7 +26,7 @@ const set = ({ name, data }) => {
 const clean = ({ name }) => {
   const trackerData = get({ name: name });
   const allTrackerItemIds = trackerData.map((item) => String(item.id));
-  const directoryContents = fs.readdirSync(`${OUTPUTS_DIRNAME}/${name}`, { withFileTypes: true });
+  const directoryContents = fs.readdirSync(`${OUTPUTS_DIRNAME}/${name}/`, { withFileTypes: true });
   for (const existingFile of directoryContents) {
     console.log('existingFile.name', existingFile.name);
     if (allTrackerItemIds.includes(existingFile.name)) continue;
