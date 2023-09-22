@@ -24,9 +24,9 @@ const set = ({ name, data }) => {
 };
 
 const clean = ({ name }) => {
-  const directoryContents = fs.readdirSync(`${OUTPUTS_DIRNAME}/${name}`, { withFileTypes: true });
   const trackerData = get({ name: name });
   const allTrackerItemIds = trackerData.map((item) => String(item.id));
+  const directoryContents = fs.readdirSync(`${OUTPUTS_DIRNAME}/${name}`, { withFileTypes: true });
   for (const existingFile of directoryContents) {
     if (allTrackerItemIds.includes(existingFile.name)) continue;
     fs.rmSync(`${OUTPUTS_DIRNAME}/${name}/${existingFile.name}`, { recursive: true, force: true });
