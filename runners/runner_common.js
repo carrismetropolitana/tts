@@ -18,7 +18,7 @@ module.exports = async () => {
   // Define common sayings
   const allCommonData = [
     { id: 'next_stop', text: 'Seguinte' },
-    { id: 'last_stop', text: 'Fim de Percurso. Obrigado por viajar com a Carris Metropolitana!' },
+    { id: 'last_stop', text: 'Fim de Percurso. ( Obrigado por viajar ) com a Carris Metropolitana!' },
   ];
 
   // Log progress
