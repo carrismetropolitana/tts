@@ -527,8 +527,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Conselheiro ');
   regex = /\b(Corr[\.]?)(\s)(?!Ext)/giu;
   thisString = thisString.replace(regex, 'Corregedor ');
-  regex = /\b(Consig[\.]?)\s(?=Pedr)/giu;
+  regex = /\b(Consig[l]?[\.]?)\s(?=Pedr)/giu;
   thisString = thisString.replace(regex, 'Consilhiéri ');
+  regex = /\bConsiglieri\b/giu;
+  thisString = thisString.replace(regex, 'Consilhiéri');
   regex = /\b(Mq[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Marquês$2');
   regex = /\b(C[o]?m[^\s]?[d]?[t][e]?[\.]?)\s/giu;
