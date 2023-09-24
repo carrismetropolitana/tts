@@ -638,6 +638,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'És-te');
   regex = /\bFomega\b/giu;
   thisString = thisString.replace(regex, 'Fómega');
+  regex = /\bRepublica\b/giu;
+  thisString = thisString.replace(regex, 'República');
   regex = /Linda-a-velha/giu;
   thisString = thisString.replace(regex, 'Linda-á-Velha');
   regex = /Monta[\s]*chique/giu;
