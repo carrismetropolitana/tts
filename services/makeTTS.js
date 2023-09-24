@@ -133,6 +133,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Majór Rosa ');
   regex = /\b(Bº[\.]?)/giu;
   thisString = thisString.replace(regex, 'Bairro ');
+  regex = /\bB[\s]*(?=Azeit)/giu;
+  thisString = thisString.replace(regex, 'Brejos de ');
   regex = /\b(B[oº][\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Bairro$2');
   regex = /(^|\(|\sX)[\s]?B[oº]?[\.]?(\s|$)/giu;
@@ -442,9 +444,9 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Cruz ');
   regex = /\b(A[l]?[d]?[\.]?)\s(?=Meco)/giu;
   thisString = thisString.replace(regex, 'Aldeia do ');
-  regex = /\b(Ch(ar)?(neca)?[\.]?)(\sCap[^ií]?(rica)?[\.]?)\b/giu;
+  regex = /\b(Ch(ar)?(neca)?[\.]?)(\sCap[^ií]?r?(ica)?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Charnéca de Caparíca ');
-  regex = /\b(Ch(ar)?(neca)?[\.]?)(\sCot[^ií][v]?(ia)?[\.]?)/giu;
+  regex = /\b(Ch(ar)?(neca)?[\.]?)(\sCot[^ií]?[v]?(ia)?[\.]?)/giu;
   thisString = thisString.replace(regex, 'Charnéca da Cotovia ');
   regex = /\b(C(osta)?[\.]?)(\sCap[^ií]?(rica)?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Costa da Caparíca ');
