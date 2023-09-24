@@ -153,7 +153,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Parque ');
   regex = /(?<=Parque)\s*Est[a]?[c]?[i]?[o]?[n]?[a]?[m]?[\.]?($|\s)/giu;
   thisString = thisString.replace(regex, ' de Estacionamento ');
-  regex = /\b(C[m]?[p]?[\.]?[oº]?)(\s)(?=Fut|Bol)/giu;
+  regex = /\b(C[m]?[p]?[\.]?[oº]?)(\s)(?=Fut|Bol|Jog)/giu;
   thisString = thisString.replace(regex, 'Campo$2');
   regex = /\b(Viad[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Viaduto$2');
@@ -387,6 +387,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Terminál ');
   regex = /\b(Merc[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Mercado ');
+  regex = /\b(Comp[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Complexo ');
   regex = /\b(Superm(erc)?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Súper-mercádo ');
   regex = /\b(Paral[\.]?)\s/giu;
@@ -606,6 +608,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'riba-tejo');
   regex = /Coina/giu;
   thisString = thisString.replace(regex, 'Cóina');
+  regex = /Murfac[eé]m/giu;
+  thisString = thisString.replace(regex, 'Murfácém');
   regex = /samou/giu;
   thisString = thisString.replace(regex, 'Sámou');
   regex = /\bc[ée]sar\b/giu;
