@@ -919,6 +919,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Centro de Emprego e Formação ');
   /* Trim spaces */
   thisString = thisString.replace(/\s+/g, ' ');
+  /* Remove underscores */
+  thisString = thisString.replace(/\_/g, '');
   /* Title case */
   thisString = titleCase(thisString);
   /* Reset "e" casing*/
