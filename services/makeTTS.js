@@ -95,6 +95,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, '$1 $2');
   regex = /(\d)([^\s\dºª])/giu;
   thisString = thisString.replace(regex, '$1 $2');
+  regex = /[\s]1\b/giu;
+  thisString = thisString.replace(regex, '- Um ');
   /* Add months of the year */
   regex = /\b(Jan[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Janeiro$2');
