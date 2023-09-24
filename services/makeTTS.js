@@ -602,6 +602,8 @@ module.exports = (p, modes = {}) => {
   /* TTS specific optimizations */
   regex = /ribatejo/giu;
   thisString = thisString.replace(regex, 'riba-tejo');
+  regex = /Coina/giu;
+  thisString = thisString.replace(regex, 'Cóina');
   regex = /samou/giu;
   thisString = thisString.replace(regex, 'Sámou');
   regex = /\bc[ée]sar\b/giu;
