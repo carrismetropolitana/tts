@@ -561,6 +561,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Luís ');
   regex = /(?<=Luís)[\s]*(de)?[\s]*Cam[õo]?(e)?[s]?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' de Camões');
+  regex = /\bVasco[\s]*Gama\b/giu;
+  thisString = thisString.replace(regex, 'Vasco da Gama');
   regex = /\b(S(ac)?)(\s)*(?=Cab)/giu;
   thisString = thisString.replace(regex, 'Sacadura ');
   regex = /\b(?<=Sacadura)(\s)*C(ab)?[r]?[l]?(\s|$)/giu;
