@@ -470,6 +470,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Vendas de Azeitão ');
   regex = /\bM(ar)?(c)?[\.]?[\s]?Grilo/giu;
   thisString = thisString.replace(regex, 'Marco do Grilo');
+  regex = /\bBaixa[\.]?[\s]?Banheira\b/giu;
+  thisString = thisString.replace(regex, 'Baixa da Banheira');
   regex = /\bB[\.]?[\s]?Vista\b/giu;
   thisString = thisString.replace(regex, 'Bela Vista');
   regex = /\bP[\.]?[\s]*S(an)?t(a)?[\.]?[\s]*Iria\b/giu;
