@@ -640,6 +640,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, '- Estaçaão ');
   regex = /\bFarmacia\b/giu;
   thisString = thisString.replace(regex, 'Farmácia');
+  regex = /\bInspector\b/giu;
+  thisString = thisString.replace(regex, 'Inspétor');
   /* Leave towards all unmatched lonely C */
   regex = /(^|\()[\s]?C[\.]?\s(?!C\s)/giu;
   thisString = thisString.replace(regex, '$1 Casal ');
