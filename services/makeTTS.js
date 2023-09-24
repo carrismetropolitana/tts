@@ -470,6 +470,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Póvoa de Santa Iria');
   regex = /\bG[\s]?Bravo\b/giu;
   thisString = thisString.replace(regex, 'Gato Bravo');
+  regex = /\bCor[\s]?Rosa\b/giu;
+  thisString = thisString.replace(regex, 'Cor-de-Rosa');
   regex = /\bAmora/giu;
   thisString = thisString.replace(regex, 'Amóra ');
   regex = /\bF[e]?[r]?[n]?[\.]?[\s](?=Ferro)/giu;
