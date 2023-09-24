@@ -432,6 +432,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Movimento das Forças Armadas');
   regex = /\bF[^\s]*[\s]+Arm[^\s]*\b/giu;
   thisString = thisString.replace(regex, 'Forças Armadas');
+  regex = /\bM[^\s]*F[^\s]*A[^\s]*\b/giu;
+  thisString = thisString.replace(regex, 'M. F. A.');
   regex = /\b(C[o]?v[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Cóva ');
   regex = /\b(Oei[r]?[\.]?)(\s|$)/giu;
