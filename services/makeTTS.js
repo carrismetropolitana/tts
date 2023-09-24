@@ -175,8 +175,14 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Rotunda');
   regex = /\bF(on)?t[e]?[\.]?[\s]*Prata/giu;
   thisString = thisString.replace(regex, 'Fonte da Prata');
+  regex = /\bF(on)?t[e]?[\.]?[\s]*Luminosa/giu;
+  thisString = thisString.replace(regex, 'Fonte Luminosa');
+  regex = /(?<=\()[\s]*(F[r]?t[e]?[\.]?)\b/giu;
+  thisString = thisString.replace(regex, ' Frente');
   regex = /\b(F[r]?t[e]?[\.]?)\b/giu;
-  thisString = thisString.replace(regex, ' - Frente');
+  thisString = thisString.replace(regex, ' ( Frente');
+  regex = /(?<=Frente)\s*(?=\d)/giu;
+  thisString = thisString.replace(regex, ' ao número ');
   regex = /\b(T[r]?[a]?v[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Travessa');
   regex = /\b(Tr(?![êeoiu])[a]?[v]?[\.]?)\b/giu;
@@ -450,7 +456,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Vila Fresca de Azeitão ');
   regex = /\bV(ila)?[\.]?[\s]?N[o]?[g]?(ueira)?[\.]?[\s]?Az(eit[ãa]o)?/giu;
   thisString = thisString.replace(regex, 'Vila Nogueira de Azeitão ');
-  regex = /\bB[r]?[e]?[j]?(os)?[\.]?[\s]?Az(eit[ãa]o)?/giu;
+  regex = /\bB[r]?[e]?[j]?(os)?[\.]?[\s]+Az(eit[ãa]o)?/giu;
   thisString = thisString.replace(regex, 'Brejos de Azeitão ');
   regex = /\bV[e]?nd(as)?[\.]?[\s]?Az(eit[ãa]o)?/giu;
   thisString = thisString.replace(regex, 'Vendas de Azeitão ');
