@@ -466,6 +466,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Marco do Grilo');
   regex = /\bB[\.]?[\s]?Vista\b/giu;
   thisString = thisString.replace(regex, 'Bela Vista');
+  regex = /\bP[\.]?[\s]*S(an)?t(a)?[\.]?[\s]*Iria\b/giu;
+  thisString = thisString.replace(regex, 'Póvoa de Santa Iria');
   regex = /\bG[\s]?Bravo\b/giu;
   thisString = thisString.replace(regex, 'Gato Bravo');
   regex = /\bAmora/giu;
@@ -902,11 +904,11 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, '$1 Quinto ');
   /* Replace crossings */
   regex = /[\(](([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
-  thisString = thisString.replace(regex, '( Cruzamento entre ( $1 ) e ( $4 ) ');
+  thisString = thisString.replace(regex, '( Cruzamento entre ( $1 ) e $4  ');
   regex = /(?<=[A-Za-z]\s)((?:Rua|Avenida|Alameda|Praceta|Travessa|Estrada)([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
-  thisString = thisString.replace(regex, '( Cruzamento entre ( $1 ) e ( $4 ) )');
+  thisString = thisString.replace(regex, '( Cruzamento entre ( $1 ) e $4  )');
   regex = /((.)*)[\s]+(X)[\s]+((.)*)/giu;
-  thisString = thisString.replace(regex, 'Cruzamento entre ( $1 ) e ( $4 )');
+  thisString = thisString.replace(regex, 'Cruzamento entre ( $1 ) e $4 ');
   regex = /\bEDP\b/giu;
   thisString = thisString.replace(regex, 'E. D. P.');
   regex = /\bFCT\b/giu;
