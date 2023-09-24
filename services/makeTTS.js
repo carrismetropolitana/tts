@@ -639,6 +639,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'António ');
   regex = /\b(Ant[oº]?[\.]?[oº]?)$/giu;
   thisString = thisString.replace(regex, 'António ');
+  regex = /\bAntonio\b/giu;
+  thisString = thisString.replace(regex, 'António');
   regex = /\s([ÁA]lv[\.]?)\s(?=Per)/giu;
   thisString = thisString.replace(regex, ' Álvares ');
   regex = /\s([ÁA]lv[oº]?[\.]?[oº]?)(\s|$)/giu;
