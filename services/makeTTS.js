@@ -95,8 +95,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, '$1 $2');
   regex = /(\d)([^\s\dºª])/giu;
   thisString = thisString.replace(regex, '$1 $2');
-  regex = /[\s]1\b/giu;
-  thisString = thisString.replace(regex, '- Um ');
+  regex = /[\s]+1\b/giu;
+  thisString = thisString.replace(regex, ' - Um ');
   /* Add months of the year */
   regex = /\b(Jan[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Janeiro$2');
@@ -118,6 +118,9 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Novembro$2');
   regex = /\b(Dez[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Dezembro$2');
+  /* Resolve reading the 25 of april */
+  regex = /(?<=Abril)[\s]+([\d]+)/giu;
+  thisString = thisString.replace(regex, ' - $1');
   /* Resolve common street abbreviations */
   regex = /\b(Alm(ad)?[\.]?)\s(Neg[^\s]*)/giu;
   thisString = thisString.replace(regex, 'Almáda Negreiros');
@@ -472,6 +475,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Marco do Grilo');
   regex = /\bBaixa[\.]?[\s]?Banheira\b/giu;
   thisString = thisString.replace(regex, 'Baixa da Banheira');
+  regex = /\bVenda[\s]*Pinheiro\b/giu;
+  thisString = thisString.replace(regex, 'Venda do Pinheiro');
   regex = /\bB[\.]?[\s]?Vista\b/giu;
   thisString = thisString.replace(regex, 'Bela Vista');
   regex = /\bP[\.]?[\s]*S(an)?t(a)?[\.]?[\s]*Iria\b/giu;
@@ -612,10 +617,20 @@ module.exports = (p, modes = {}) => {
   regex = /\bEstal[\.]?\b/giu;
   thisString = thisString.replace(regex, 'Estaleiro');
   /* TTS specific optimizations */
+  regex = /cç[ãaoõ]/giu;
+  thisString = thisString.replace(regex, 'ç');
+  regex = /[a]ct[o]/giu;
+  thisString = thisString.replace(regex, 't');
   regex = /ribatejo/giu;
   thisString = thisString.replace(regex, 'riba-tejo');
   regex = /Coina/giu;
-  thisString = thisString.replace(regex, 'Cóina');
+  thisString = thisString.replace(regex, 'Coin-a');
+  regex = /Euf[ée]mia/giu;
+  thisString = thisString.replace(regex, 'Eufémi-a');
+  regex = /Pinteus/giu;
+  thisString = thisString.replace(regex, 'Pintéus');
+  regex = /Carmona/giu;
+  thisString = thisString.replace(regex, 'Cármona');
   regex = /Esteval/giu;
   thisString = thisString.replace(regex, 'Estevál');
   regex = /Zambujeiro/giu;
@@ -630,8 +645,6 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Sámou');
   regex = /\bc[ée]sar\b/giu;
   thisString = thisString.replace(regex, 'Césár');
-  regex = /\bActor\b/giu;
-  thisString = thisString.replace(regex, 'Ator');
   regex = /\bBowling\b/giu;
   thisString = thisString.replace(regex, 'Bólíng');
   regex = /\bSapec\b/giu;
@@ -639,7 +652,7 @@ module.exports = (p, modes = {}) => {
   regex = /abraão/giu;
   thisString = thisString.replace(regex, 'Abrão');
   regex = /Peg[oõ]es/giu;
-  thisString = thisString.replace(regex, 'Pégões');
+  thisString = thisString.replace(regex, 'Pé-gões');
   regex = /este/giu;
   thisString = thisString.replace(regex, 'És-te');
   regex = /\bFomega\b/giu;
