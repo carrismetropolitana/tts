@@ -623,6 +623,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 't');
   regex = /ribatejo/giu;
   thisString = thisString.replace(regex, 'riba-tejo');
+  regex = /miratejo/giu;
+  thisString = thisString.replace(regex, 'mira-tejo');
+  regex = /\b([\w]+)tejo\b/giu;
+  thisString = thisString.replace(regex, '$1-tejo');
   regex = /Coina/giu;
   thisString = thisString.replace(regex, 'Coin-a');
   regex = /Euf[ée]mia/giu;
