@@ -633,6 +633,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Eufémi-a');
   regex = /Pinteus/giu;
   thisString = thisString.replace(regex, 'Pintéus');
+  regex = /Aboboda/giu;
+  thisString = thisString.replace(regex, 'Abóboda');
+  regex = /Ameixoeira/giu;
+  thisString = thisString.replace(regex, 'Ameixo-eira');
   regex = /Carmona/giu;
   thisString = thisString.replace(regex, 'Cármona');
   regex = /Esteval/giu;
@@ -967,6 +971,8 @@ module.exports = (p, modes = {}) => {
   regex = /[\(](([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
   thisString = thisString.replace(regex, '( Cruzamento entre ( $1 ) e $4  ');
   regex = /(?<=[A-Za-z]\s)((?:Rua|Avenida|Alameda|Praceta|Travessa|Estrada)([^\)])*)[\s]+(X)[\s]+((.)*)/giu;
+  thisString = thisString.replace(regex, '( Cruzamento entre ( $1 ) e $4  )');
+  regex = /(?<=^[A-Za-z\s]*)[\(][\s]*((?:Rua|Avenida|Alameda|Praceta|Travessa|Estrada)([^.])*)[\s]+(X)[\s]+((.)*)/giu;
   thisString = thisString.replace(regex, '( Cruzamento entre ( $1 ) e $4  )');
   regex = /((.)*)[\s]+(X)[\s]+((.)*)/giu;
   thisString = thisString.replace(regex, 'Cruzamento entre ( $1 ) e $4 ');
