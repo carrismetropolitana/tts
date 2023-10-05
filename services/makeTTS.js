@@ -82,21 +82,13 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, '$1 )');
   regex = /([^X])\)([^\s])/giu;
   thisString = thisString.replace(regex, '$1 ) $2');
-  /* Add spaces around numbers */
+  /* Add spaces around road numbers */
   regex = /(^|\()[\s]*N[ac\s]?((\d)+)([\s\-\(\)]|$)/giu;
   thisString = thisString.replace(regex, '$1Estrada Nacional $2 ');
   regex = /\bN([\d]{3})-(\d)\b/giu;
   thisString = thisString.replace(regex, ' Estrada Nacional $1 $2 ');
   regex = /(?!\sE)\sN[.\s]*[º]?[\s]?((\d)+[a-g]?)[\s]*([\(\)]?)$/giu;
   thisString = thisString.replace(regex, ' ( Número $1 $3 ) ');
-  regex = /1[\.]?[º]?[\s]*(?=Mai|Dez)/giu;
-  thisString = thisString.replace(regex, 'Primeiro de ');
-  regex = /([^\s\d])(\d)/giu;
-  thisString = thisString.replace(regex, '$1 $2');
-  regex = /(\d)([^\s\dºª])/giu;
-  thisString = thisString.replace(regex, '$1 $2');
-  regex = /[\s]+1\b/giu;
-  thisString = thisString.replace(regex, ' - Um ');
   /* Add months of the year */
   regex = /\b(Jan[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Janeiro$2');
@@ -118,9 +110,24 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Novembro$2');
   regex = /\b(Dez[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Dezembro$2');
-  /* Resolve reading the 25 of april */
-  regex = /(?<=Abril)[\s]+([\d]+)/giu;
+  /* Resolve reading dates */
+  regex = /1[\.]?[º]?[\s]*(?=Jane|Feve|Març|Abr|Maio|Junh|Julh|Agosto|Setem|Outu|Novem|Dez)/giu;
+  thisString = thisString.replace(regex, 'Primeiro de ');
+  regex = /([\d]+)([\s]*)(?=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)/giu;
+  thisString = thisString.replace(regex, '$1 de ');
+  regex = /(?<=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)[\s]*([\d]+)/giu;
   thisString = thisString.replace(regex, ' - $1');
+  /* Add spaces around numbers */
+  regex = /([^\s\d])(\d)/giu;
+  thisString = thisString.replace(regex, '$1 $2');
+  regex = /(\d)([^\s\dºª])/giu;
+  thisString = thisString.replace(regex, '$1 $2');
+  regex = /([\d]+)[\s]*\/[\s]*([\d]+)/giu;
+  thisString = thisString.replace(regex, '$1 $2');
+  regex = /\b([P]\s?[\d]+)(\s|$)/giu;
+  thisString = thisString.replace(regex, '( $1 ) ');
+  regex = /(?<!P)[\s]+1\b/giu;
+  thisString = thisString.replace(regex, ' - Um ');
   /* Resolve common street abbreviations */
   regex = /\b(Alm(ad)?[\.]?)\s(Neg[^\s]*)/giu;
   thisString = thisString.replace(regex, 'Almáda Negreiros');
@@ -231,13 +238,7 @@ module.exports = (p, modes = {}) => {
   regex = /\b((E|Est|Estr|Estrada)?[\s]?M[un]?)\s+(?=\d{3})/giu;
   thisString = thisString.replace(regex, ' Estrada Municipal ');
   regex = /\s([A][\s]?E)(\s|$)/giu;
-  thisString = thisString.replace(regex, ' Auto-estrada ');
-  regex = /\s[A](\s|$)/giu;
-  thisString = thisString.replace(regex, ' Á ');
-  regex = /(?<=[\d])\s*[C](\s|$)/giu;
-  thisString = thisString.replace(regex, ' Cê ');
-  regex = /\b([P]\s?[\d]+)(\s|$)/giu;
-  thisString = thisString.replace(regex, '( $1 ) ');
+  thisString = thisString.replace(regex, ' Autó-estrada ');
   regex = /\b(Km[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Quilómetro ');
   regex = /s\s(Mun(ici)?(p)?[\.]?)\b/giu;
@@ -635,6 +636,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Pintéus');
   regex = /Aboboda/giu;
   thisString = thisString.replace(regex, 'Abóboda');
+  regex = /Saida/giu;
+  thisString = thisString.replace(regex, 'Saída');
   regex = /Ameixoeira/giu;
   thisString = thisString.replace(regex, 'Ameixo-eira');
   regex = /Carmona/giu;
@@ -683,6 +686,10 @@ module.exports = (p, modes = {}) => {
   regex = /(^|\()[\s]?C[\.]?\s(?!C\s)/giu;
   thisString = thisString.replace(regex, '$1 Casal ');
   /* Celsius correction */
+  regex = /\s[A](\s|$)/giu;
+  thisString = thisString.replace(regex, ' Á ');
+  regex = /(?<=[\d])\s*[C](\s|$)/giu;
+  thisString = thisString.replace(regex, ' Cê ');
   regex = /(^|\(|\s)[C](\s|$)/giu;
   thisString = thisString.replace(regex, ' Cê ');
   /* Resolve common name abbreviations to determine gramatical gender */
