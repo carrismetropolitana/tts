@@ -115,7 +115,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Primeiro de ');
   regex = /([\d]+)([\s]*)(?=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)/giu;
   thisString = thisString.replace(regex, '$1 de ');
-  regex = /(?<=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)[\s]*([\d]{1,3})/giu;
+  regex = /(?<=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)[\s]*([\d]{1,3}\b)/giu;
   thisString = thisString.replace(regex, ' número $1');
   /* Add spaces around numbers */
   regex = /([^\s\d])(\d)/giu;
