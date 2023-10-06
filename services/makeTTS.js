@@ -111,12 +111,12 @@ module.exports = (p, modes = {}) => {
   regex = /\b(Dez[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Dezembro$2');
   /* Resolve reading dates */
-  regex = /1[\.]?[º]?[\s]*(?=Jane|Feve|Març|Abr|Maio|Junh|Julh|Agosto|Setem|Outu|Novem|Dez)/giu;
+  regex = /\b1[\.\s]?[ºo]?[\s]*(de)?[\s]*(?=Jane|Feve|Març|Abr|Maio|Junh|Julh|Agosto|Setem|Outu|Novem|Dez)/giu;
   thisString = thisString.replace(regex, 'Primeiro de ');
   regex = /([\d]+)([\s]*)(?=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)/giu;
   thisString = thisString.replace(regex, '$1 de ');
-  regex = /(?<=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)[\s]*([\d]+)/giu;
-  thisString = thisString.replace(regex, ' - $1');
+  regex = /(?<=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)[\s]*([\d]{1,3})/giu;
+  thisString = thisString.replace(regex, ' número $1');
   /* Add spaces around numbers */
   regex = /([^\s\d])(\d)/giu;
   thisString = thisString.replace(regex, '$1 $2');
@@ -238,7 +238,7 @@ module.exports = (p, modes = {}) => {
   regex = /\b((E|Est|Estr|Estrada)?[\s]?M[un]?)\s+(?=\d{3})/giu;
   thisString = thisString.replace(regex, ' Estrada Municipal ');
   regex = /\s([A][\s]?E)(\s|$)/giu;
-  thisString = thisString.replace(regex, ' Autó-estrada ');
+  thisString = thisString.replace(regex, ' Autóstrada ');
   regex = /\b(Km[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Quilómetro ');
   regex = /s\s(Mun(ici)?(p)?[\.]?)\b/giu;
@@ -440,6 +440,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Movimento das Forças Armadas');
   regex = /\bF[^\s]*[\s]+Arm[^\s]*\b/giu;
   thisString = thisString.replace(regex, 'Forças Armadas');
+  regex = /\bF[^\s]*[\s]+A[ée]r(ea)?[\s]*P(or)?t(ug)?\b/giu;
+  thisString = thisString.replace(regex, 'Força Aérea Portuguesa');
+  regex = /\bF[^\s]*[\s]+A[ée]r(ea)?\b/giu;
+  thisString = thisString.replace(regex, 'Força Aérea');
   regex = /\bM[\.\s]*F[\.\s]*A[\.\s]*\b/giu;
   thisString = thisString.replace(regex, 'M. F. A.');
   regex = /\b(C[o]?v[\.]?)(\s|$)/giu;
@@ -493,11 +497,13 @@ module.exports = (p, modes = {}) => {
   regex = /\bA[\.]?[\s]?Nec(ess)?(id)?\b/giu;
   thisString = thisString.replace(regex, 'Alto das Necessidades');
   regex = /\bLagoa[\.]?[\s]+A(lb)?\b/giu;
-  thisString = thisString.replace(regex, 'Lagoa da Albufeira');
+  thisString = thisString.replace(regex, 'Lagoa de Albufeira');
   regex = /\bM[\.]?[\s]?S(in)?tr[a]?\b/giu;
   thisString = thisString.replace(regex, 'Mira Sintra ');
   regex = /\b(Dep([oó]|[oó]s|[oó]si|[oó]sit)?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Depósito$3');
+  regex = /\bConst[\.]?\b(?=[\s]*Civil)/giu;
+  thisString = thisString.replace(regex, 'Construção');
   regex = /\b(Av[e]?[n]?[\.]?[aª]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Avenida$2');
   regex = /(?<!Rua|Avenida|Alameda|Praceta|Travessa|Estrada)(\s|^)R[\.]?(\s)/iu;
