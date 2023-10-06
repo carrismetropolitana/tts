@@ -113,10 +113,8 @@ module.exports = (p, modes = {}) => {
   /* Resolve reading dates */
   regex = /\b1[\.\s]?[ºo]?[\s]*(de)?[\s]*(?=Jane|Feve|Març|Abr|Maio|Junh|Julh|Agosto|Setem|Outu|Novem|Dez)/giu;
   thisString = thisString.replace(regex, 'Primeiro de ');
-  regex = /([\d]+)([\s]*)(?=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)/giu;
+  regex = /([\d]+|Primeiro)([\s]*)(?=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)/giu;
   thisString = thisString.replace(regex, '$1 de ');
-  regex = /(?<=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)[\s]*([\d]{1,3}\b)/giu;
-  thisString = thisString.replace(regex, ' número $1');
   /* Add spaces around numbers */
   regex = /([^\s\d])(\d)/giu;
   thisString = thisString.replace(regex, '$1 $2');
@@ -126,6 +124,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, '$1 $2');
   regex = /\b([P]\s?[\d]+)(\s|$)/giu;
   thisString = thisString.replace(regex, '( $1 ) ');
+  regex = /(?<=Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)[\s]*([\d]{1,3}\b)/giu;
+  thisString = thisString.replace(regex, ' número $1');
   regex = /(?<!P)[\s]+1\b/giu;
   thisString = thisString.replace(regex, ' - Um ');
   /* Resolve common street abbreviations */
@@ -438,9 +438,9 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Combatentes da Grande Guerra');
   regex = /\b(Mov[^\s]*[\s]F[^\s]*[\s]Arm[^\s]*)\b/giu;
   thisString = thisString.replace(regex, 'Movimento das Forças Armadas');
-  regex = /\bF[^\s]*[\s]+Arm[^\s]*\b/giu;
+  regex = /\bF(or)?([cç]as)?[^\s]*[\s]+Arm[^\s]*\b/giu;
   thisString = thisString.replace(regex, 'Forças Armadas');
-  regex = /\bF[^\s]*[\s]+A[ée]r(ea)?[\s]*P(or)?t(ug)?\b/giu;
+  regex = /\bF(or)?([cç]a)?[^\s]*[\s]+A[ée]r(ea)?[\s]*P(or)?t(ug)?\b/giu;
   thisString = thisString.replace(regex, 'Força Aérea Portuguesa');
   regex = /\bF[^\s]*[\s]+A[ée]r(ea)?\b/giu;
   thisString = thisString.replace(regex, 'Força Aérea');
