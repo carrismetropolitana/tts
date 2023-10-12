@@ -563,7 +563,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Poeta$2');
   regex = /\b(Esp([íi]r)?[\.]?)(\s)(?=S)/giu;
   thisString = thisString.replace(regex, 'Espírito ');
-  regex = /\b(B[e]?[n]?[t]?[o]?[\.]?)(\s)+(de)?(\s)+(J[e]?[u]?[s]?[\.]?)(\s)+(?=Car)/giu;
+  regex = /\b(B[e]?[n]?[t]?[o]?[\.]?)(\s)+(de)?(\s)*(J[e]?[u]?[s]?[\.]?)(\s)+(?=Car)/giu;
   thisString = thisString.replace(regex, 'Bento de Jesus ');
   regex = /\b(B(to)?[\.]?)(\s)(de\s)?(?=Jesus)/giu;
   thisString = thisString.replace(regex, 'Bento de ');
