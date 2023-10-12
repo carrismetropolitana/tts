@@ -597,6 +597,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Sacadura ');
   regex = /\b(?<=Sacadura)(\s)*C(ab)?[r]?[l]?(\s|$)/giu;
   thisString = thisString.replace(regex, 'Cabral ');
+  regex = /\b(B[e]?[n]?[t]?[o]?[\.]?)(\s)+(J[e]?[u]?[s]?[\.]?)(\s)+(?=Car)/giu;
+  thisString = thisString.replace(regex, 'Bento Jesus ');
   regex = /\b(B[o]?[r]?[d]?[\.]?)(\s)(?=Pin)/giu;
   thisString = thisString.replace(regex, 'Bordalo ');
   regex = /(?<=Bordalo)[\s]*P(in)?[h]?(ei)?[r]?[\.]?\b/giu;
@@ -803,6 +805,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Rebelo ');
   regex = /\s(Aq[\.]?)(\s|$|\))/giu;
   thisString = thisString.replace(regex, ' Aquilino ');
+  regex = /\s(Conc[\.]?)(\s|$|\))/giu;
+  thisString = thisString.replace(regex, ' Conceição ');
   regex = /\s(Antun[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, ' Antunes ');
   regex = /\s(Eus([eé]b)?[\.]?)(\s|$)/giu;
