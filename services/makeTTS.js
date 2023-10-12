@@ -563,6 +563,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Poeta$2');
   regex = /\b(Esp([íi]r)?[\.]?)(\s)(?=S)/giu;
   thisString = thisString.replace(regex, 'Espírito ');
+  regex = /\b(B[e]?[n]?[t]?[o]?[\.]?)(\s)+(de)?(\s)+(J[e]?[u]?[s]?[\.]?)(\s)+(?=Car)/giu;
+  thisString = thisString.replace(regex, 'Bento de Jesus ');
   regex = /\b(B(to)?[\.]?)(\s)(de\s)?(?=Jesus)/giu;
   thisString = thisString.replace(regex, 'Bento de ');
   regex = /\b(S(ou)?[s]?[\.]?)(\s)?(?=Mend)/giu;
@@ -597,8 +599,6 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Sacadura ');
   regex = /\b(?<=Sacadura)(\s)*C(ab)?[r]?[l]?(\s|$)/giu;
   thisString = thisString.replace(regex, 'Cabral ');
-  regex = /\b(B[e]?[n]?[t]?[o]?[\.]?)(\s)+(J[e]?[u]?[s]?[\.]?)(\s)+(?=Car)/giu;
-  thisString = thisString.replace(regex, 'Bento Jesus ');
   regex = /\b(B[o]?[r]?[d]?[\.]?)(\s)(?=Pin)/giu;
   thisString = thisString.replace(regex, 'Bordalo ');
   regex = /(?<=Bordalo)[\s]*P(in)?[h]?(ei)?[r]?[\.]?\b/giu;
