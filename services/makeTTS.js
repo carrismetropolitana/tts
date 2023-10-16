@@ -251,9 +251,9 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Municipal');
   regex = /\b([C][a]?[m]?[\s]?M[u]?[n]?)[\s]*(?=[\d])/giu;
   thisString = thisString.replace(regex, 'Caminho Municipal ');
-  regex = /\b([C][aâ]?[m]?[\s]+M[u]?[n]?)(\s|$)/giu;
+  regex = /\b([C][aâ]?[m]?[\s]*M[u]?[n]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Câmara Municipal ');
-  regex = /\bCam\b(?![\s]*M)/giu;
+  regex = /\bCam[\s]+(?!M)/giu;
   thisString = thisString.replace(regex, 'Caminho ');
   regex = /\sM([\d]{3})\b/giu;
   thisString = thisString.replace(regex, ' Municipal $1');
