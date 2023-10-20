@@ -680,7 +680,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Abrão');
   regex = /Peg[oõ]es/giu;
   thisString = thisString.replace(regex, 'Pé-gões');
-  regex = /este/giu;
+  regex = /este\b/giu;
   thisString = thisString.replace(regex, 'És-te');
   regex = /\bFomega\b/giu;
   thisString = thisString.replace(regex, 'Fómega');
