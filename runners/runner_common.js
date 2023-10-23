@@ -19,6 +19,12 @@ module.exports = async () => {
   const allCommonData = [
     { id: 'next_stop', text: 'Seguinte' },
     { id: 'last_stop', text: 'Fim de Percurso. ( Obrigado por viajar ) com a Carris Metropolitana!' },
+    { id: 'no_pickup_a', text: 'Esta paragem só permite entradas.' },
+    { id: 'no_pickup_b', text: 'Não é possível sair nesta paragem.' },
+    { id: 'no_pickup_c', text: 'Por ser em Lisboa, não é possível sair nesta paragem.' },
+    { id: 'no_pickup_d', text: 'Por ser em Lisboa, não é permitido desembarque.' },
+    { id: 'no_pickup_e', text: 'Não é permitido desembarque em Lisboa.' },
+    { id: 'no_pickup_f', text: 'Não pode sair aqui.' },
   ];
 
   // Log progress
