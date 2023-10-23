@@ -484,6 +484,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Marco do Grilo');
   regex = /\bBaixa[\.]?[\s]?Banheira\b/giu;
   thisString = thisString.replace(regex, 'Baixa da Banheira');
+  regex = /\bQuinta[\s]*Conde\b/giu;
+  thisString = thisString.replace(regex, 'Quinta do Conde');
   regex = /\bVenda[\s]*Pinheiro\b/giu;
   thisString = thisString.replace(regex, 'Venda do Pinheiro');
   regex = /\bB[\.]?[\s]?Vista\b/giu;
@@ -603,6 +605,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Bordalo ');
   regex = /(?<=Bordalo)[\s]*P(in)?[h]?(ei)?[r]?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' Pinheiro');
+  regex = /\bM(ar)?[q]?[\.]?[\s]+(de)?(\s)*(?=Pombal)/giu;
+  thisString = thisString.replace(regex, 'Marquês de ');
+  regex = /\bMarqu[eê]s(\s)+(?=Pombal)/giu;
+  thisString = thisString.replace(regex, 'Marquês de ');
   regex = /(?<=Gago|Magalh[aã]es)[\s]*C(ou)?[t]?[i]?(nh)?[o]?[\.]?\b/giu;
   thisString = thisString.replace(regex, ' Coutinho');
   regex = /\sG(a|ag)?(\s)*(?=Cout)/giu;
