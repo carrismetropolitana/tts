@@ -496,6 +496,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Gato Bravo');
   regex = /\bCor[\s]?Rosa\b/giu;
   thisString = thisString.replace(regex, 'Cor-de-Rosa');
+  regex = /\V[\s]*Flores\b/giu;
+  thisString = thisString.replace(regex, 'Vale Flores');
   regex = /\bAmora/giu;
   thisString = thisString.replace(regex, 'Amóra ');
   regex = /\bF[e]?[r]?[n]?[\.]?[\s](?=Ferro)/giu;
@@ -636,9 +638,9 @@ module.exports = (p, modes = {}) => {
   regex = /\bEstal[\.]?\b/giu;
   thisString = thisString.replace(regex, 'Estaleiro');
   /* TTS specific optimizations */
-  regex = /cç[ãaoõ]/giu;
+  regex = /cç(?=[ãaoõ])/giu;
   thisString = thisString.replace(regex, 'ç');
-  regex = /[a]ct[o]/giu;
+  regex = /(?<=[a])ct(?=[o])/giu;
   thisString = thisString.replace(regex, 't');
   regex = /ribatejo/giu;
   thisString = thisString.replace(regex, 'riba-tejo');
@@ -686,7 +688,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Abrão');
   regex = /Peg[oõ]es/giu;
   thisString = thisString.replace(regex, 'Pé-gões');
-  regex = /este\b/giu;
+  regex = /\bEste\b/giu;
   thisString = thisString.replace(regex, 'És-te');
   regex = /\bFomega\b/giu;
   thisString = thisString.replace(regex, 'Fómega');
