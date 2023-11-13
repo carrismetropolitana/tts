@@ -496,7 +496,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Gato Bravo');
   regex = /\bCor[\s]?Rosa\b/giu;
   thisString = thisString.replace(regex, 'Cor-de-Rosa');
-  regex = /\V[\s]*Flores\b/giu;
+  regex = /\bV[\s]*Flores\b/giu;
   thisString = thisString.replace(regex, 'Vale Flores');
   regex = /\bAmora/giu;
   thisString = thisString.replace(regex, 'Amóra ');
