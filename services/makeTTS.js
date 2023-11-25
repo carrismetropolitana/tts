@@ -587,6 +587,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Timor ');
   regex = /\b(Lib(er)?[d]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Liberdade ');
+  regex = /\bLocalid\b/giu;
+  thisString = thisString.replace(regex, 'Localidade');
+  regex = /\bQuinta(\s)*Conde\b/giu;
+  thisString = thisString.replace(regex, 'Quinta do Conde');
   regex = /(?<=Egas\s)\s*\bM[o]?[n]?\s/giu;
   thisString = thisString.replace(regex, 'Moniz ');
   regex = /\b(C[a]?[l]?[\.]?)(\s)(?=Gulb)/giu;
@@ -637,6 +641,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Circunvalação');
   regex = /\bEstal[\.]?\b/giu;
   thisString = thisString.replace(regex, 'Estaleiro');
+  regex = /(?<=(Marcos|Farmácia))(\s)+PT\b/giu;
+  thisString = thisString.replace(regex, ' Portugal');
   /* TTS specific optimizations */
   regex = /cç(?=[ãaoõ])/giu;
   thisString = thisString.replace(regex, 'ç');
@@ -716,6 +722,15 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Cê ');
   regex = /(^|\(|\s)[C](\s|$)/giu;
   thisString = thisString.replace(regex, ' Cê ');
+  /* Resolve Nova/Novo */
+  regex = /(?<=a)(\s)+(Nv[\.]?[aª]?)\b/giu;
+  thisString = thisString.replace(regex, ' Nova');
+  regex = /(?<=Urbanização)(\s)+(Nv[\.]?[aª]?)\b/giu;
+  thisString = thisString.replace(regex, ' Nova');
+  regex = /(?<=o)(\s)+(Nv[\.]?)\b/giu;
+  thisString = thisString.replace(regex, ' Novo');
+  regex = /(?<=Monte)(\s)+(Nv[\.]?)\b/giu;
+  thisString = thisString.replace(regex, ' Novo');
   /* Resolve common name abbreviations to determine gramatical gender */
   regex = /\b(M[\.]?[ªa])(\s|$)/giu;
   thisString = thisString.replace(regex, 'Maria ');
