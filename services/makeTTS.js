@@ -367,7 +367,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Campo ');
   regex = /\bEmpres[\.]?\b/giu;
   thisString = thisString.replace(regex, 'Empresarial');
-  regex = /\bEscrit[\.]?\b/giu;
+  regex = /\bEscrit[\.]?(\s|$|\(|\))/giu;
   thisString = thisString.replace(regex, 'Escritórios ');
   regex = /\bL[o]?j[\.]?\s/giu;
   thisString = thisString.replace(regex, 'Lója ');
