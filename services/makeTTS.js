@@ -245,6 +245,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 's Municipais');
   regex = /\sC[âa]m[\.]?\s(?=Mun)/giu;
   thisString = thisString.replace(regex, ' Câmara ');
+  regex = /\sFreg[\.]?\b/giu;
+  thisString = thisString.replace(regex, ' Freguesia');
   regex = /\b(C(al)?ç[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Calçada ');
   regex = /\s(Mun[i]?[c]?(?![í])[i]?(p)?[\.]?)\b/giu;
