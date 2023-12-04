@@ -450,6 +450,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Força Aérea Portuguesa');
   regex = /\bF[^\s]*[\s]+A[ée]r(ea)?\b/giu;
   thisString = thisString.replace(regex, 'Força Aérea');
+  regex = /\bFuz[^\s]*[\s]+Nav(a)?(ai)?(ais)?\b/giu;
+  thisString = thisString.replace(regex, 'Fuzileiros Navais');
+  regex = /\bEcom\b/giu;
+  thisString = thisString.replace(regex, 'Ecomuseu');
   regex = /\bM[\.\s]*F[\.\s]*A[\.\s]*\b/giu;
   thisString = thisString.replace(regex, 'M. F. A.');
   regex = /\b(C[o]?v[\.]?)(\s|$)/giu;
@@ -607,7 +611,11 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Vasco da Gama');
   regex = /\b(S(ac)?)(\s)*(?=Cab)/giu;
   thisString = thisString.replace(regex, 'Sacadura ');
-  regex = /\b(?<=Sacadura)(\s)*C(ab)?[r]?[l]?(\s|$)/giu;
+  regex = /\b(P(e)?(ed)?(Pedr)?)(\s)*(?=[ÁA]lv)/giu;
+  thisString = thisString.replace(regex, 'Pedro ');
+  regex = /\b(?<=Pedro)(\s)*[ÁA](l)?(lv)?(lva)?(lvar)?(\s)*(?=C)/giu;
+  thisString = thisString.replace(regex, 'Álvares ');
+  regex = /\b(?<=Sacadura|Álvares)(\s)*C(ab)?[r]?[l]?(\s|$)/giu;
   thisString = thisString.replace(regex, 'Cabral ');
   regex = /\b(Re(s)?(si)?(sis)?(sist)?(siste)?(sisten)?(sistent)?)(\s)*(?=Antifa)/giu;
   thisString = thisString.replace(regex, 'Resistentes ');
