@@ -609,6 +609,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Sacadura ');
   regex = /\b(?<=Sacadura)(\s)*C(ab)?[r]?[l]?(\s|$)/giu;
   thisString = thisString.replace(regex, 'Cabral ');
+  regex = /\b(Re(s)?(si)?(sis)?(sist)?(siste)?(sisten)?(sistent)?)(\s)*(?=Antifa)/giu;
+  thisString = thisString.replace(regex, 'Resistentes ');
+  regex = /\b(?<=Resistente[s]?)(\s)*Antifa(s)?(sc)?(sci)?(scis)?(scist)?(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Antisfascistas ');
   regex = /\b(B[o]?[r]?[d]?[\.]?)(\s)(?=Pin)/giu;
   thisString = thisString.replace(regex, 'Bordalo ');
   regex = /(?<=Bordalo)[\s]*P(in)?[h]?(ei)?[r]?[\.]?\b/giu;
