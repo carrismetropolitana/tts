@@ -377,6 +377,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Solidária ');
   regex = /\bJardm\b/giu;
   thisString = thisString.replace(regex, 'Jardim');
+  regex = /(?<=((Bairro)|B[oº]?))[\.]?\sCtt\b/giu;
+  thisString = thisString.replace(regex, 'dos C.T.T.');
   regex = /\bCtt\b/giu;
   thisString = thisString.replace(regex, 'Correios ');
   regex = /\b(Cgd|Bcp)\b/giu;
@@ -494,6 +496,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Quinta do Conde');
   regex = /\bVenda[\s]*Pinheiro\b/giu;
   thisString = thisString.replace(regex, 'Venda do Pinheiro');
+  regex = /\bM[\s]*Rolas\b/giu;
+  thisString = thisString.replace(regex, 'Moínho das Rolas');
   regex = /\bB[\.]?[\s]?Vista\b/giu;
   thisString = thisString.replace(regex, 'Bela Vista');
   regex = /\bP[\.]?[\s]*S(an)?t(a)?[\.]?[\s]*Iria\b/giu;
@@ -856,6 +860,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Eusébio ');
   regex = /\sCar[v]?[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, ' Carvalho ');
+  regex = /\sSalv\.]?(\s|$)/giu;
+  thisString = thisString.replace(regex, ' Salvador ');
   regex = /\sR[óo]m[úu]?[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, ' Rómulo ');
   regex = /\sBarn[\.]?(\s|$)/giu;
