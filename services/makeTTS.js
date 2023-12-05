@@ -860,7 +860,7 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Eusébio ');
   regex = /\sCar[v]?[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, ' Carvalho ');
-  regex = /\sSalv\.]?(\s|$)/giu;
+  regex = /\sSalv[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, ' Salvador ');
   regex = /\sR[óo]m[úu]?[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, ' Rómulo ');
