@@ -378,7 +378,7 @@ module.exports = (p, modes = {}) => {
   regex = /\bJardm\b/giu;
   thisString = thisString.replace(regex, 'Jardim');
   regex = /(?<=((Bairro)|B[oº]?))[\.]?\sCtt\b/giu;
-  thisString = thisString.replace(regex, 'dos C.T.T.');
+  thisString = thisString.replace(regex, ' dos C.T.T.');
   regex = /\bCtt\b/giu;
   thisString = thisString.replace(regex, 'Correios ');
   regex = /\b(Cgd|Bcp)\b/giu;
@@ -618,13 +618,13 @@ module.exports = (p, modes = {}) => {
   regex = /\b(P(e)?(ed)?(Pedr)?)(\s)*(?=[ÁA]lv)/giu;
   thisString = thisString.replace(regex, 'Pedro ');
   regex = /\b(?<=Pedro)(\s)*[ÁA](l)?(lv)?(lva)?(lvar)?(\s)*(?=C)/giu;
-  thisString = thisString.replace(regex, 'Álvares ');
+  thisString = thisString.replace(regex, ' Álvares ');
   regex = /\b(?<=Sacadura|Álvares)(\s)*C(ab)?[r]?[l]?(\s|$)/giu;
-  thisString = thisString.replace(regex, 'Cabral ');
+  thisString = thisString.replace(regex, ' Cabral ');
   regex = /\b(Re(s)?(si)?(sis)?(sist)?(siste)?(sisten)?(sistent)?)(\s)*(?=Antifa)/giu;
   thisString = thisString.replace(regex, 'Resistentes ');
   regex = /\b(?<=Resistente[s]?)(\s)*Antifa(s)?(sc)?(sci)?(scis)?(scist)?(\s|$)/giu;
-  thisString = thisString.replace(regex, 'Antisfascistas ');
+  thisString = thisString.replace(regex, ' Antifascistas ');
   regex = /\b(B[o]?[r]?[d]?[\.]?)(\s)(?=Pin)/giu;
   thisString = thisString.replace(regex, 'Bordalo ');
   regex = /(?<=Bordalo)[\s]*P(in)?[h]?(ei)?[r]?[\.]?\b/giu;
