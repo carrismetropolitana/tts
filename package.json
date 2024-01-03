@@ -9,7 +9,7 @@
     "dependencies": {
         "@google-cloud/text-to-speech": "5.0.1",
         "adm-zip": "0.5.10",
-        "axios": "1.6.2",
+        "axios": "1.6.3",
         "google-tts-api": "2.0.2",
         "papaparse": "5.4.1"
     }
