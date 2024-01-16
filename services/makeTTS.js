@@ -155,6 +155,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Práça$2');
   regex = /\b(P[r]?[cç]t[a]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Praceta$2');
+  regex = /\b(P[r]?[cç]?t[a][\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Praceta$2');
   regex = /\b(P[a]?[r]?[q](ue)?[\.]?)(\s)(Camp[^\s]*)\b/giu;
   thisString = thisString.replace(regex, 'Parque de Campismo');
   regex = /\b(P[a]?[r]?[q](ue)?[\.]?)(\s)(Inf[^\s]*)\b/giu;
