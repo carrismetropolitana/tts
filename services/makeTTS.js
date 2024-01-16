@@ -185,6 +185,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Vale$2');
   regex = /\b(Qt[aª]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Quinta$2');
+  regex = /\bChaf(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Chafariz$2');
   regex = /\b(R[o]?[t][\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Rotunda');
   regex = /\bF(on)?t[e]?[\.]?[\s]*Prata/giu;
@@ -224,7 +226,7 @@ module.exports = (p, modes = {}) => {
   regex = /\b(Est(a[çc])?[\.]?)\s/giu;
   thisString = thisString.replace(regex, '- Estaçaão ');
   regex = /\s(Rodov[\.]?)\b/giu;
-  thisString = thisString.replace(regex, 'Rodoviária');
+  thisString = thisString.replace(regex, ' Rodoviária');
   regex = /\b(Rest[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Restaurante ');
   regex = /\b(Esp[\.]?)(\s|$)/giu;
