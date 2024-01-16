@@ -214,7 +214,7 @@ module.exports = (p, modes = {}) => {
   regex = /\b(L[r]?g[o]?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Largo');
   regex = /\b(Lt[e]?[\.]?)\b/giu;
-  thisString = thisString.replace(regex, 'Lóte');
+  thisString = thisString.replace(regex, '- Lóte');
   regex = /\b(C[l]?ç[d]?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Calçáda');
   regex = /\b(Mt[e]?[\.]?)\b/giu;
@@ -808,6 +808,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Xavier ');
   regex = /\b(Fran[c]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Francisco ');
+  regex = /\b(Teix[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Teixeira ');
   regex = /\b(Fred[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Frederico ');
   regex = /\b(Lourei[\.]?)(\s|$)/giu;
