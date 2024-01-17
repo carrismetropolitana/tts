@@ -33,7 +33,7 @@ module.exports = async () => {
     const trackerEntry = trackerData.find((item) => item.id === stopData.id);
     const ttsHasChanged = stopData.tts_name !== trackerEntry?.tts;
 
-    if (ttsHasChanged && stopData.tts_name) {
+    if (ttsHasChanged && stopData.tts_name && stopData.tts_name !== '#N/A') {
       console.log(`* [${stopIndex}/${allStopsData.length}] Generating for Stop ${stopData.id} - ${stopData.tts_name}`);
       await GoogleCloudTTSAPI({ string: stopData.tts_name, filename: stopData.id, dirname: `${settings.OUTPUTS_DIRNAME}/stops`, replaceIfExists: true });
     }
