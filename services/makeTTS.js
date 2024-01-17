@@ -188,7 +188,7 @@ module.exports = (p, modes = {}) => {
   regex = /\b(Qt[aª]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Quinta$2');
   regex = /\bChaf(\s|$)/giu;
-  thisString = thisString.replace(regex, 'Chafariz$2');
+  thisString = thisString.replace(regex, 'Chafariz$1');
   regex = /\b(R[o]?[t][\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Rotunda');
   regex = /\bF(on)?t[e]?[\.]?[\s]*Prata/giu;
