@@ -595,6 +595,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Libânia ');
   regex = /\b(Lib(er)?[\.]?)(\s)+(?=Timor)/giu;
   thisString = thisString.replace(regex, 'Libertadores de ');
+  regex = /\b(B(rand)?[\.]?)(\s)+(?=Vasc)/giu;
+  thisString = thisString.replace(regex, 'Brandão ');
+  regex = /\sVasc\b/giu;
+  thisString = thisString.replace(regex, ' Vasconcelos');
   regex = /\bLor(o)?(sae)?\b/giu;
   thisString = thisString.replace(regex, ' Loro Sae ');
   regex = /\bT\s*(?=Lor)/giu;
