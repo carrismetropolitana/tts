@@ -303,6 +303,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Escola ');
   regex = /(?<=Escola\s)Pri[m]?(\s|$)/giu;
   thisString = thisString.replace(regex, 'Primária ');
+  regex = /(?<=Escola\s)Nac(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Nacional ');
   regex = /\b(Col[\.]?)\s/giu;
   thisString = thisString.replace(regex, 'Colégio ');
   regex = /\b(Cid[\.]?)\s/giu;
