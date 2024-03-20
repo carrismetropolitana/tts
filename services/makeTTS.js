@@ -255,12 +255,12 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Calçada ');
   regex = /\s(Mun[i]?[c]?(?![í])[i]?(p)?[\.]?)\b/giu;
   thisString = thisString.replace(regex, ' Municipal');
+  regex = /\bCam[\s]+(?!M)/giu;
+  thisString = thisString.replace(regex, 'Caminho ');
   regex = /\b([C][a]?[m]?[\s]?M[u]?[n]?)[\s]*(?=[\d])/giu;
   thisString = thisString.replace(regex, 'Caminho Municipal ');
   regex = /\b([C][aâ]?[m]?[\s]*M[u]?[n]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Câmara Municipal ');
-  regex = /\bCam[\s]+(?!M)/giu;
-  thisString = thisString.replace(regex, 'Caminho ');
   regex = /\sM([\d]{3})\b/giu;
   thisString = thisString.replace(regex, ' Municipal $1');
   regex = /(\s|^)(F[aá]b[r]?[\.]?)(\s|$)/giu;
