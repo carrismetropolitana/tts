@@ -83,7 +83,7 @@ module.exports = (p, modes = {}) => {
   regex = /([^X])\)([^\s])/giu;
   thisString = thisString.replace(regex, '$1 ) $2');
   /* Add spaces around road numbers */
-  regex = /(^|\()[\s]*N[ac\s]?((\d)+)([\s\-\(\)]|$)/giu;
+  regex = /(^|\(|\sX)[\s]*N[ac\s]?((\d)+)([\s\-\(\)]|$)/giu;
   thisString = thisString.replace(regex, '$1Estrada Nacional $2 ');
   regex = /\bN([\d]{3})-(\d)\b/giu;
   thisString = thisString.replace(regex, ' Estrada Nacional $1 $2 ');
