@@ -1,4 +1,4 @@
-function titleCase(str) {
+ffunction titleCase(str) {
   var splitStr = str.toLowerCase().split(' ');
   for (var i = 0; i < splitStr.length; i++) {
     // You do not need to check if i is larger than splitStr length, as your for does that for you
@@ -550,7 +550,7 @@ module.exports = (p, modes = {}) => {
   regex = /\b(Gen[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'General$2');
   regex = /\b(Maj[\.]?)(\s)/giu;
-  thisString = thisString.replace(regex, 'Major$2');
+  thisString = thisString.replace(regex, 'Majór$2');
   regex = /\b(Cel[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Coronél$2');
   regex = /\b(Ten[\.]?)(\s)/giu;
