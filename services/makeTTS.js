@@ -549,6 +549,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Marechal$2');
   regex = /\b(Gen[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'General$2');
+  regex = /\b(Maj[\.]?)(\s)/giu;
+  thisString = thisString.replace(regex, 'Major$2');
   regex = /\b(Cel[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Coronél$2');
   regex = /\b(Ten[\.]?)(\s)/giu;
