@@ -659,10 +659,14 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Quinta do Conde');
   regex = /(?<=Egas\s)\s*\bM[o]?[n]?\s/giu;
   thisString = thisString.replace(regex, 'Moniz ');
-  regex = /\b(C[a]?[l]?[\.]?)(\s)(?=Gulb)/giu;
+  regex = /\b(C[a]?[l]?[\.]?)[\s]+(?=Gulb)/giu;
   thisString = thisString.replace(regex, 'Calouste ');
-  regex = /(?<=Calouste\s)\bG(ulb|ulbenk)?\b/giu;
-  thisString = thisString.replace(regex, 'Gulbenkian');
+  regex = /(?<=Calouste)[\s]+G(ulb|ulbenk)?\b/giu;
+  thisString = thisString.replace(regex, ' Gulbenkian');
+  regex = /\b(M[a]?[n]?[\.]?)[\s]+(?=Alped)/giu;
+  thisString = thisString.replace(regex, 'Manuel ');
+  regex = /(?<=Manuel)[\s]+Alped(r|rinh)?\b/giu;
+  thisString = thisString.replace(regex, ' Alpedrinha');
   regex = /\b(L[uú]?[íi]?[sz]?[\.]?)(\s)(?=Cam)/giu;
   thisString = thisString.replace(regex, 'Luís ');
   regex = /(?<=Luís)[\s]*(de)?[\s]*Cam[õo]?(e)?[s]?[\.]?\b/giu;
