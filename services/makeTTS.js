@@ -53,10 +53,12 @@ module.exports = (p, modes = {}) => {
   /* Uniformize crossing to (X), add spaces around crossing */
   let regex = /\(X\)/giu;
   thisString = thisString.replace(regex, ' X ');
-  regex = /Ant[e]?[s]?[\s]?[\(]?X[\)]?[^aiouâêîôûáéíóúàèìòùt]/giu;
-  thisString = thisString.replace(regex, 'Antes do Cruzamento');
+  regex = /\bAnt[e]?[s]?[\s]?[\(]?X[\)]?([\s]+$)/giu;
+  thisString = thisString.replace(regex, 'Antes do Cruzamento ');
+  regex = /\bAnt[e]?[s]?[\s]?[\(]?X[\)]?([\s]*[^$])/giu;
+  thisString = thisString.replace(regex, 'Antes do Cruzamento com ');
   regex = /[\(]?X[\)]?[\s]?Ant[e]?[s]?\s/giu;
-  thisString = thisString.replace(regex, ' Cruzamento Antes ');
+  thisString = thisString.replace(regex, ' Cruzamento Antes de ');
   regex = /[\s][\(]?X[\)]?[\s]*($|\))/giu;
   thisString = thisString.replace(regex, ' Cruzamento $1');
   regex = /(^|[\(])[\s]*[\(]?X[\)]?\s/giu;
