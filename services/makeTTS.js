@@ -221,6 +221,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Calçáda');
   regex = /\b(Mt[e]?[\.]?)\b/giu;
   thisString = thisString.replace(regex, 'Monte');
+  regex = /\bCast[\.]?(\s|$|\))/giu;
+  thisString = thisString.replace(regex, 'Castelo$1');
   regex = /\b(Estr[\.]?)\sM[un]?(?=\d)/giu;
   thisString = thisString.replace(regex, 'Estrada Municipal ');
   regex = /\b(Estr[\.]?)(\s|$)/giu;
@@ -898,8 +900,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Rómulo ');
   regex = /\sBarn[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, ' Barnabé ');
-  regex = /\b(Ed[u]?[\.]?)(\s|$)/giu;
-  thisString = thisString.replace(regex, 'Eduardo ');
+  regex = /\s(Ed[u]?[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, ' Eduardo ');
+  regex = /\sZef[\.]?(\s|$)/giu;
+  thisString = thisString.replace(regex, ' Zeferino ');
   /* Resolve Dona */
   regex = /\s(D[\.]?[ª]?[\.]?)(\s[^\s]*[a]\b)/giu;
   thisString = thisString.replace(regex, ' Dona$2');
