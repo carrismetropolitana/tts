@@ -609,6 +609,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Timor ');
   regex = /\b(Lib(er)?[d]?[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Liberdade ');
+  regex = /\bTrind\b/giu;
+  thisString = thisString.replace(regex, 'Trindade');
   regex = /\bLocalid\b/giu;
   thisString = thisString.replace(regex, 'Localidade');
   regex = /\bQuinta(\s)*Conde\b/giu;
