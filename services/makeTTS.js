@@ -598,7 +598,7 @@ module.exports = (p, modes = {}) => {
   regex = /\b(Ten[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Tenente$2');
   regex = /\b(Desemb(arg)?[\.]?)(\s|\))/giu;
-  thisString = thisString.replace(regex, 'Desembargador$2');
+  thisString = thisString.replace(regex, 'Desembargador$3');
   regex = /\b(Sarg[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Sargento$2');
   regex = /\b(Brig[\.]?)(\s)/giu;
