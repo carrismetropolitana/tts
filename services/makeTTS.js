@@ -175,7 +175,9 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, 'Viaduto$2');
   regex = /\b(Aqued[\.]?)(\s|$)/giu;
   thisString = thisString.replace(regex, 'Aqueduto$2');
-  regex = /\b(Ed(if)?[\.]?)(\s|$)/giu;
+  regex = /\b(Ed[ií]f[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Edifício ');
+  regex = /(?<=(^|\(|-|\)))(\s)*Ed(\s|$)/giu;
   thisString = thisString.replace(regex, 'Edifício ');
   regex = /\b(Imp[\.]?)(\s)/giu;
   thisString = thisString.replace(regex, 'Impasse ');
@@ -896,6 +898,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, ' Rómulo ');
   regex = /\sBarn[\.]?(\s|$)/giu;
   thisString = thisString.replace(regex, ' Barnabé ');
+  regex = /\b(Ed[u]?[\.]?)(\s|$)/giu;
+  thisString = thisString.replace(regex, 'Eduardo ');
   /* Resolve Dona */
   regex = /\s(D[\.]?[ª]?[\.]?)(\s[^\s]*[a]\b)/giu;
   thisString = thisString.replace(regex, ' Dona$2');
