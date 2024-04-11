@@ -326,6 +326,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, "Escola ");
   regex = /(?<=Escola\s)Prep(\s|$)/giu;
   thisString = thisString.replace(regex, "Preparatória ");
+  regex = /(?<=Escola\s)Prim(\s|$)/giu;
+  thisString = thisString.replace(regex, "Primária ");
   regex = /(?<=Escola\s)Cond(\s|$)/giu;
   thisString = thisString.replace(regex, "Condução ");
   regex = /\bPSP\b/giu;
@@ -833,6 +835,8 @@ module.exports = (p, modes = {}) => {
   /* Celsius correction */
   regex = /\s[A](\s|$)/giu;
   thisString = thisString.replace(regex, " Á ");
+  regex = /\s[E](\s|$)/giu;
+  thisString = thisString.replace(regex, " É ");
   regex = /(?<=[\d])\s*[C](\s|$)/giu;
   thisString = thisString.replace(regex, " Cê ");
   regex = /(^|\(|\s)[C](\s|$)/giu;
