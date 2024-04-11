@@ -835,7 +835,7 @@ module.exports = (p, modes = {}) => {
   /* Celsius correction */
   regex = /\s[A](\s|$)/giu;
   thisString = thisString.replace(regex, " Á ");
-  regex = /\s[E](\s|$)/giu;
+  regex = /\s[E]\s*(\)|$|-)/giu;
   thisString = thisString.replace(regex, " É ");
   regex = /(?<=[\d])\s*[C](\s|$)/giu;
   thisString = thisString.replace(regex, " Cê ");
