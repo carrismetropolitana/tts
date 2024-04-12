@@ -755,6 +755,8 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, "Coin-a");
   regex = /Euf[ée]mia/giu;
   thisString = thisString.replace(regex, "Eufémi-a");
+  regex = /\bAida\b/giu;
+  thisString = thisString.replace(regex, "Ai-da");
   regex = /Pinteus/giu;
   thisString = thisString.replace(regex, "Pintéus");
   regex = /\bMalmequeres\b/giu;
