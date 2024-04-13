@@ -766,6 +766,10 @@ module.exports = (p, modes = {}) => {
   thisString = thisString.replace(regex, "Cima");
   regex = /\bDesc[\.]?(\s)/giu;
   thisString = thisString.replace(regex, "Descida ");
+  regex = /\bSup[\.]?(\s)/giu;
+  thisString = thisString.replace(regex, "Superior ");
+  regex = /\bPass[\.]?(\s)/giu;
+  thisString = thisString.replace(regex, "Passagem ");
   regex = /(?<!Rua)(?<=[a-zA-Z])\sC\s*\(/giu;
   thisString = thisString.replace(regex, " Cima (");
   regex = /\bAld[\.]?\b/giu;
