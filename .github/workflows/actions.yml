@@ -1,4 +1,4 @@
-name: Build & Publish Docker Images
+name: Actions
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
   # # # # # # # # # # # # # # # # # # # # #
 
   tts-lib:
-    name: 'Docker Build - lib'
+    name: 'Publish to NPM - lib'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
