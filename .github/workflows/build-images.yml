@@ -58,13 +58,12 @@ jobs:
       - name: Bump package version
         run: node bump-version.js
 
-      - name: Change dir
-        run: cd lib
-
       - name: Install NPM dependencies
         run: npm install
+        working-directory: ./lib
 
       - name: Publish package to NPM
         run: npm publish --access public
+        working-directory: ./lib
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
