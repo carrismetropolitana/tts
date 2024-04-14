@@ -1,7 +1,7 @@
 {
   "name": "@carrismetropolitana/tts",
   "version": "4.0.0",
-  "main": "index.js",
+  "main": "lib.js",
   "scripts": {
     "start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node index.js",
     "tts-summary": "node run-tts-summary.js"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/carrismetropolitana/tts.git"
   },
-  "keywords": ["transit", "toponomy", "tts", "lisbon"],
+  "keywords": ["public transit", "toponomy", "tts", "lisbon"],
   "author": "Ricardo Maçãs",
   "license": "AGPL-3.0-or-later",
   "bugs": {
