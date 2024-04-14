@@ -1,5 +1,7 @@
+/* * */
+
+const tts = require('@carrismetropolitana/tts');
 const settings = require('../config/settings');
-const makeTTS = require('../services/makeTTS');
 const Tracker = require('../services/Tracker');
 const GoogleCloudTTSAPI = require('../services/GoogleCloudTTSAPI');
 
@@ -42,7 +44,7 @@ module.exports = async () => {
       const patternResponse = await fetch(`https://api.carrismetropolitana.pt/patterns/${patternId}`);
       const patternData = await patternResponse.json();
 
-      const headsignTts = makeTTS(patternData.headsign);
+      const headsignTts = tts.makeText(patternData.headsign);
 
       const patternTTs = `Linha ${lineShortNameTts} com destino a ${headsignTts}`;
 

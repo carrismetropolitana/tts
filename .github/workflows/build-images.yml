@@ -11,8 +11,8 @@ jobs:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  tts-generator:
-    name: 'Docker Build - server'
+  tts-daemon:
+    name: 'Docker Build - daemon'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -22,19 +22,46 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@master
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker Image
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@master
         with:
           push: true
-          context: ./
-          file: ./Dockerfile
-          tags: ghcr.io/carrismetropolitana/tts-generator:${{ github.ref_name }}
+          context: ./daemon
+          file: ./daemon/Dockerfile
+          tags: ghcr.io/carrismetropolitana/tts-daemon:${{ github.ref_name }}
+
+  # # # # # # # # # # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # # # # #
+
+  tts-lib:
+    name: 'Docker Build - lib'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@main
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Bump package version
+        run: node bump-version.js
+
+      - name: Install NPM dependencies
+        run: npm install
+
+      - name: Publish package to NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

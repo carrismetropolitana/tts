@@ -1,3 +1,5 @@
+/* * */
+
 const settings = require('./config/settings');
 const runnerCommon = require('./runners/runner_common');
 const runnerStops = require('./runners/runner_stops');

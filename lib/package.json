@@ -1,0 +1,30 @@
+{
+    "name": "@carrismetropolitana/tts",
+    "version": "2024.04.142122",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "run-from-file": "node run-from-file.js"
+    },
+    "dependencies": {
+        "papaparse": "5.4.1"
+    },
+    "description": "Disambiguates common bus stop abbreviations automatically.",
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/carrismetropolitana/tts.git"
+    },
+    "keywords": [
+        "public transit",
+        "toponomy",
+        "tts",
+        "lisbon"
+    ],
+    "author": "Ricardo Maçãs",
+    "license": "AGPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/carrismetropolitana/tts/issues"
+    },
+    "homepage": "https://github.com/carrismetropolitana/tts#readme"
+}

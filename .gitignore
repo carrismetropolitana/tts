@@ -134,10 +134,10 @@ package-lock.json
 stops.txt
 
 # Credentials
-/credentials
+credentials
 
 # outputs
-/outputs
+outputs
 stops_tts_summary.txt
 stops_diff.txt
 stops_updated.txt
