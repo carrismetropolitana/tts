@@ -6,7 +6,7 @@
         "start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node index.js"
     },
     "dependencies": {
-        "@carrismetropolitana/tts": ">1.0.0",
+        "@carrismetropolitana/tts": "latest",
         "@google-cloud/text-to-speech": "5.2.0",
         "adm-zip": "0.5.12",
         "axios": "1.6.8",
