@@ -46,19 +46,19 @@ module.exports = async () => {
 
       const headsignTts = tts.makeText(patternData.headsign);
 
-      const patternTTs = `Linha ${lineShortNameTts} com destino a ${headsignTts}`;
+      const patternTts = `Linha ${lineShortNameTts} com destino a ${headsignTts}`;
 
       // Check if tracker already has this entry,
       // and if it differs from the generated TTS.
       const trackerEntry = trackerData.find((item) => item.id === patternId);
-      const ttsHasChanged = patternTTs !== trackerEntry?.tts;
+      const ttsHasChanged = patternTts !== trackerEntry?.tts;
 
       if (ttsHasChanged) {
-        await GoogleCloudTTSAPI({ string: patternTTs, filename: patternId, dirname: `${settings.OUTPUTS_DIRNAME}/patterns`, replaceIfExists: true });
-        console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTTs}`);
+        await GoogleCloudTTSAPI({ string: patternTts, filename: patternId, dirname: `${settings.OUTPUTS_DIRNAME}/patterns`, replaceIfExists: true });
+        console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTts}`);
       }
 
-      trackerDataUpdated.push({ id: patternId, tts: patternTTs });
+      trackerDataUpdated.push({ id: patternId, tts: patternTts });
 
       //
     }
