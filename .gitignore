@@ -139,3 +139,5 @@ stops.txt
 # outputs
 /outputs
 stops_tts_summary.txt
+stops_diff.txt
+stops_updated.txt

@@ -6,7 +6,7 @@ const makeTTS = require("./services/makeTTS");
 /**
  * Library tts
  * Usage:
- * require("@carrismetropolitana/tts");
+ * tts = require("@carrismetropolitana/tts");
  * tts.makeText()
  */
 const tts = {
