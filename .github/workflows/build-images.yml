@@ -58,6 +58,9 @@ jobs:
       - name: Bump package version
         run: node bump-version.js
 
+      - name: Change dir
+        run: cd lib
+
       - name: Install NPM dependencies
         run: npm install
 
