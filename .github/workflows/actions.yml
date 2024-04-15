@@ -59,7 +59,7 @@ jobs:
         run: node bump-version.js
 
       - name: Install NPM dependencies
-        run: npm install
+        run: npm install --omit-dev
         working-directory: ./lib
 
       - name: Publish package to NPM
