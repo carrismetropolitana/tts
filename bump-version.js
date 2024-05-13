@@ -1,8 +1,8 @@
 /* * */
 
 const fs = require('fs');
-const libPJson = require('./package.json');
-const daemonPJson = require('../daemon/package.json');
+const libPJson = require('./lib/package.json');
+const daemonPJson = require('./daemon/package.json');
 
 /* * */
 
@@ -18,8 +18,8 @@ const version = `${year}.${month}.${day}${hours}${minutes}`;
 libPJson.version = version;
 daemonPJson.version = version;
 
-fs.writeFileSync('./package.json', JSON.stringify(libPJson, null, 4));
-fs.writeFileSync('../daemon/package.json', JSON.stringify(daemonPJson, null, 4));
+fs.writeFileSync('./lib/package.json', JSON.stringify(libPJson, null, 4));
+fs.writeFileSync('./daemon/package.json', JSON.stringify(daemonPJson, null, 4));
 
 /* * */
 
