@@ -1,6 +1,6 @@
 {
     "name": "@carrismetropolitana/tts",
-    "version": "2024.04.142258",
+    "version": "1.0.0",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
