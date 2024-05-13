@@ -1,10 +1,12 @@
 {
     "name": "@carrismetropolitana/tts",
-    "version": "2024.04.142258",
+    "version": "2024.05.131208",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "run-from-file": "node run-from-file.js"
+        "run-from-file": "node run-from-file.js",
+        "bump": "node bump-version.js",
+        "send": "npm run bump && npm publish"
     },
     "dependencies": {
         "papaparse": "5.4.1"

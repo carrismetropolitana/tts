@@ -1,6 +1,6 @@
 {
     "name": "@carrismetropolitana/tts-daemon",
-    "version": "2024.04.142258",
+    "version": "2024.05.131208",
     "main": "index.js",
     "scripts": {
         "start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node index.js"
