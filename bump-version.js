@@ -9,11 +9,9 @@ const daemonPJson = require('./daemon/package.json');
 const now = new Date();
 const year = now.getFullYear();
 const month = padNumber(now.getMonth() + 1);
-const day = padNumber(now.getDate());
-const hours = padNumber(now.getHours());
-const minutes = padNumber(now.getMinutes());
+const seconds = Number(parseInt(now.getTime()/1000))
 
-const version = `${year}.${month}.${day}${hours}${minutes}`;
+const version = `${year}.${month}.${seconds}`;
 
 libPJson.version = version;
 daemonPJson.version = version;
