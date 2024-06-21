@@ -10,7 +10,6 @@
         "papaparse": "5.4.1"
     },
     "description": "Disambiguates common bus stop abbreviations automatically.",
-    "devDependencies": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/carrismetropolitana/tts.git"
