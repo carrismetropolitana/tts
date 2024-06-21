@@ -55,11 +55,12 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Bump package version
-        run: node bump-version.js
-
       - name: Install NPM dependencies
         run: npm install --omit-dev
+        working-directory: ./lib
+
+      - name: Bump package version
+        run: npx @carrismetropolitana/bumper bump
         working-directory: ./lib
 
       - name: Publish package to NPM

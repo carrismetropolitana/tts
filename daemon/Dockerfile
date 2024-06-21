@@ -1,14 +1,14 @@
 FROM node:alpine
 
-# Create app directory
 WORKDIR /app
 
-# Copy package.json and install app dependencies
 COPY package.json ./
-RUN npm --omit=dev install
 
-# Copy the rest of the repo
+RUN npm install \
+    && npm cache clean --force
+
+RUN npx @carrismetropolitana/bumper bump
+
 COPY . .
 
-# Start the program
 CMD ["node", "index.js"]
