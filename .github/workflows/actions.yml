@@ -60,7 +60,7 @@ jobs:
         working-directory: ./lib
 
       - name: Bump package version
-        run: npx @carrismetropolitana/bumper bump
+        run: npx @helperkits/bumper bump
         working-directory: ./lib
 
       - name: Publish package to NPM
