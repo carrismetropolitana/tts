@@ -6,7 +6,7 @@ Disambiguates common bus stop abbreviations automatically.
 
 `npm run tts_audio`
 
-# Ownership
+## Ownership
 
 This citizen initiative is a volunteer-led project that helps to tackle accessibility in public transport.
 The lead contributor is independent from Carris Metropolitana.
