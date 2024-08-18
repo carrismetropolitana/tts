@@ -1,26 +1,28 @@
 /* * */
 
-const tts = require('@carrismetropolitana/tts');
-const settings = require('../config/settings');
-const Tracker = require('../services/Tracker');
-const GoogleCloudTTSAPI = require('../services/GoogleCloudTTSAPI');
+const tts = require("@carrismetropolitana/tts");
+const settings = require("../config/settings");
+const Tracker = require("../services/Tracker");
+const GoogleCloudTTSAPI = require("../services/GoogleCloudTTSAPI");
 
 /* * */
 
 module.exports = async () => {
   console.log();
-  console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
-  console.log('* TTS PATTERNS');
+  console.log("* * * * * * * * * * * * * * * * * * * * * * * * * *");
+  console.log("* TTS PATTERNS");
   const start = new Date();
   console.log(`* Run started on ${start.toISOString()}`);
 
   // Setup tracker
-  const trackerData = Tracker.get('patterns');
+  const trackerData = Tracker.get("patterns");
   const trackerDataUpdated = [];
 
   // Get all lines
-  console.log('* Fetching all lines from API...');
-  const allLinesResponse = await fetch('https://api.carrismetropolitana.pt/lines');
+  console.log("* Fetching all lines from API...");
+  const allLinesResponse = await fetch(
+    "https://api.carrismetropolitana.pt/lines",
+  );
   const allLinesData = await allLinesResponse.json();
 
   // Log progress
@@ -32,21 +34,20 @@ module.exports = async () => {
     //
 
     // 1.
-    // Setup line short name TTS
-    const lineShortNameTts = getLineShortNameTts(lineData.short_name);
-
-    // 2.
     // For each pattern of this line
 
     for (const [patternIndex, patternId] of lineData.patterns.entries()) {
       //
 
-      const patternResponse = await fetch(`https://api.carrismetropolitana.pt/patterns/${patternId}`);
+      const patternResponse = await fetch(
+        `https://api.carrismetropolitana.pt/patterns/${patternId}`,
+      );
       const patternData = await patternResponse.json();
 
-      const headsignTts = tts.makeText(patternData.headsign);
-
-      const patternTts = `Linha ${lineShortNameTts} com destino a ${headsignTts}`;
+      const patternTts = tts.makePattern(
+        lineData.short_name,
+        patternData.headsign,
+      );
 
       // Check if tracker already has this entry,
       // and if it differs from the generated TTS.
@@ -54,8 +55,15 @@ module.exports = async () => {
       const ttsHasChanged = patternTts !== trackerEntry?.tts;
 
       if (ttsHasChanged) {
-        await GoogleCloudTTSAPI({ string: patternTts, filename: patternId, dirname: `${settings.OUTPUTS_DIRNAME}/patterns`, replaceIfExists: true });
-        console.log(`* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTts}`);
+        await GoogleCloudTTSAPI({
+          string: patternTts,
+          filename: patternId,
+          dirname: `${settings.OUTPUTS_DIRNAME}/patterns`,
+          replaceIfExists: true,
+        });
+        console.log(
+          `* [${lineIndex}/${allLinesData.length}] [${patternIndex}/${lineData.patterns.length}] Generated | Line ${lineData.id} | Pattern ${patternData.id} | ${patternTts}`,
+        );
       }
 
       trackerDataUpdated.push({ id: patternId, tts: patternTts });
@@ -65,20 +73,20 @@ module.exports = async () => {
   }
 
   // Save updated tracker
-  Tracker.set('patterns', trackerDataUpdated);
+  Tracker.set("patterns", trackerDataUpdated);
 
   // Clean directory
-  Tracker.clean('patterns');
+  Tracker.clean("patterns");
 
   // Zip directory
-  Tracker.zip('patterns');
+  Tracker.zip("patterns");
 
   //
   console.log();
   console.log(`* Processed ${trackerDataUpdated.length} patterns.`);
   const syncDuration = new Date() - start;
   console.log(`* Run took ${syncDuration / 1000} seconds.`);
-  console.log('* * * * * * * * * * * * * * * * * * * * * * * * * *');
+  console.log("* * * * * * * * * * * * * * * * * * * * * * * * * *");
   console.log();
 };
 
@@ -89,30 +97,3 @@ module.exports = async () => {
 //
 //
 //
-
-function getLineShortNameTts(lineShortName) {
-  //
-
-  // If line is not numeric, return as-is
-  if (isNaN(lineShortName)) return lineShortName;
-
-  // If line is numeric, and has 4 digits
-  if (lineShortName.length === 4) {
-    //
-    // If digit 1 is zero also return as-is
-    if (lineShortName[1] === '0') return lineShortName;
-
-    // If digit 2 and digit 3 are both zero, also return as-is
-    if (lineShortName[2] === '0' && lineShortName[3] === '0') return lineShortName;
-
-    // Else, separate into two blocks (ex. [4238] -> [42] [38])
-    return `${lineShortName[0]}${lineShortName[1]} ${lineShortName[2]}${lineShortName[3]}`;
-
-    //
-  }
-
-  // Return as-is otherwise
-  return lineShortName;
-
-  //
-}
