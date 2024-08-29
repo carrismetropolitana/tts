@@ -2,7 +2,9 @@
 	"name": "@carrismetropolitana/tts",
 	"type": "module",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": ["dist/"],
 	"scripts": {
 		"start": "tsc && resolve-tspaths && node dist/index.js",
 		"lint": "eslint .",
