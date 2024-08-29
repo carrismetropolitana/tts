@@ -56,15 +56,19 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install NPM dependencies
-        run: npm install --omit-dev
+        run: npm install
         working-directory: ./lib
 
       - name: Bump package version
         run: npx @helperkits/bumper bump
         working-directory: ./lib
 
+      - name: Build package
+        run: npm run build
+        working-directory: ./lib
+
       - name: Publish package to NPM
         run: npm publish --access public
-        working-directory: ./lib
+        working-directory: ./lib/dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

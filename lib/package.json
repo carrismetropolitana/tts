@@ -1,29 +1,40 @@
 {
-    "name": "@carrismetropolitana/tts",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js",
-        "run-from-file": "node run-from-file.js"
-    },
-    "dependencies": {
-        "papaparse": "5.4.1"
-    },
-    "description": "Disambiguates common bus stop abbreviations automatically.",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/carrismetropolitana/tts.git"
-    },
-    "keywords": [
-        "public transit",
-        "toponomy",
-        "tts",
-        "lisbon"
-    ],
-    "author": "Ricardo Maçãs",
-    "license": "AGPL-3.0-or-later",
-    "bugs": {
-        "url": "https://github.com/carrismetropolitana/tts/issues"
-    },
-    "homepage": "https://github.com/carrismetropolitana/tts#readme"
+	"name": "@carrismetropolitana/tts",
+	"type": "module",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "tsc && resolve-tspaths && node dist/index.js",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"build": "tsc && resolve-tspaths",
+		"watch": "tsc -w",
+		"run-from-file": "node run-from-file.js"
+	},
+	"dependencies": {
+		"papaparse": "5.4.1"
+	},
+	"devDependencies": {
+		"@carrismetropolitana/eslint": "20240722.1548.55",
+		"@types/node": "22.5.1",
+		"resolve-tspaths": "0.8.19",
+		"typescript": "5.5.4"
+	},
+	"description": "Disambiguates common bus stop abbreviations automatically.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/carrismetropolitana/tts.git"
+	},
+	"keywords": [
+		"public transit",
+		"toponomy",
+		"tts",
+		"lisbon"
+	],
+	"author": "Ricardo Maçãs",
+	"license": "AGPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/carrismetropolitana/tts/issues"
+	},
+	"homepage": "https://github.com/carrismetropolitana/tts#readme"
 }
