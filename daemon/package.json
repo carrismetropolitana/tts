@@ -26,7 +26,7 @@
 		"build": "npm run clean && tsc && resolve-tspaths",
 		"clean": "rm -rf dist",
 		"dev": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' tsx watch ./src/index.ts",
-		"start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node index.js"
+		"start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node dist/index.js"
 	},
 	"dependencies": {
 		"@carrismetropolitana/tts": "latest",
