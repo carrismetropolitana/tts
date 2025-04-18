@@ -11,4 +11,4 @@ RUN npx @helperkits/bumper bump
 
 COPY . .
 
-CMD ["node", "index.js"]
+CMD ["node", "dist/index.js"]
