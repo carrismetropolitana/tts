@@ -1,5 +1,6 @@
 {
 	"name": "@carrismetropolitana/tts-daemon",
+	"description": "Disambiguates common bus stop abbreviations automatically.",
 	"version": "1.0.0",
 	"author": "Ricardo Maçãs",
 	"license": "AGPL-3.0-or-later",
@@ -17,7 +18,6 @@
 		"tts",
 		"lisbon"
 	],
-	"description": "Disambiguates common bus stop abbreviations automatically.",
 	"type": "module",
 	"files": ["dist"],
 	"main": "dist/index.js",
