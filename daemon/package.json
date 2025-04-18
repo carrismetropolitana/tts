@@ -4,7 +4,6 @@
 	"author": "Ricardo Maçãs",
 	"license": "AGPL-3.0-or-later",
 	"homepage": "https://github.com/carrismetropolitana/tts#readme",
-	"description": "Disambiguates common bus stop abbreviations automatically.",
 	"bugs": {
 		"url": "https://github.com/carrismetropolitana/tts/issues"
 	},
@@ -18,6 +17,8 @@
 		"tts",
 		"lisbon"
 	],
+	"type": "module",
+	"description": "Disambiguates common bus stop abbreviations automatically.",
 	"main": "index.js",
 	"scripts": {
 		"build": "npm run clean && tsc && resolve-tspaths",

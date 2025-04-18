@@ -1,8 +1,8 @@
 /* * */
 
-import { SETTINGS } from '@/config/settings';
-import { googleCloudTtsApi } from '@/services/googleCloudTtsApi';
-import { Tracker, type TrackerItem } from '@/services/Tracker';
+import { SETTINGS } from '@/config/settings.js';
+import { googleCloudTtsApi } from '@/services/googleCloudTtsApi.js';
+import { Tracker, type TrackerItem } from '@/services/Tracker.js';
 import { type Stop } from '@carrismetropolitana/api-types/network';
 import tts from '@carrismetropolitana/tts';
 import LOGGER from '@helperkits/logger';
@@ -23,7 +23,7 @@ export async function runnerStops() {
 	// Get all stops
 	console.log('* Fetching all stops from API...');
 	const allStopsResponse = await fetch('https://api.carrismetropolitana.pt/v2/stops');
-	const allStopsData: Stop[] = await allStopsResponse.json();
+	const allStopsData = await allStopsResponse.json() as Stop[];
 
 	// Log progress
 	console.log(`* Preparing ${allStopsData.length} stops...`);

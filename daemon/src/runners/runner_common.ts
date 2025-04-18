@@ -1,8 +1,8 @@
 /* * */
 
-import { SETTINGS } from '@/config/settings';
-import { googleCloudTtsApi } from '@/services/googleCloudTtsApi';
-import { Tracker, type TrackerItem } from '@/services/Tracker';
+import { SETTINGS } from '@/config/settings.js';
+import { googleCloudTtsApi } from '@/services/googleCloudTtsApi.js';
+import { Tracker, type TrackerItem } from '@/services/Tracker.js';
 import LOGGER from '@helperkits/logger';
 import TIMETRACKER from '@helperkits/timer';
 

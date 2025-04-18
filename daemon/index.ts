@@ -1,9 +1,9 @@
 /* * */
 
-import { SETTINGS } from '@/config/settings';
-import { runnerCommon } from '@/runners/runner_common';
-import { runnerPatterns } from '@/runners/runner_patterns';
-import { runnerStops } from '@/runners/runner_stops';
+import { SETTINGS } from '@/config/settings.js';
+import { runnerCommon } from '@/runners/runner_common.js';
+import { runnerPatterns } from '@/runners/runner_patterns.js';
+import { runnerStops } from '@/runners/runner_stops.js';
 import LOGGER from '@helperkits/logger';
 
 /* * */

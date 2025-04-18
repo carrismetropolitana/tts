@@ -1,6 +1,6 @@
 /* * */
 
-import { SETTINGS } from '@/config/settings';
+import { SETTINGS } from '@/config/settings.js';
 import AdmZip from 'adm-zip';
 import fs from 'fs';
 import Papa from 'papaparse';
