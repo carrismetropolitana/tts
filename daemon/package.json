@@ -1,32 +1,48 @@
 {
-    "name": "@carrismetropolitana/tts-daemon",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-        "start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node index.js"
-    },
-    "dependencies": {
-        "@carrismetropolitana/tts": "latest",
-        "@google-cloud/text-to-speech": "5.3.0",
-        "adm-zip": "0.5.14",
-        "axios": "1.7.2",
-        "google-tts-api": "2.0.2"
-    },
-    "description": "Disambiguates common bus stop abbreviations automatically.",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/carrismetropolitana/tts.git"
-    },
-    "keywords": [
-        "public transit",
-        "toponomy",
-        "tts",
-        "lisbon"
-    ],
-    "author": "Ricardo Maçãs",
-    "license": "AGPL-3.0-or-later",
-    "bugs": {
-        "url": "https://github.com/carrismetropolitana/tts/issues"
-    },
-    "homepage": "https://github.com/carrismetropolitana/tts#readme"
+	"name": "@carrismetropolitana/tts-daemon",
+	"version": "1.0.0",
+	"author": "Ricardo Maçãs",
+	"license": "AGPL-3.0-or-later",
+	"homepage": "https://github.com/carrismetropolitana/tts#readme",
+	"description": "Disambiguates common bus stop abbreviations automatically.",
+	"bugs": {
+		"url": "https://github.com/carrismetropolitana/tts/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/carrismetropolitana/tts.git"
+	},
+	"keywords": [
+		"public transit",
+		"toponomy",
+		"tts",
+		"lisbon"
+	],
+	"main": "index.js",
+	"scripts": {
+		"build": "npm run clean && tsc && resolve-tspaths",
+		"clean": "rm -rf dist",
+		"dev": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' tsx watch ./src/index.ts",
+		"start": "GOOGLE_APPLICATION_CREDENTIALS='./credentials/google-cloud-key.json' node index.js"
+	},
+	"dependencies": {
+		"@carrismetropolitana/tts": "latest",
+		"@google-cloud/text-to-speech": "6.0.1",
+		"@helperkits/logger": "20240703.1726.24",
+		"@helperkits/timer": "20240627.34.23",
+		"adm-zip": "0.5.16",
+		"axios": "1.8.4",
+		"google-tts-api": "2.0.2",
+		"papaparse": "5.5.2"
+	},
+	"devDependencies": {
+		"@carrismetropolitana/api-types": "20250415.2338.18",
+		"@carrismetropolitana/eslint": "latest",
+		"@types/adm-zip": "0.5.7",
+		"@types/node": "22.14.1",
+		"@types/papaparse": "5.3.15",
+		"resolve-tspaths": "0.8.23",
+		"tsx": "4.19.3",
+		"typescript": "5.8.3"
+	}
 }

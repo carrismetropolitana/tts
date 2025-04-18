@@ -1,8 +1,6 @@
-/**
- * Dependencies.
- */
+/* * */
 
-import { makeLine, makePattern, makeRoute, makeStop, makeText } from './makeText.js';
+import { makeLine, makePattern, makeRoute, makeStop, makeText } from '@/makeText.js';
 
 /**
  * Library tts

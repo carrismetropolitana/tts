@@ -1,42 +1,27 @@
 {
 
-	"editor.tabSize": 4,
+	"[css]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": "explicit"
+		},
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
 
-	"files.eol": "\n",
-
-	"eslint.workingDirectories": [
-		"./lib"
-	],
-
-	// Enable the ESlint flat config support
-	"eslint.useFlatConfig": true,
-
-	// Disable the default formatter, use eslint instead
-	"prettier.enable": false,
-	"editor.formatOnSave": false,
-	"eslint.format.enable": true,
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	// Disable the default CSS formatter, use stylelint instead
+	"css.validate": false,
 
 	// Auto fix
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit",
-		"source.organizeImports": "never"
+		"source.fixAll.eslint": "explicit"
 	},
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"editor.formatOnSave": false,
+	"editor.tabSize": 4,
 
-	// Silent the stylistic rules in you IDE, but still auto fix them
-	"eslint.rules.customizations": [
-		{ "rule": "style/*", "severity": "off" },
-		{ "rule": "format/*", "severity": "off" },
-		{ "rule": "*-indent", "severity": "off" },
-		{ "rule": "*-spacing", "severity": "off" },
-		{ "rule": "*-spaces", "severity": "off" },
-		{ "rule": "*-order", "severity": "off" },
-		{ "rule": "*-dangle", "severity": "off" },
-		{ "rule": "*-newline", "severity": "off" },
-		{ "rule": "*quotes", "severity": "off" },
-		{ "rule": "*semi", "severity": "off" }
-	],
-
+	"eslint.format.enable": true,
 	// Enable eslint for all supported languages
 	"eslint.validate": [
 		"javascript",
@@ -51,6 +36,23 @@
 		"yaml",
 		"toml",
 		"astro"
-	]
+	],
+	"eslint.workingDirectories": ["auto"],
+	"files.eol": "\n",
+
+	"less.validate": false,
+	// Disable the default formatter, use eslint instead
+	"prettier.enable": false,
+	"scss.validate": false,
+
+	"svg.preview.background": "custom",
+	"typescript.tsdk": "./frontend/node_modules/typescript/lib",
+	"workbench.editor.customLabels.enabled": true,
+
+	"workbench.editor.customLabels.patterns": {
+		"**/components/**/*.css": "${dirname} (${extname})",
+		"**/components/**/*.js": "${dirname} (${extname})",
+		"**/components/**/*.tsx": "${dirname} (${extname})"
+	}
 
 }
