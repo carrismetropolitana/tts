@@ -9,6 +9,9 @@ RUN npm install \
 
 RUN npx @helperkits/bumper bump
 
+RUN npm run build
+RUN npm prune --production
+
 COPY . .
 
 CMD ["node", "dist/index.js"]

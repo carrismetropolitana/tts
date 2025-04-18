@@ -17,9 +17,11 @@
 		"tts",
 		"lisbon"
 	],
-	"type": "module",
 	"description": "Disambiguates common bus stop abbreviations automatically.",
-	"main": "index.js",
+	"type": "module",
+	"files": ["dist"],
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "npm run clean && tsc && resolve-tspaths",
 		"clean": "rm -rf dist",
